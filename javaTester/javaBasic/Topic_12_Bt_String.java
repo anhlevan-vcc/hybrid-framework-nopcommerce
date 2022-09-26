@@ -28,4 +28,9 @@ public class Topic_12_Bt_String {
 		System.out.println("Tổng chữ Số = " + countNumber);
 	}
 
+	@Test
+	public void TC_02() {
+		char namePageArr[] = namePage.toCharArray();
+
+	}
 }
