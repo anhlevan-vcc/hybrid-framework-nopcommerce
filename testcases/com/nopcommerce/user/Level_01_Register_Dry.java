@@ -12,7 +12,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
-public class User_01_Register_Dry {
+public class Level_01_Register_Dry {
 	WebDriver driver;
 	String emailValid;
 	String projectPath = System.getProperty("user.dir");
@@ -70,7 +70,7 @@ public class User_01_Register_Dry {
 		driver.findElement(By.xpath("//a[text()= 'Register']")).click();
 		driver.findElement(By.cssSelector("input#FirstName")).sendKeys("Automation");
 		driver.findElement(By.cssSelector("input#LastName")).sendKeys("FC");
-		driver.findElement(By.cssSelector("input#Email")).sendKeys("automationfc.vn@gmail.com");
+		driver.findElement(By.cssSelector("input#Email")).sendKeys("Au@gmail.com");
 		driver.findElement(By.cssSelector("input#Password")).sendKeys("123456");
 		driver.findElement(By.cssSelector("input#ConfirmPassword")).sendKeys("123456");
 		driver.findElement(By.cssSelector("button#register-button")).click();

@@ -7,8 +7,13 @@ public class Computer {
 	public float weight; // màu xanh lá cây
 
 	// Property(thuộc tính)
-	private int ramSize;// biến toàn cục
+	private int ramSize;
+
 	String ramName;
+
+	protected String cpuProductName;
+
+	public int vgaSize;
 
 	// Method(Phương thức)
 	private void setRamSize(int ramSize) { // ramSize- biến cục bộ
@@ -19,7 +24,14 @@ public class Computer {
 
 	void setRamProductName(String ramName) {
 		this.ramName = ramName;
+	}
 
+	protected void setCpuProducName(String cpuProduct) {
+		cpuProductName = cpuProduct;
+	}
+
+	public void setVgaSize(int vgaSize) {
+		this.vgaSize = vgaSize;
 	}
 
 	public static void main(String[] args) {
