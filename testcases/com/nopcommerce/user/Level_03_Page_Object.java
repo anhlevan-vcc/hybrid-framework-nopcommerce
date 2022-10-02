@@ -14,11 +14,11 @@ import pageObject.HomePageObject;
 import pageObject.RegisterPageObject;
 
 public class Level_03_Page_Object {
-	WebDriver driver;
-	HomePageObject homePage;
-	RegisterPageObject registerPage;
-	String emailValid, firstName, lastName, password, confirmPassword;
-	String projectPath = System.getProperty("user.dir");
+	private WebDriver driver;
+	private HomePageObject homePage;
+	private RegisterPageObject registerPage;
+	private String emailValid, firstName, lastName, password, confirmPassword;
+	private String projectPath = System.getProperty("user.dir");
 
 	@BeforeClass
 	public void beforeClass() {
@@ -26,13 +26,15 @@ public class Level_03_Page_Object {
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
+		driver.get("https://demo.nopcommerce.com/");
+		homePage = new HomePageObject(driver);
+		registerPage = new RegisterPageObject(driver);
 
 		firstName = "Automation";
 		lastName = "FC";
 		password = "123456";
 		confirmPassword = "123456";
 		emailValid = "Automation" + generateRandomNumber() + "@gmail.com";
-		driver.get("https://demo.nopcommerce.com/");
 	}
 
 	@Test
