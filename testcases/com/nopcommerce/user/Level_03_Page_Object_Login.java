@@ -42,7 +42,7 @@ public class Level_03_Page_Object_Login {
 	}
 
 	@Test
-	public void TC_01_Login_Empty_Data() {
+	public void Login_01_Empty_Data() {
 
 		homePage.clickToLoginLink();
 		loginPage.clickToLoginButton();
@@ -51,7 +51,7 @@ public class Level_03_Page_Object_Login {
 	}
 
 	@Test
-	public void TC_02_Login_Invalid_Email() {
+	public void Login_02_Invalid_Email() {
 		homePage.clickToLoginLink();
 		loginPage.inputToEmailTextbox("123@123@123");
 		loginPage.clickToLoginButton();
@@ -61,7 +61,7 @@ public class Level_03_Page_Object_Login {
 	}
 
 	@Test
-	public void TC_03_Login_Existing_Email() {
+	public void Login_03_Existing_Email() {
 		homePage.clickToLoginLink();
 		loginPage.inputToEmailTextbox("Anhanh@hotmail.com");
 		loginPage.inputToPasswordTextbox("123456");
@@ -72,7 +72,7 @@ public class Level_03_Page_Object_Login {
 	}
 
 	@Test
-	public void TC_04_Login_Empty_Password() {
+	public void Login_04_Empty_Password() {
 		homePage.clickToRegisterLink();
 		registerPage.inputToFirstnameTextbox(firstName);
 		registerPage.inputToLastnameTextbox(lastName);
@@ -92,7 +92,7 @@ public class Level_03_Page_Object_Login {
 	}
 
 	@Test
-	public void TC_05_Login_Invalid_Password() {
+	public void Login_05_Invalid_Password() {
 		homePage.clickToLoginLink();
 
 		loginPage.inputToEmailTextbox(emailValid);
@@ -105,7 +105,7 @@ public class Level_03_Page_Object_Login {
 	}
 
 	@Test
-	public void TC_06_Login_Success() {
+	public void Login_06_Success() {
 
 		homePage.clickToLoginLink();
 
