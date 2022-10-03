@@ -64,8 +64,7 @@ public class Level_02_Apply_BasePage_Login extends BasePage {
 		waitForElementClickable(driver, "//button[text()= 'Log in']");
 		clickToElement(driver, "//button[text()= 'Log in']");
 
-		Assert.assertEquals(getElementText(driver, "//div[contains(@class,'message-error')]"),
-				"Login was unsuccessful. Please correct the errors and try again.\nNo customer account found");
+		Assert.assertEquals(getElementText(driver, "//div[contains(@class,'message-error')]"), "Login was unsuccessful. Please correct the errors and try again.\nNo customer account found");
 
 	}
 
@@ -96,8 +95,7 @@ public class Level_02_Apply_BasePage_Login extends BasePage {
 		waitForElementClickable(driver, "//button[text()= 'Log in']");
 		clickToElement(driver, "//button[text()= 'Log in']");
 
-		Assert.assertEquals(getElementText(driver, "//div[contains(@class,'message-error')]"),
-				"Login was unsuccessful. Please correct the errors and try again.\nThe credentials provided are incorrect");
+		Assert.assertEquals(getElementText(driver, "//div[contains(@class,'message-error')]"), "Login was unsuccessful. Please correct the errors and try again.\nThe credentials provided are incorrect");
 
 	}
 
@@ -112,8 +110,7 @@ public class Level_02_Apply_BasePage_Login extends BasePage {
 		waitForElementClickable(driver, "//button[text()= 'Log in']");
 		clickToElement(driver, "//button[text()= 'Log in']");
 
-		Assert.assertEquals(getElementText(driver, "//div[contains(@class,'message-error')]"),
-				"Login was unsuccessful. Please correct the errors and try again.\nThe credentials provided are incorrect");
+		Assert.assertEquals(getElementText(driver, "//div[contains(@class,'message-error')]"), "Login was unsuccessful. Please correct the errors and try again.\nThe credentials provided are incorrect");
 
 	}
 
