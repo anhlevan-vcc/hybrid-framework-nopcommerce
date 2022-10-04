@@ -23,9 +23,9 @@ public class LoginPageObject extends BasePage {
 		return getElementText(driver, LoginPageUI.EMAIL_ERROR_MESSAGE);
 	}
 
-	public void inputToEmailTextbox(String email) {
+	public void inputToEmailTextbox(String invalidEmail) {
 		waitForElementVisible(driver, LoginPageUI.EMAIL_TEXTBOX);
-		sendkeyToElement(driver, LoginPageUI.EMAIL_TEXTBOX, email);
+		sendkeyToElement(driver, LoginPageUI.EMAIL_TEXTBOX, invalidEmail);
 
 	}
 

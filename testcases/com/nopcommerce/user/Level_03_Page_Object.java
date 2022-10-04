@@ -28,7 +28,6 @@ public class Level_03_Page_Object {
 		driver.manage().window().maximize();
 		driver.get("https://demo.nopcommerce.com/");
 		homePage = new HomePageObject(driver);
-		registerPage = new RegisterPageObject(driver);
 
 		firstName = "Automation";
 		lastName = "FC";
@@ -42,6 +41,9 @@ public class Level_03_Page_Object {
 
 		System.out.println("Register_01 - Step 01: Click to Register link");
 		homePage.clickToRegisterLink();
+
+		// Từ trang A nhảy qua trang B thì mới khởi tạo
+		registerPage = new RegisterPageObject(driver);
 
 		System.out.println("Register_01 - Step 02: Click to Register Button");
 		registerPage.clickToRegisterButton();
@@ -59,6 +61,8 @@ public class Level_03_Page_Object {
 	public void Register_02_Invalid_Email() {
 		System.out.println("Register_02 - Step 01: Click to Register link");
 		homePage.clickToRegisterLink();
+
+		registerPage = new RegisterPageObject(driver);
 
 		System.out.println("Register_02 - Step 02: Input to required fields");
 		registerPage.inputToFirstnameTextbox(firstName);
@@ -79,6 +83,8 @@ public class Level_03_Page_Object {
 	public void Register_03_Success() {
 		System.out.println("Register_03 - Step 01: Click to Register link");
 		homePage.clickToRegisterLink();
+
+		registerPage = new RegisterPageObject(driver);
 
 		System.out.println("Register_03 - Step 02: Input to required fields");
 		registerPage.inputToFirstnameTextbox(firstName);
@@ -103,6 +109,8 @@ public class Level_03_Page_Object {
 		System.out.println("Register_04 - Step 01: Click to Register link");
 		homePage.clickToRegisterLink();
 
+		registerPage = new RegisterPageObject(driver);
+
 		System.out.println("Register_04 - Step 02: Input to required fields");
 		registerPage.inputToFirstnameTextbox(firstName);
 		registerPage.inputToLastnameTextbox(lastName);
@@ -123,6 +131,8 @@ public class Level_03_Page_Object {
 		System.out.println("Register_05 - Step 01: Click to Register link");
 		homePage.clickToRegisterLink();
 
+		registerPage = new RegisterPageObject(driver);
+
 		System.out.println("Register_05 - Step 02: Input to required fields");
 		registerPage.inputToFirstnameTextbox(firstName);
 		registerPage.inputToLastnameTextbox(lastName);
@@ -142,6 +152,8 @@ public class Level_03_Page_Object {
 	public void Register_06_Invalid_Comfirm_Password() {
 		System.out.println("Register_06 - Step 01: Click to Register link");
 		homePage.clickToRegisterLink();
+
+		registerPage = new RegisterPageObject(driver);
 
 		System.out.println("Register_06 - Step 02: Input to required fields");
 		registerPage.inputToFirstnameTextbox(firstName);
