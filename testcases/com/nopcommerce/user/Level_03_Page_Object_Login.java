@@ -135,9 +135,7 @@ public class Level_03_Page_Object_Login {
 
 		loginPage.clickToLoginButton();
 
-		homePage.clickToRegisterLink();
-
-		Assert.assertEquals(loginPage.getMessageSuccess(), "Welcome to our store");
+		Assert.assertEquals(homePage.getMessageSuccess(), "Welcome to our store");
 
 	}
 

@@ -22,4 +22,8 @@ public class HomePageObject extends BasePage {
 		clickToElement(driver, HomePageUI.LOGIN_LINK);
 	}
 
+	public String getMessageSuccess() {
+		waitForElementVisible(driver, HomePageUI.HOME_SUCCESS_MASSAGE);
+		return getElementText(driver, HomePageUI.HOME_SUCCESS_MASSAGE);
+	}
 }

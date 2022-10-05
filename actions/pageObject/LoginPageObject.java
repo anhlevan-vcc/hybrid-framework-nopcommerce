@@ -45,9 +45,4 @@ public class LoginPageObject extends BasePage {
 		return getElementText(driver, LoginPageUI.EXISTING_EMAIL_ERROR_MASSAGE);
 	}
 
-	public String getMessageSuccess() {
-		waitForElementVisible(driver, LoginPageUI.LOGIN_SUCCESS_MASSAGE);
-		return getElementText(driver, LoginPageUI.LOGIN_SUCCESS_MASSAGE);
-	}
-
 }
