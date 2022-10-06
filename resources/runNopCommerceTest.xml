@@ -1,8 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="NopCommerce">
-  <test name="Run on Firefox">
-    <classes>
-      <class name="com.nopcommerce.user.Level_03_Page_Object_Login"/>
-    </classes>
-  </test>
+
+	<test name="Run on Firefox">
+		<parameter name="browser" value="firefox"></parameter>
+    	<classes>
+     		<class name="com.nopcommerce.user.Level_04_Multiple_Browser"/>
+    	</classes>
+  	</test>
+  	
+<!--   	<test name="Run on Headless Firefox"> -->
+<!-- 		<parameter name="browser" value="h_firefox"></parameter> -->
+<!--     	<classes> -->
+<!--      		<class name="com.nopcommerce.user.Level_04_Multiple_Browser"/> -->
+<!--     	</classes> -->
+<!--   	</test> -->
+
+	<test name="Run on Chrome">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.nopcommerce.user.Level_04_Multiple_Browser"></class>
+		</classes>
+	</test>
+	
+<!-- 	<test name="Run on Headless Chrome"> -->
+<!-- 		<parameter name="browser" value="h_chrome"></parameter> -->
+<!-- 		<classes> -->
+<!-- 			<class name="com.nopcommerce.user.Level_04_Multiple_Browser"></class> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
+
+	<test name="Run on Edge">
+		<parameter name="browser" value="edge"></parameter>
+		<classes>
+			<class name="com.nopcommerce.user.Level_04_Multiple_Browser"></class>
+		</classes>
+	</test>
+	
+	<test name="Run on COC COC">
+		<parameter name="browser" value="coccoc"></parameter>
+		<classes>
+			<class name="com.nopcommerce.user.Level_04_Multiple_Browser"></class>
+		</classes>
+	</test>
+	
+	<test name="Run on opera">
+		<parameter name="browser" value="opera"></parameter>
+		<classes>
+			<class name="com.nopcommerce.user.Level_04_Multiple_Browser"></class>
+		</classes>
+	</test>
+	
+	<test name="Run on Brave">
+		<parameter name="browser" value="brave"></parameter>
+		<classes>
+			<class name="com.nopcommerce.user.Level_04_Multiple_Browser"></class>
+		</classes>
+	</test>
 </suite>
