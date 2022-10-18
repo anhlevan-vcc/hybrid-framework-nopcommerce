@@ -114,7 +114,7 @@ public class Level_03_Page_Object_Register {
 		System.out.println("Register_03 - Step 04: Verify message Success displayed");
 		Assert.assertEquals(registerPage.getMessageSuccess(), "Your registration completed");
 
-		System.out.println("Register - Step 05: Click to Logout link");
+		System.out.println("Register_03 - Step 05: Click to Logout link");
 		registerPage.clickToLogoutLink();
 
 	}

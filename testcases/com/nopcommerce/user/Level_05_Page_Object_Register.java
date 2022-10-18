@@ -10,13 +10,13 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import pageObject.HomePageObject;
-import pageObject.RegisterPageObject;
+import pageFactory.HomePageFactory;
+import pageFactory.RegisterPageFactory;
 
 public class Level_05_Page_Object_Register extends BaseTest {
 	private WebDriver driver;
-	private HomePageObject homePage;
-	private RegisterPageObject registerPage;
+	private HomePageFactory homePage;
+	private RegisterPageFactory registerPage;
 	private String emailValid, firstName, lastName, password, confirmPassword;
 
 	@Parameters("browser")
@@ -25,7 +25,7 @@ public class Level_05_Page_Object_Register extends BaseTest {
 		driver = getBrowserDriver(browserName);
 
 		driver.get("https://demo.nopcommerce.com/");
-		homePage = new HomePageObject(driver);
+		homePage = new HomePageFactory(driver);
 
 		firstName = "Automation";
 		lastName = "FC";
@@ -41,7 +41,7 @@ public class Level_05_Page_Object_Register extends BaseTest {
 		homePage.clickToRegisterLink();
 
 		// Từ trang A nhảy qua trang B thì mới khởi tạo
-		registerPage = new RegisterPageObject(driver);
+		registerPage = new RegisterPageFactory(driver);
 
 		System.out.println("Register_01 - Step 02: Click to Register Button");
 		registerPage.clickToRegisterButton();
@@ -60,7 +60,7 @@ public class Level_05_Page_Object_Register extends BaseTest {
 		System.out.println("Register_02 - Step 01: Click to Register link");
 		homePage.clickToRegisterLink();
 
-		registerPage = new RegisterPageObject(driver);
+		registerPage = new RegisterPageFactory(driver);
 
 		System.out.println("Register_02 - Step 02: Input to required fields");
 		registerPage.inputToFirstnameTextbox(firstName);
@@ -82,7 +82,7 @@ public class Level_05_Page_Object_Register extends BaseTest {
 		System.out.println("Register_03 - Step 01: Click to Register link");
 		homePage.clickToRegisterLink();
 
-		registerPage = new RegisterPageObject(driver);
+		registerPage = new RegisterPageFactory(driver);
 
 		System.out.println("Register_03 - Step 02: Input to required fields");
 		registerPage.inputToFirstnameTextbox(firstName);
@@ -97,7 +97,7 @@ public class Level_05_Page_Object_Register extends BaseTest {
 		System.out.println("Register_03 - Step 04: Verify message Success displayed");
 		Assert.assertEquals(registerPage.getMessageSuccess(), "Your registration completed");
 
-		System.out.println("Register - Step 05: Click to Logout link");
+		System.out.println("Register_03 - Step 05: Click to Logout link");
 		registerPage.clickToLogoutLink();
 
 	}
@@ -107,7 +107,7 @@ public class Level_05_Page_Object_Register extends BaseTest {
 		System.out.println("Register_04 - Step 01: Click to Register link");
 		homePage.clickToRegisterLink();
 
-		registerPage = new RegisterPageObject(driver);
+		registerPage = new RegisterPageFactory(driver);
 
 		System.out.println("Register_04 - Step 02: Input to required fields");
 		registerPage.inputToFirstnameTextbox(firstName);
@@ -129,7 +129,7 @@ public class Level_05_Page_Object_Register extends BaseTest {
 		System.out.println("Register_05 - Step 01: Click to Register link");
 		homePage.clickToRegisterLink();
 
-		registerPage = new RegisterPageObject(driver);
+		registerPage = new RegisterPageFactory(driver);
 
 		System.out.println("Register_05 - Step 02: Input to required fields");
 		registerPage.inputToFirstnameTextbox(firstName);
@@ -151,7 +151,7 @@ public class Level_05_Page_Object_Register extends BaseTest {
 		System.out.println("Register_06 - Step 01: Click to Register link");
 		homePage.clickToRegisterLink();
 
-		registerPage = new RegisterPageObject(driver);
+		registerPage = new RegisterPageFactory(driver);
 
 		System.out.println("Register_06 - Step 02: Input to required fields");
 		registerPage.inputToFirstnameTextbox(firstName);
