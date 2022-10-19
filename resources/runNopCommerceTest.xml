@@ -4,7 +4,7 @@
 	<test name="Run on Firefox">
 		<parameter name="browser" value="firefox"></parameter>
     	<classes>
-     		<class name="com.nopcommerce.user.Level_05_Page_Object_Register"/>
+     		<class name="com.nopcommerce.user.Level_06_Page_Generator_Manager_III"/>
     	</classes>
   	</test>
   	
@@ -15,12 +15,12 @@
 <!--     	</classes> -->
 <!--   	</test> -->
 
-	<test name="Run on Chrome">
-		<parameter name="browser" value="chrome"></parameter>
-		<classes>
-			<class name="com.nopcommerce.user.Level_05_Page_Object_Register"></class>
-		</classes>
-	</test>
+<!--	<test name="Run on Chrome">-->
+<!--		<parameter name="browser" value="chrome"></parameter>-->
+<!--		<classes>-->
+<!--			<class name="com.nopcommerce.user.Level_06_Page_Generator_Manager_I"></class>-->
+<!--		</classes>-->
+<!--	</test>-->
 	
 <!-- 	<test name="Run on Headless Chrome"> -->
 <!-- 		<parameter name="browser" value="h_chrome"></parameter> -->

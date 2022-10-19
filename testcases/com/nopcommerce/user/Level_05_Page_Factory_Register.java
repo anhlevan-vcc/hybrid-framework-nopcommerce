@@ -13,7 +13,7 @@ import commons.BaseTest;
 import pageFactory.HomePageFactory;
 import pageFactory.RegisterPageFactory;
 
-public class Level_05_Page_Object_Register extends BaseTest {
+public class Level_05_Page_Factory_Register extends BaseTest {
 	private WebDriver driver;
 	private HomePageFactory homePage;
 	private RegisterPageFactory registerPage;
