@@ -16,6 +16,17 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import pageObject.AddressPageObject;
+import pageObject.BackInStockSubscriptionsPageObject;
+import pageObject.ChangePasswordPageObject;
+import pageObject.CustomerInfoPageObject;
+import pageObject.DownloadableProductsPageObject;
+import pageObject.MyProductReviewPageObject;
+import pageObject.OrdersPageObject;
+import pageObject.PageGeneratorManager;
+import pageObject.RewardPointPageObject;
+import pageUIs.BasePageUI;
+
 public class BasePage {
 
 	public static BasePage getBasePageObject() {
@@ -324,4 +335,53 @@ public class BasePage {
 	}
 
 	private long longTimeout = 30;
+
+	public CustomerInfoPageObject openCustomerInfoPage(WebDriver driver) {
+		waitForElementClickable(driver, BasePageUI.CUSTOMERINFO_LINK);
+		clickToElement(driver, BasePageUI.CUSTOMERINFO_LINK);
+		return PageGeneratorManager.getCustomerInfoPage(driver);
+	}
+
+	public AddressPageObject openAddressPage(WebDriver driver) {
+		waitForElementClickable(driver, BasePageUI.ADDRESS_LINK);
+		clickToElement(driver, BasePageUI.ADDRESS_LINK);
+		return PageGeneratorManager.getAddressPage(driver);
+	}
+
+	public OrdersPageObject openOrdersPage(WebDriver driver) {
+		waitForElementClickable(driver, BasePageUI.ORDERS_LINK);
+		clickToElement(driver, BasePageUI.ORDERS_LINK);
+		return PageGeneratorManager.getOrdersPage(driver);
+	}
+
+	public DownloadableProductsPageObject openDownloadableProductsPage(WebDriver driver) {
+		waitForElementClickable(driver, BasePageUI.DOWNLOADABLE_PRODUCT_LINK);
+		clickToElement(driver, BasePageUI.DOWNLOADABLE_PRODUCT_LINK);
+		return PageGeneratorManager.getDownloadableProductsPage(driver);
+	}
+
+	public BackInStockSubscriptionsPageObject openBackInStockSubscriptionsPage(WebDriver driver) {
+		waitForElementClickable(driver, BasePageUI.BACK_IN_STOCK_SUB_LINK);
+		clickToElement(driver, BasePageUI.BACK_IN_STOCK_SUB_LINK);
+		return PageGeneratorManager.getBackInStockSubscriptionsPage(driver);
+	}
+
+	public RewardPointPageObject openRewardPointPage(WebDriver driver) {
+		waitForElementClickable(driver, BasePageUI.REWARDPOINT_LINK);
+		clickToElement(driver, BasePageUI.REWARDPOINT_LINK);
+		return PageGeneratorManager.getRewardPointPage(driver);
+	}
+
+	public ChangePasswordPageObject openChangePasswordPage(WebDriver driver) {
+		waitForElementClickable(driver, BasePageUI.CHANGE_PASSWORD_LINK);
+		clickToElement(driver, BasePageUI.CHANGE_PASSWORD_LINK);
+		return PageGeneratorManager.getChangePasswordPage(driver);
+	}
+
+	public MyProductReviewPageObject openMyProductReviewPage(WebDriver driver) {
+		waitForElementClickable(driver, BasePageUI.MYPRODUCTREVIEW_LINK);
+		clickToElement(driver, BasePageUI.MYPRODUCTREVIEW_LINK);
+		return PageGeneratorManager.getMyProductReviewPage(driver);
+	}
+
 }

@@ -54,7 +54,7 @@ public class Level_03_Page_Object_Login {
 		password = "123456";
 
 		System.out.println("Pre-Condition - Step 01: Click to Register link");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 
 		registerPage = new RegisterPageObject(driver);
 
@@ -81,7 +81,7 @@ public class Level_03_Page_Object_Login {
 	@Test
 	public void Login_01_Empty_Data() {
 
-		homePage.clickToLoginLink();
+		homePage.openLoginPage();
 		loginPage = new LoginPageObject(driver);
 
 		loginPage.clickToLoginButton();
@@ -91,7 +91,7 @@ public class Level_03_Page_Object_Login {
 
 	@Test
 	public void Login_02_Invalid_Email() {
-		homePage.clickToLoginLink();
+		homePage.openLoginPage();
 		loginPage = new LoginPageObject(driver);
 
 		loginPage.inputToEmailTextbox(invalidEmail);
@@ -103,7 +103,7 @@ public class Level_03_Page_Object_Login {
 
 	@Test
 	public void Login_03_Not_Found_Email() {
-		homePage.clickToLoginLink();
+		homePage.openLoginPage();
 		loginPage = new LoginPageObject(driver);
 
 		loginPage.inputToEmailTextbox(notFoundEmail);
@@ -116,7 +116,7 @@ public class Level_03_Page_Object_Login {
 
 	@Test
 	public void Login_04_Empty_Password() {
-		homePage.clickToLoginLink();
+		homePage.openLoginPage();
 		loginPage = new LoginPageObject(driver);
 
 		loginPage.inputToEmailTextbox(validEmail);
@@ -128,7 +128,7 @@ public class Level_03_Page_Object_Login {
 
 	@Test
 	public void Login_05_Invalid_Password() {
-		homePage.clickToLoginLink();
+		homePage.openLoginPage();
 		loginPage = new LoginPageObject(driver);
 
 		loginPage.inputToEmailTextbox(validEmail);
@@ -142,7 +142,7 @@ public class Level_03_Page_Object_Login {
 
 	@Test
 	public void Login_06_Success() {
-		homePage.clickToLoginLink();
+		homePage.openLoginPage();
 		loginPage = new LoginPageObject(driver);
 
 		loginPage.inputToEmailTextbox(validEmail);

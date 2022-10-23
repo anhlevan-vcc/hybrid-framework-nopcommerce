@@ -55,7 +55,7 @@ public class Level_03_Page_Object_Register {
 	public void Register_01_Empty_Data() {
 
 		System.out.println("Register_01 - Step 01: Click to Register link");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 
 		// Từ trang A nhảy qua trang B thì mới khởi tạo
 		registerPage = new RegisterPageObject(driver);
@@ -75,7 +75,7 @@ public class Level_03_Page_Object_Register {
 	@Test
 	public void Register_02_Invalid_Email() {
 		System.out.println("Register_02 - Step 01: Click to Register link");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 
 		registerPage = new RegisterPageObject(driver);
 
@@ -97,7 +97,7 @@ public class Level_03_Page_Object_Register {
 	@Test
 	public void Register_03_Success() {
 		System.out.println("Register_03 - Step 01: Click to Register link");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 
 		registerPage = new RegisterPageObject(driver);
 
@@ -122,7 +122,7 @@ public class Level_03_Page_Object_Register {
 	@Test
 	public void Register_04_Existing_Email() {
 		System.out.println("Register_04 - Step 01: Click to Register link");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 
 		registerPage = new RegisterPageObject(driver);
 
@@ -144,7 +144,7 @@ public class Level_03_Page_Object_Register {
 	@Test
 	public void Register_05_Password_Less_Than_6_Chars() {
 		System.out.println("Register_05 - Step 01: Click to Register link");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 
 		registerPage = new RegisterPageObject(driver);
 
@@ -166,7 +166,7 @@ public class Level_03_Page_Object_Register {
 	@Test
 	public void Register_06_Invalid_Comfirm_Password() {
 		System.out.println("Register_06 - Step 01: Click to Register link");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 
 		registerPage = new RegisterPageObject(driver);
 
