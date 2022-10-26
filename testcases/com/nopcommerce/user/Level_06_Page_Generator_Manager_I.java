@@ -8,15 +8,15 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import pageObject.HomePageObject;
-import pageObject.LoginPageObject;
-import pageObject.RegisterPageObject;
+import pageObject.nopCommerce.user.UserHomePageObject;
+import pageObject.nopCommerce.user.UserLoginPageObject;
+import pageObject.nopCommerce.user.UserRegisterPageObject;
 
 public class Level_06_Page_Generator_Manager_I extends BaseTest {
 	private WebDriver driver;
-	private HomePageObject homePage;
-	private LoginPageObject loginPage;
-	private RegisterPageObject registerPage;
+	private UserHomePageObject homePage;
+	private UserLoginPageObject loginPage;
+	private UserRegisterPageObject registerPage;
 	private String validEmail, invalidEmail, notFoundEmail, firstName, lastName, password;
 
 	@Parameters("browser")
@@ -25,7 +25,7 @@ public class Level_06_Page_Generator_Manager_I extends BaseTest {
 		driver = getBrowserDriver(browserName);
 
 		// 1
-		homePage = new HomePageObject(driver);
+		homePage = new UserHomePageObject(driver);
 
 		firstName = "Automation";
 		lastName = "FC";
@@ -38,7 +38,7 @@ public class Level_06_Page_Generator_Manager_I extends BaseTest {
 		homePage.openRegisterPage();
 
 		// 2
-		registerPage = new RegisterPageObject(driver);
+		registerPage = new UserRegisterPageObject(driver);
 
 		System.out.println("Pre-Condition - Step 02: Input to required fields");
 		registerPage.inputToFirstnameTextbox(firstName);
@@ -58,7 +58,7 @@ public class Level_06_Page_Generator_Manager_I extends BaseTest {
 
 		// Click logout thì về trang hôm
 		// 3
-		homePage = new HomePageObject(driver);
+		homePage = new UserHomePageObject(driver);
 	}
 
 	@Test
@@ -67,7 +67,7 @@ public class Level_06_Page_Generator_Manager_I extends BaseTest {
 		homePage.openLoginPage();
 
 		// 4
-		loginPage = new LoginPageObject(driver);
+		loginPage = new UserLoginPageObject(driver);
 
 		loginPage.clickToLoginButton();
 		Assert.assertEquals(loginPage.getErrorMassageEmailTextbox(), "Please enter your email");
@@ -79,7 +79,7 @@ public class Level_06_Page_Generator_Manager_I extends BaseTest {
 		homePage.openLoginPage();
 
 		// 5
-		loginPage = new LoginPageObject(driver);
+		loginPage = new UserLoginPageObject(driver);
 
 		loginPage.inputToEmailTextbox(invalidEmail);
 		loginPage.clickToLoginButton();
@@ -93,7 +93,7 @@ public class Level_06_Page_Generator_Manager_I extends BaseTest {
 		homePage.openLoginPage();
 
 		// 6
-		loginPage = new LoginPageObject(driver);
+		loginPage = new UserLoginPageObject(driver);
 
 		loginPage.inputToEmailTextbox(notFoundEmail);
 		loginPage.inputToPasswordTextbox(password);
@@ -108,7 +108,7 @@ public class Level_06_Page_Generator_Manager_I extends BaseTest {
 		homePage.openLoginPage();
 
 		// 7
-		loginPage = new LoginPageObject(driver);
+		loginPage = new UserLoginPageObject(driver);
 
 		loginPage.inputToEmailTextbox(validEmail);
 		loginPage.clickToLoginButton();
@@ -122,7 +122,7 @@ public class Level_06_Page_Generator_Manager_I extends BaseTest {
 		homePage.openLoginPage();
 
 		// 8
-		loginPage = new LoginPageObject(driver);
+		loginPage = new UserLoginPageObject(driver);
 
 		loginPage.inputToEmailTextbox(validEmail);
 		loginPage.inputToPasswordTextbox("101010");
@@ -138,7 +138,7 @@ public class Level_06_Page_Generator_Manager_I extends BaseTest {
 		homePage.openLoginPage();
 
 		// 9
-		loginPage = new LoginPageObject(driver);
+		loginPage = new UserLoginPageObject(driver);
 
 		loginPage.inputToEmailTextbox(validEmail);
 		loginPage.inputToPasswordTextbox(password);
@@ -147,7 +147,7 @@ public class Level_06_Page_Generator_Manager_I extends BaseTest {
 
 		// Login thanh cong ve trang Home
 		// 10
-		homePage = new HomePageObject(driver);
+		homePage = new UserHomePageObject(driver);
 
 		Assert.assertEquals(homePage.getMessageSuccess(), "Welcome to our store");
 

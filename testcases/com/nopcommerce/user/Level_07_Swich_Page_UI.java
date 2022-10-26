@@ -8,32 +8,32 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import pageObject.HomePageObject;
-import pageObject.LoginPageObject;
-import pageObject.MyProductReviewPageObject;
-import pageObject.OrdersPageObject;
-import pageObject.AddressPageObject;
-import pageObject.BackInStockSubscriptionsPageObject;
-import pageObject.ChangePasswordPageObject;
-import pageObject.CustomerInfoPageObject;
-import pageObject.DownloadableProductsPageObject;
-import pageObject.PageGeneratorManager;
-import pageObject.RegisterPageObject;
-import pageObject.RewardPointPageObject;
+import commons.PageGeneratorManager;
+import pageObject.nopCommerce.user.UserAddressPageObject;
+import pageObject.nopCommerce.user.UserBackInStockSubscriptionsPageObject;
+import pageObject.nopCommerce.user.UserChangePasswordPageObject;
+import pageObject.nopCommerce.user.UserCustomerInfoPageObject;
+import pageObject.nopCommerce.user.UserDownloadableProductsPageObject;
+import pageObject.nopCommerce.user.UserHomePageObject;
+import pageObject.nopCommerce.user.UserLoginPageObject;
+import pageObject.nopCommerce.user.UserMyProductReviewPageObject;
+import pageObject.nopCommerce.user.UserOrdersPageObject;
+import pageObject.nopCommerce.user.UserRegisterPageObject;
+import pageObject.nopCommerce.user.UserRewardPointPageObject;
 
 public class Level_07_Swich_Page_UI extends BaseTest {
 	private WebDriver driver;
-	private HomePageObject homePage;
-	private LoginPageObject loginPage;
-	private RegisterPageObject registerPage;
-	private CustomerInfoPageObject customerinfoPage;
-	private AddressPageObject addressPage;
-	private MyProductReviewPageObject myProductReviewPage;
-	private RewardPointPageObject rewardPointPage;
-	private OrdersPageObject ordersPage;
-	private DownloadableProductsPageObject downloadableProductsPage;
-	private BackInStockSubscriptionsPageObject backInStockSubscriptionsPage;
-	private ChangePasswordPageObject changePasswordPage;
+	private UserHomePageObject homePage;
+	private UserLoginPageObject loginPage;
+	private UserRegisterPageObject registerPage;
+	private UserCustomerInfoPageObject customerinfoPage;
+	private UserAddressPageObject addressPage;
+	private UserMyProductReviewPageObject myProductReviewPage;
+	private UserRewardPointPageObject rewardPointPage;
+	private UserOrdersPageObject ordersPage;
+	private UserDownloadableProductsPageObject downloadableProductsPage;
+	private UserBackInStockSubscriptionsPageObject backInStockSubscriptionsPage;
+	private UserChangePasswordPageObject changePasswordPage;
 
 	private String validEmail, firstName, lastName, password;
 
@@ -42,7 +42,7 @@ public class Level_07_Swich_Page_UI extends BaseTest {
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName);
 
-		homePage = PageGeneratorManager.getHomePage(driver);
+		homePage = PageGeneratorManager.getUserHomePage(driver);
 
 		firstName = "Automation";
 		lastName = "FC";
