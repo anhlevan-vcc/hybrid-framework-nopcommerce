@@ -21,9 +21,11 @@ import pageObject.nopCommerce.user.UserBackInStockSubscriptionsPageObject;
 import pageObject.nopCommerce.user.UserChangePasswordPageObject;
 import pageObject.nopCommerce.user.UserCustomerInfoPageObject;
 import pageObject.nopCommerce.user.UserDownloadableProductsPageObject;
+import pageObject.nopCommerce.user.UserHomePageObject;
 import pageObject.nopCommerce.user.UserMyProductReviewPageObject;
 import pageObject.nopCommerce.user.UserOrdersPageObject;
 import pageObject.nopCommerce.user.UserRewardPointPageObject;
+import pageObjects.nopCommerce.admin.AdminLoginPageObject;
 import pageUIs.nopCommerce.user.BasePageUI;
 
 public class BasePage {
@@ -299,8 +301,7 @@ public class BasePage {
 
 	protected boolean isImageLoaded(WebDriver driver, String xpathLocator) {
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-		boolean status = (boolean) jsExecutor.executeScript("return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0",
-				getWebElement(driver, xpathLocator));
+		boolean status = (boolean) jsExecutor.executeScript("return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", getWebElement(driver, xpathLocator));
 		if (status) {
 			return true;
 		} else {
@@ -383,4 +384,15 @@ public class BasePage {
 		return PageGeneratorManager.getUserMyProductReviewPage(driver);
 	}
 
+	public UserHomePageObject clickToLogoutLinkAtUserPage(WebDriver driver) {
+		waitForElementClickable(driver, BasePageUI.LOGOUT_LINK_AT_USER);
+		clickToElement(driver, BasePageUI.LOGOUT_LINK_AT_USER);
+		return PageGeneratorManager.getUserHomePage(driver);
+	}
+
+	public AdminLoginPageObject clickToLogoutLinkAtAdminPage(WebDriver driver) {
+		waitForElementClickable(driver, BasePageUI.LOGOUT_LINK_AT_ADMIN);
+		clickToElement(driver, BasePageUI.LOGOUT_LINK_AT_ADMIN);
+		return PageGeneratorManager.getAdminLoginPage(driver);
+	}
 }

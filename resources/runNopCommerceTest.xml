@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="NopCommerce">
 
-	<test name="Run on Firefox">
-		<parameter name="browser" value="firefox"></parameter>
-    	<classes>
-     		<class name="com.nopcommerce.user.Level_08_Swich_Role"/>
-    	</classes>
-  	</test>
+<!-- 	<test name="Run on Firefox"> -->
+<!-- 		<parameter name="browser" value="firefox"></parameter> -->
+<!--     	<classes> -->
+<!--      		<class name="com.nopcommerce.user.Level_08_Swich_Role"/> -->
+<!--     	</classes> -->
+<!--   	</test> -->
   	
 <!--   	<test name="Run on Headless Firefox"> -->
 <!-- 		<parameter name="browser" value="h_firefox"></parameter> -->
@@ -15,12 +15,12 @@
 <!--     	</classes> -->
 <!--   	</test> -->
 
-<!--	<test name="Run on Chrome">-->
-<!--		<parameter name="browser" value="chrome"></parameter>-->
-<!--		<classes>-->
-<!--			<class name="com.nopcommerce.user.Level_06_Page_Generator_Manager_I"></class>-->
-<!--		</classes>-->
-<!--	</test>-->
+	<test name="Run on Chrome">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.nopcommerce.user.Level_08_Swich_Role"></class>
+		</classes>
+	</test>
 	
 <!-- 	<test name="Run on Headless Chrome"> -->
 <!-- 		<parameter name="browser" value="h_chrome"></parameter> -->

@@ -30,7 +30,7 @@ public class UserHomePageObject extends BasePage {
 		return getElementText(driver, HomePageUI.HOME_SUCCESS_MASSAGE);
 	}
 
-	public UserCustomerInfoPageObject openMyAccountPage() {
+	public UserCustomerInfoPageObject openMyAccountCustomerInfoPage() {
 		waitForElementVisible(driver, HomePageUI.MY_ACCOUNT_lINK);
 		clickToElement(driver, HomePageUI.MY_ACCOUNT_lINK);
 		return PageGeneratorManager.getUserCustomerInfoPage(driver);

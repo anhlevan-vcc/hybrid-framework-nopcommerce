@@ -77,7 +77,7 @@ public class Level_07_Swich_Page_UI extends BaseTest {
 
 	@Test
 	public void User_03_MyAccount() {
-		customerinfoPage = homePage.openMyAccountPage();
+		customerinfoPage = homePage.openMyAccountCustomerInfoPage();
 		customerinfoPage.clickToNewsletterCheckbox();
 	}
 

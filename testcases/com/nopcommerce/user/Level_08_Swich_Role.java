@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 import commons.BaseTest;
 import commons.GlobalConstants;
 import commons.PageGeneratorManager;
+import pageObject.nopCommerce.user.UserCustomerInfoPageObject;
 import pageObject.nopCommerce.user.UserHomePageObject;
 import pageObject.nopCommerce.user.UserLoginPageObject;
 import pageObject.nopCommerce.user.UserRegisterPageObject;
@@ -21,6 +22,7 @@ public class Level_08_Swich_Role extends BaseTest {
 	private UserHomePageObject userHomePage;
 	private UserLoginPageObject userLoginPage;
 	private UserRegisterPageObject userRegisterPage;
+	private UserCustomerInfoPageObject userCustomerInfoPage;
 	private AdminLoginPageObject adminLoginPage;
 	private AdminDashboardPageObject adminDashboardPage;
 
@@ -57,18 +59,29 @@ public class Level_08_Swich_Role extends BaseTest {
 		userLoginPage = userHomePage.openLoginPage();
 
 		userHomePage = userLoginPage.loginAsUser(userEmailAddress, userPassword);
-
 		Assert.assertEquals(userHomePage.getMessageSuccess(), "Welcome to our store");
 
-	}
+		userCustomerInfoPage = userHomePage.openMyAccountCustomerInfoPage();
+		userHomePage = userCustomerInfoPage.clickToLogoutLinkAtUserPage(driver);
 
-	@Test
-	public void Role_02_Admin() {
 		userHomePage.openPageUrl(driver, GlobalConstants.ADMIN_PAGE_URL);
 		adminLoginPage = PageGeneratorManager.getAdminLoginPage(driver);
 		adminDashboardPage = adminLoginPage.loginAsAdmin(adminEmailAddress, adminPassword);
 
 		Assert.assertTrue(adminDashboardPage.isDashboardHeaderDisplayed());
+
+		adminLoginPage = adminDashboardPage.clickToLogoutLinkAtAdminPage(driver);
+	}
+
+	@Test
+	public void Role_02_Admin() {
+		adminLoginPage.openPageUrl(driver, GlobalConstants.PORTAL_PAGE_URL);
+		userHomePage = PageGeneratorManager.getUserHomePage(driver);
+
+		userLoginPage = userHomePage.openLoginPage();
+		userHomePage = userLoginPage.loginAsUser(userEmailAddress, userPassword);
+		Assert.assertEquals(userHomePage.getMessageSuccess(), "Welcome to our store");
+
 	}
 
 	@AfterClass
