@@ -44,7 +44,7 @@ public class Level_08_Swich_Role extends BaseTest {
 	}
 
 	@Test
-	public void Role_01_User() {
+	public void Role_01_User_To_Admin() {
 		userRegisterPage = userHomePage.openRegisterPage();
 		userRegisterPage.inputToFirstnameTextbox(firstName);
 		userRegisterPage.inputToLastnameTextbox(lastName);
@@ -74,7 +74,7 @@ public class Level_08_Swich_Role extends BaseTest {
 	}
 
 	@Test
-	public void Role_02_Admin() {
+	public void Role_02_Admin_To_User() {
 		adminLoginPage.openPageUrl(driver, GlobalConstants.PORTAL_PAGE_URL);
 		userHomePage = PageGeneratorManager.getUserHomePage(driver);
 
