@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="NopCommerce">
 
- 	<test name="Run on Firefox"> 
-		<parameter name="browser" value="firefox"></parameter>
- 		<classes> 
-    		<class name="com.nopcommerce.user.Level_08_Swich_Role"/> 
-   		</classes> 
-  	</test> 
+<!--  	<test name="Run on Firefox">  -->
+<!-- 		<parameter name="browser" value="firefox"></parameter> -->
+<!--  		<classes>  -->
+<!--     		<class name="com.nopcommerce.user.Level_08_Swich_Role"/>  -->
+<!--    		</classes>  -->
+<!--   	</test>  -->
   	
   	<test name="Run on Chrome"> 
 		<parameter name="browser" value="chrome"></parameter>
  		<classes> 
-    		<class name="com.nopcommerce.user.Level_08_Swich_Role"/> 
+    		<class name="com.nopcommerce.user.Level_07_Swich_Page_UI"/> 
    		</classes> 
   	</test> 
   	
