@@ -11,7 +11,7 @@
   	<test name="Run on Chrome"> 
 		<parameter name="browser" value="chrome"></parameter>
  		<classes> 
-    		<class name="com.nopcommerce.user.Level_07_Swich_Page_UI"/> 
+    		<class name="com.nopcommerce.user.Level_09_Dynamic_Locator"/> 
    		</classes> 
   	</test> 
   	
