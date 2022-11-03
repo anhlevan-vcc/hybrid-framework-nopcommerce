@@ -15,7 +15,7 @@ public class Topic_02_Variable_Property_Method {
 	// Dùng trong phạm vi class hiện tại
 	private static String studentPhone = "0123456";
 
-	// Final variable- không cho gán lại dữ liệu (overead) dùng để cố định dữ liệu
+	// Final variable- không cho gán lại dữ liệu (override) dùng để cố định dữ liệu
 	// Hàm static muốn gọi dùng thì phải thông qua Object New lên để dùng
 	final String country = "Việt Nam";
 

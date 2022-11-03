@@ -10,5 +10,9 @@ public class Topic_02_Global_Instance_Variable {
 
 		System.out.println(Topic_02_Variable_Property_Method.studentAdd);
 		Topic_02_Variable_Property_Method.studentAdd = "HN";
+
+		// Ngoài class thì goi như này Tênclass.tên hàm
+		Topic_03_Method.showcarColor();
+
 	}
 }
