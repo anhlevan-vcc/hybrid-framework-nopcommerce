@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="NopCommerce">
 
-<!--  	<test name="Run on Firefox">  -->
-<!-- 		<parameter name="browser" value="firefox"></parameter> -->
-<!--  		<classes>  -->
-<!--     		<class name="com.nopcommerce.user.Level_08_Swich_Role"/>  -->
-<!--    		</classes>  -->
-<!--   	</test>  -->
-  	
-  	<test name="Run on Chrome"> 
-		<parameter name="browser" value="chrome"></parameter>
+	<parameter name="enviroment" value="DEV"></parameter>
+
+ 	<test name="Run on Firefox"> 
+		<parameter name="browser" value="CHROME"></parameter>
  		<classes> 
     		<class name="com.nopcommerce.user.Level_09_Dynamic_Locator"/> 
    		</classes> 
   	</test> 
+  	
+<!--   	<test name="Run on Chrome">  -->
+<!-- 		<parameter name="browser" value="chrome"></parameter> -->
+<!--  		<classes>  -->
+<!--     		<class name="com.nopcommerce.user.Level_09_Dynamic_Locator"/>  -->
+<!--    		</classes>  -->
+<!--   	</test>  -->
   	
 <!--   	<test name="Run on Headless Firefox"> -->
 <!-- 		<parameter name="browser" value="h_firefox"></parameter> -->
