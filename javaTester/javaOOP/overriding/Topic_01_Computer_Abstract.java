@@ -1,6 +1,6 @@
-package javaOOP;
+package javaOOP.overriding;
 
-public abstract class Computer_Abstract {
+public abstract class Topic_01_Computer_Abstract {
 	public void showComputerInfo() {
 		System.out.println("Ram");
 	}

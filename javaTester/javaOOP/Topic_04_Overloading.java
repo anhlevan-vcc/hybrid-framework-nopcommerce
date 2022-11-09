@@ -13,8 +13,8 @@ public class Topic_04_Overloading {
 
 	public static void main(String[] args) {
 
-		plusMethod(5, 10);
-		plusMethod(5.5, 5.3);
+		System.out.println(plusMethod(5, 10));
+		System.out.println(plusMethod(5.5, 5.3));
 	}
 
 }

@@ -1,6 +1,6 @@
-package javaOOP;
+package javaOOP.overriding;
 
-public class Kethua_Computer_Interface implements Computer_Interface {
+public class Topic_02_Kethua_Computer_Interface implements Topic_02_Computer_Interface {
 	// khi kế thừa Abstract class thì nó bắt Override lại
 	@Override
 	public void showComputerInfo() {

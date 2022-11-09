@@ -45,5 +45,6 @@
 	<classpathentry kind="lib" path="libWebdriverManager/okio-1.14.0.jar"/>
 	<classpathentry kind="lib" path="libWebdriverManager/slf4j-api-1.7.36.jar"/>
 	<classpathentry kind="lib" path="libWebdriverManager/webdrivermanager-5.3.0.jar"/>
+	<classpathentry kind="lib" path="libraries/lombok-1.18.22.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
