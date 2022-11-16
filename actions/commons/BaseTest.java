@@ -18,48 +18,117 @@ public class BaseTest {
 	private WebDriver driver;
 
 	protected WebDriver getBrowserDriver(String browserName) {
-		if (browserName.equals("firefox")) {
-			// System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
+
+		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
+
+		if (browserList == BrowserList.FIREFOX) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 
-		} else if (browserName.equals("h_firefox")) {
+		} else if (browserList == BrowserList.H_FIREFOX) {
 			WebDriverManager.firefoxdriver().setup();
 			FirefoxOptions options = new FirefoxOptions();
 			options.addArguments("--headless");
 			options.addArguments("window-size=1920x1080");
 			driver = new FirefoxDriver(options);
 
-		} else if (browserName.equals("chrome")) {
+		} else if (browserList == BrowserList.CHROME) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 
-		} else if (browserName.equals("h_chrome")) {
+		} else if (browserList == BrowserList.H_CHROME) {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--headless");
 			options.addArguments("window-size=1920x1080");
 			driver = new ChromeDriver(options);
 
-		} else if (browserName.equals("edge")) {
+		} else if (browserList == BrowserList.EDGE) {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 
-		} else if (browserName.equals("opera")) {
+		} else if (browserList == BrowserList.OPERA) {
 			WebDriverManager.operadriver().setup();
 			driver = new OperaDriver();
 
-		} else if (browserName.equals("ie")) {
+		} else if (browserList == BrowserList.IE) {
 			WebDriverManager.iedriver().arch32().setup();
 			driver = new InternetExplorerDriver();
 
-		} else if (browserName.equals("coccoc")) {
+		} else if (browserList == BrowserList.COCCOC) {
+			WebDriverManager.chromedriver().driverVersion("105.0.5195.52").setup();
+			ChromeOptions options = new ChromeOptions();
+			if (GlobalConstants.OS_NAME.startsWith("Windows")) {
+				options.setBinary("C:\\Program Files (x86)\\CocCoc\\Browser\\Application\\browser.exe");
+			} else {
+				options.setBinary("....");
+			}
+			driver = new ChromeDriver(options);
+
+		} else if (browserList == BrowserList.BRAVE) {
+			WebDriverManager.chromedriver().driverVersion("105.0.5195.52").setup();
+			ChromeOptions options = new ChromeOptions();
+			if (GlobalConstants.OS_NAME.startsWith("Windows")) {
+				options.setBinary("C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe");
+			} else {
+				options.setBinary("...");
+			}
+			driver = new ChromeDriver(options);
+
+		} else {
+			throw new RuntimeException("Browser name invalid");
+		}
+		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+		driver.get(GlobalConstants.PORTAL_PAGE_URL);
+		return driver;
+	}
+
+	protected WebDriver getBrowserDriver(String browserName, String environmentName) {
+
+		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
+
+		if (browserList == BrowserList.FIREFOX) {
+			WebDriverManager.firefoxdriver().setup();
+			driver = new FirefoxDriver();
+
+		} else if (browserList == BrowserList.H_FIREFOX) {
+			WebDriverManager.firefoxdriver().setup();
+			FirefoxOptions options = new FirefoxOptions();
+			options.addArguments("--headless");
+			options.addArguments("window-size=1920x1080");
+			driver = new FirefoxDriver(options);
+
+		} else if (browserList == BrowserList.CHROME) {
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver();
+
+		} else if (browserList == BrowserList.H_CHROME) {
+			WebDriverManager.chromedriver().setup();
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--headless");
+			options.addArguments("window-size=1920x1080");
+			driver = new ChromeDriver(options);
+
+		} else if (browserList == BrowserList.EDGE) {
+			WebDriverManager.edgedriver().setup();
+			driver = new EdgeDriver();
+
+		} else if (browserList == BrowserList.OPERA) {
+			WebDriverManager.operadriver().setup();
+			driver = new OperaDriver();
+
+		} else if (browserList == BrowserList.IE) {
+			WebDriverManager.iedriver().arch32().setup();
+			driver = new InternetExplorerDriver();
+
+		} else if (browserList == BrowserList.COCCOC) {
 			WebDriverManager.chromedriver().driverVersion("105.0.5195.52").setup();
 			ChromeOptions options = new ChromeOptions();
 			options.setBinary("C:\\Program Files (x86)\\CocCoc\\Browser\\Application\\browser.exe");
 			driver = new ChromeDriver(options);
 
-		} else if (browserName.equals("brave")) {
+		} else if (browserList == BrowserList.BRAVE) {
 			WebDriverManager.chromedriver().driverVersion("105.0.5195.52").setup();
 			ChromeOptions options = new ChromeOptions();
 			options.setBinary("C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe");
@@ -68,10 +137,85 @@ public class BaseTest {
 		} else {
 			throw new RuntimeException("Browser name invalid");
 		}
-		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-		driver.get("https://demo.nopcommerce.com/");
+		driver.get(getEnvironmentUrl(environmentName));
 		return driver;
+	}
+
+	protected WebDriver getBrowserDriver(String browserName, String envUrl, String urrl) {
+
+		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
+
+		if (browserList == BrowserList.FIREFOX) {
+			WebDriverManager.firefoxdriver().setup();
+			driver = new FirefoxDriver();
+
+		} else if (browserList == BrowserList.H_FIREFOX) {
+			WebDriverManager.firefoxdriver().setup();
+			FirefoxOptions options = new FirefoxOptions();
+			options.addArguments("--headless");
+			options.addArguments("window-size=1920x1080");
+			driver = new FirefoxDriver(options);
+
+		} else if (browserList == BrowserList.CHROME) {
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver();
+
+		} else if (browserList == BrowserList.H_CHROME) {
+			WebDriverManager.chromedriver().setup();
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--headless");
+			options.addArguments("window-size=1920x1080");
+			driver = new ChromeDriver(options);
+
+		} else if (browserList == BrowserList.EDGE) {
+			WebDriverManager.edgedriver().setup();
+			driver = new EdgeDriver();
+
+		} else if (browserList == BrowserList.OPERA) {
+			WebDriverManager.operadriver().setup();
+			driver = new OperaDriver();
+
+		} else if (browserList == BrowserList.IE) {
+			WebDriverManager.iedriver().arch32().setup();
+			driver = new InternetExplorerDriver();
+
+		} else if (browserList == BrowserList.COCCOC) {
+			WebDriverManager.chromedriver().driverVersion("105.0.5195.52").setup();
+			ChromeOptions options = new ChromeOptions();
+			options.setBinary("C:\\Program Files (x86)\\CocCoc\\Browser\\Application\\browser.exe");
+			driver = new ChromeDriver(options);
+
+		} else if (browserList == BrowserList.BRAVE) {
+			WebDriverManager.chromedriver().driverVersion("105.0.5195.52").setup();
+			ChromeOptions options = new ChromeOptions();
+			options.setBinary("C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe");
+			driver = new ChromeDriver(options);
+
+		} else {
+			throw new RuntimeException("Browser name invalid");
+		}
+		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+		driver.get(getEnvironmentUrl(envUrl));
+		return driver;
+	}
+
+	private String getEnvironmentUrl(String severName) {
+		String envUrl = null;
+		EnvironmentList environment = EnvironmentList.valueOf(severName.toUpperCase());
+
+		if (environment == EnvironmentList.DEV) {
+			envUrl = "";
+		} else if (environment == EnvironmentList.TESTING) {
+			envUrl = "https://demo.nopcommerce.com/";
+		} else if (environment == EnvironmentList.STAGING) {
+			envUrl = "";
+		} else if (environment == EnvironmentList.PRODUCTION) {
+			envUrl = "";
+		}
+		return envUrl;
 	}
 
 	protected int generateRandomNumber() {
