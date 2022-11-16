@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="NopCommerce">
+
+	<parameter name="enviroment" value="DEV"></parameter>
+
+ 	<test name="Run on Firefox"> 
+		<parameter name="browser" value="CHROME"></parameter>
+ 		<classes> 
+    		<class name="com.nopcommerce.user.Level_09_Dynamic_Locator"/> 
+   		</classes> 
+  	</test> 
+  	
+</suite>
