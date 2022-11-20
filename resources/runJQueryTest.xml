@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="NopCommerce">
+<suite name="JQuery">
 
-	<parameter name="enviroment" value="DEV"></parameter>
+	<parameter name="url" value="https://www.jqueryscript.net/demo/CRUD-Data-Grid-Plugin-jQuery-Quickgrid/"></parameter>
 
- 	<test name="Run on Firefox"> 
+ 	<test name="Run on Chrome"> 
 		<parameter name="browser" value="CHROME"></parameter>
  		<classes> 
-    		<class name="com.nopcommerce.user.Level_09_Dynamic_Locator"/> 
+    		<class name="com.jquery.datatable.Level_10_Datatable_DataGrid"/> 
    		</classes> 
   	</test> 
   	

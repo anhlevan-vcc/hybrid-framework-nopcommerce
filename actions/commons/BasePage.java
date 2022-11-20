@@ -182,12 +182,12 @@ public class BasePage {
 
 	protected void selectItemInDefaulfDropdown(WebDriver driver, String locatorType, String textItem) {
 		Select select = new Select(getWebElement(driver, locatorType));
-		select.selectByValue(textItem);
+		select.selectByVisibleText(textItem);
 	}
 
 	protected void selectItemInDefaulfDropdown(WebDriver driver, String locatorType, String textItem, String... dynamicValues) {
 		Select select = new Select(getWebElement(driver, getDynamicXpath(locatorType, dynamicValues)));
-		select.selectByValue(textItem);
+		select.selectByVisibleText(textItem);
 	}
 
 	protected String getSelectItemDefaulfDropdown(WebDriver driver, String locatorType) {
@@ -221,7 +221,7 @@ public class BasePage {
 		}
 	}
 
-	protected void sleepInSecond(long timeInSecond) {
+	public void sleepInSecond(long timeInSecond) {
 		try {
 			Thread.sleep(timeInSecond * 1000);
 		} catch (InterruptedException e) {
@@ -392,7 +392,8 @@ public class BasePage {
 
 	protected boolean isImageLoaded(WebDriver driver, String locatorType) {
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-		boolean status = (boolean) jsExecutor.executeScript("return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", getWebElement(driver, locatorType));
+		boolean status = (boolean) jsExecutor.executeScript("return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0",
+				getWebElement(driver, locatorType));
 		if (status) {
 			return true;
 		} else {
@@ -450,7 +451,7 @@ public class BasePage {
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByLocator(getDynamicXpath(locatorType, dynamicValues))));
 	}
 
-	public WebElement findElementHam(WebDriver driver, String locatorType) {
+	public WebElement findElementFluentwait(WebDriver driver, String locatorType) {
 		FluentWait<WebDriver> fluentDriver;
 		fluentDriver = new FluentWait<WebDriver>(driver);
 		fluentDriver.withTimeout(Duration.ofSeconds(allTime)).pollingEvery(Duration.ofSeconds(pollingTime)).ignoring(NoSuchElementException.class);
@@ -462,7 +463,7 @@ public class BasePage {
 		});
 	}
 
-	public WebElement findElementHam(WebDriver driver, String locatorType, String... dynamicValues) {
+	public WebElement findElementFluentwait(WebDriver driver, String locatorType, String... dynamicValues) {
 		FluentWait<WebDriver> fluentDriver;
 		fluentDriver = new FluentWait<WebDriver>(driver);
 		fluentDriver.withTimeout(Duration.ofSeconds(allTime)).pollingEvery(Duration.ofSeconds(pollingTime)).ignoring(NoSuchElementException.class);
@@ -472,6 +473,24 @@ public class BasePage {
 				return driver.findElement(getByLocator(getDynamicXpath(locatorType, dynamicValues)));
 			}
 		});
+	}
+
+	public boolean isPageLoadedSuccess(WebDriver driver) {
+		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+		WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
+		ExpectedCondition<Boolean> jQueryLoad = new ExpectedCondition<Boolean>() {
+			@Override
+			public Boolean apply(WebDriver driver) {
+				return (Boolean) jsExecutor.executeScript("return (window.jQuery!= null) && (jQuery.active === 0);");
+			}
+		};
+		ExpectedCondition<Boolean> jsLoad = new ExpectedCondition<Boolean>() {
+			@Override
+			public Boolean apply(WebDriver driver) {
+				return jsExecutor.executeScript("return document.readyState").toString().equals("complete");
+			}
+		};
+		return explicitWait.until(jQueryLoad) && explicitWait.until(jsLoad);
 	}
 
 	private long allTime;
