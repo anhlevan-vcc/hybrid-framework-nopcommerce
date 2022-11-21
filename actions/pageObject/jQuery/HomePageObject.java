@@ -117,4 +117,44 @@ public class HomePageObject extends BasePage {
 
 		return customColumAllPage;
 	}
+
+	public void enterToTextboxByColumnNameAtRowNumber(String columnName, String rowNumber, String valueToSenkey) {
+		int columnIndex = getElementSize(driver, HomePageUI.COLUMN_INDEX_BY_NAME, columnName) + 1;
+
+		waitForElementVisible(driver, HomePageUI.TEXTBOX_BY_COLUMN_INDEX_AND_ROW_INDEX, rowNumber, String.valueOf(columnIndex));
+		sendkeyToElement(driver, HomePageUI.TEXTBOX_BY_COLUMN_INDEX_AND_ROW_INDEX, valueToSenkey, rowNumber, String.valueOf(columnIndex));
+
+	}
+
+	public void selectDropdownByColumnNameAtRowNumber(String columnName, String rowNumber, String valueToSelect) {
+		int columnIndex = getElementSize(driver, HomePageUI.COLUMN_INDEX_BY_NAME, columnName) + 1;
+
+		waitForElementClickable(driver, HomePageUI.DROPDOWN_BY_COLUMN_INDEX_AND_ROW_INDEX, rowNumber, String.valueOf(columnIndex));
+		selectItemInDefaulfDropdown(driver, HomePageUI.DROPDOWN_BY_COLUMN_INDEX_AND_ROW_INDEX, valueToSelect, rowNumber, String.valueOf(columnIndex));
+
+	}
+
+	public void clickToLoadButton() {
+		waitForElementClickable(driver, HomePageUI.LOAD_BUTTON);
+		clickToElement(driver, HomePageUI.LOAD_BUTTON);
+
+	}
+
+	public void checkToCheckBoxByColumnNameAtRowNumber(String columnName, String rowNumber) {
+		int columnIndex = getElementSize(driver, HomePageUI.COLUMN_INDEX_BY_NAME, columnName) + 1;
+		waitForElementClickable(driver, HomePageUI.CHECKBOX_BY_COLUMN_INDEX_AND_ROW_INDEX, rowNumber, String.valueOf(columnIndex));
+		checkToDefaultCheckboxRadio(driver, HomePageUI.CHECKBOX_BY_COLUMN_INDEX_AND_ROW_INDEX, rowNumber, String.valueOf(columnIndex));
+	}
+
+	public void unCheckToCheckBoxByColumnNameAtRowNumber(String columnName, String rowNumber) {
+		int columnIndex = getElementSize(driver, HomePageUI.COLUMN_INDEX_BY_NAME, columnName) + 1;
+		waitForElementClickable(driver, HomePageUI.CHECKBOX_BY_COLUMN_INDEX_AND_ROW_INDEX, rowNumber, String.valueOf(columnIndex));
+		unCheckToDefaultCheckbox(driver, HomePageUI.CHECKBOX_BY_COLUMN_INDEX_AND_ROW_INDEX, rowNumber, String.valueOf(columnIndex));
+	}
+
+	public void clickToIconByRowNumber(String columnName, String iconNumber) {
+		waitForElementClickable(driver, HomePageUI.ICONNAME_BY_ROW_NUMBER, columnName, iconNumber);
+		clickToElement(driver, HomePageUI.ICONNAME_BY_ROW_NUMBER, columnName, iconNumber);
+	}
+
 }

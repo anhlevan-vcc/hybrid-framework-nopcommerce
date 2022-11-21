@@ -64,7 +64,7 @@ public class Level_10_Datatable_DataGrid extends BaseTest {
 		homePage.inputToHeaderTextboxByLabel("Total", "687522");
 	}
 
-	@Test
+	// @Test
 	public void Table_03_Get_All_Value() {
 		// có thể lưu tất cả dữ liệu lấy ra vào 1 List <String> để so sánh với dữ liệu của 1 file bên ngoài
 		// Đọc dữ liệu của file country.txt ra lưu vào 1 List <String> = Expected value = expectedAllCountryValue
@@ -78,9 +78,41 @@ public class Level_10_Datatable_DataGrid extends BaseTest {
 
 	}
 
+	@Test
+	public void Table_04_Action_At_Any_Row() {
+
+		homePage.clickToLoadButton();
+
+		homePage.enterToTextboxByColumnNameAtRowNumber("Album", "1", "LeAnh");
+		homePage.enterToTextboxByColumnNameAtRowNumber("Artist", "2", "HaNoi");
+		homePage.enterToTextboxByColumnNameAtRowNumber("Year", "3", "1999");
+		homePage.enterToTextboxByColumnNameAtRowNumber("Price", "4", "150");
+
+		homePage.selectDropdownByColumnNameAtRowNumber("Origin", "1", "Japan");
+		homePage.selectDropdownByColumnNameAtRowNumber("Origin", "2", "Hong Kong");
+		homePage.selectDropdownByColumnNameAtRowNumber("Origin", "3", "US");
+
+		homePage.checkToCheckBoxByColumnNameAtRowNumber("With Poster?", "3");
+		homePage.checkToCheckBoxByColumnNameAtRowNumber("With Poster?", "5");
+
+		homePage.unCheckToCheckBoxByColumnNameAtRowNumber("With Poster?", "1");
+		homePage.unCheckToCheckBoxByColumnNameAtRowNumber("With Poster?", "2");
+		homePage.unCheckToCheckBoxByColumnNameAtRowNumber("With Poster?", "4");
+
+		homePage.clickToIconByRowNumber("1", "Insert Row Above");
+		homePage.clickToIconByRowNumber("2", "Move Up");
+		homePage.clickToIconByRowNumber("3", "Move Down");
+		homePage.clickToIconByRowNumber("5", "Remove Current Row");
+		homePage.clickToIconByRowNumber("4", "Remove Current Row");
+		homePage.clickToIconByRowNumber("3", "Remove Current Row");
+		homePage.clickToIconByRowNumber("2", "Remove Current Row");
+		homePage.clickToIconByRowNumber("1", "Remove Current Row");
+
+	}
+
 	@AfterClass
 	public void afterClass() {
-		driver.quit();
+		// driver.quit();
 	}
 
 }

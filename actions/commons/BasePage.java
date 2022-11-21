@@ -278,8 +278,22 @@ public class BasePage {
 		}
 	}
 
+	protected void checkToDefaultCheckboxRadio(WebDriver driver, String locatorType, String... dynamicValues) {
+		WebElement element = getWebElement(driver, getDynamicXpath(locatorType, dynamicValues));
+		if (!element.isSelected()) {
+			element.click();
+		}
+	}
+
 	protected void unCheckToDefaultCheckbox(WebDriver driver, String locatorType) {
 		WebElement element = getWebElement(driver, locatorType);
+		if (element.isSelected()) {
+			element.click();
+		}
+	}
+
+	protected void unCheckToDefaultCheckbox(WebDriver driver, String locatorType, String... dynamicValues) {
+		WebElement element = getWebElement(driver, getDynamicXpath(locatorType, dynamicValues));
 		if (element.isSelected()) {
 			element.click();
 		}
@@ -407,7 +421,8 @@ public class BasePage {
 
 	protected boolean isImageLoaded(WebDriver driver, String locatorType) {
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-		boolean status = (boolean) jsExecutor.executeScript("return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", getWebElement(driver, locatorType));
+		boolean status = (boolean) jsExecutor.executeScript("return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0",
+				getWebElement(driver, locatorType));
 		if (status) {
 			return true;
 		} else {

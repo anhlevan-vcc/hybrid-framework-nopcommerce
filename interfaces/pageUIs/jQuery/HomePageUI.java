@@ -9,4 +9,15 @@ public class HomePageUI {
 	public static final String ALL_ROW_EACH_PAGE = "//tbody//tr";
 	public static final String CUSTOM_ROW_ALL_PAGE = "//tbody//tr//td[@data-key='%s']";
 
+	// index của cột mà mình cần hành động vào
+	public static final String COLUMN_INDEX_BY_NAME = "xpath=//tr//td[text()='%s']//preceding-sibling::td";
+	public static final String TEXTBOX_BY_COLUMN_INDEX_AND_ROW_INDEX = "xpath=//tbody/tr[%s]/td[%s]/input";
+	public static final String DROPDOWN_BY_COLUMN_INDEX_AND_ROW_INDEX = "xpath=//tbody/tr[%s]/td[%s]/select";
+
+	public static final String LOAD_BUTTON = "css=button#btnLoad";
+
+	public static final String CHECKBOX_BY_COLUMN_INDEX_AND_ROW_INDEX = "xpath=//tbody/tr[%s]/td[%s]/input[@type='checkbox']";
+
+	public static final String ICONNAME_BY_ROW_NUMBER = "//tbody/tr[%s]//button[@title='%s']";
+
 }
