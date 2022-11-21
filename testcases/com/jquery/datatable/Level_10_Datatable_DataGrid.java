@@ -1,6 +1,9 @@
 package com.jquery.datatable;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -13,6 +16,8 @@ import pageObject.jQuery.PageGeneratorManager;
 public class Level_10_Datatable_DataGrid extends BaseTest {
 	private WebDriver driver;
 	private HomePageObject homePage;
+	List<String> actualAllCountryValue;
+	List<String> expectedAllCountryValue;
 
 	@Parameters({ "browser", "url" })
 	@BeforeClass
@@ -22,26 +27,54 @@ public class Level_10_Datatable_DataGrid extends BaseTest {
 
 	}
 
-	@Test
+	// @Test
 	public void Table_01_Paging() {
 		homePage.openPagingByPageNumber("10");
 		homePage.sleepInSecond(1);
+		Assert.assertTrue(homePage.isPageNumberActived("10"));
 
 		homePage.openPagingByPageNumber("12");
 		homePage.sleepInSecond(1);
+		Assert.assertTrue(homePage.isPageNumberActived("12"));
 
 		homePage.openPagingByPageNumber("14");
 		homePage.sleepInSecond(1);
+		Assert.assertTrue(homePage.isPageNumberActived("14"));
 
 		homePage.openPagingByPageNumber("16");
 		homePage.sleepInSecond(1);
+		Assert.assertTrue(homePage.isPageNumberActived("16"));
 
 		homePage.openPagingByPageNumber("18");
 		homePage.sleepInSecond(1);
+		Assert.assertTrue(homePage.isPageNumberActived("18"));
+	}
+
+	// @Test
+	public void Table_02_Enter_To_Header() {
+		homePage.refreshCurrentPage(driver);
+		homePage.inputToHeaderTextboxByLabel("Females", "276880");
+		homePage.inputToHeaderTextboxByLabel("Country", "Angola");
+		homePage.inputToHeaderTextboxByLabel("Males", "276472");
+		homePage.inputToHeaderTextboxByLabel("Total", "553353");
+
+		homePage.inputToHeaderTextboxByLabel("Females", "338282");
+		homePage.inputToHeaderTextboxByLabel("Country", "Argentina");
+		homePage.inputToHeaderTextboxByLabel("Males", "349238");
+		homePage.inputToHeaderTextboxByLabel("Total", "687522");
 	}
 
 	@Test
-	public void User_02_Login() {
+	public void Table_03_Get_All_Value() {
+		// có thể lưu tất cả dữ liệu lấy ra vào 1 List <String> để so sánh với dữ liệu của 1 file bên ngoài
+		// Đọc dữ liệu của file country.txt ra lưu vào 1 List <String> = Expected value = expectedAllCountryValue
+		// So sánh 2 list đó có bằng nhau ko
+		homePage.getAllValueEachRowAtAllPage();
+
+		actualAllCountryValue = homePage.getCustomColumAllPage("country");
+		Assert.assertEquals(actualAllCountryValue, expectedAllCountryValue);
+
+		homePage.getCustomColumAllPageNotDuplicate("country");
 
 	}
 
