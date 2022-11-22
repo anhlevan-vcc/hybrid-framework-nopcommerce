@@ -112,7 +112,7 @@ public class Level_10_Datatable_DataGrid extends BaseTest {
 
 	@AfterClass
 	public void afterClass() {
-		// driver.quit();
+		driver.quit();
 	}
 
 }
