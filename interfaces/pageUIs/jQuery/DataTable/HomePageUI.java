@@ -1,4 +1,4 @@
-package pageUIs.jQuery;
+package pageUIs.jQuery.DataTable;
 
 public class HomePageUI {
 	public static final String PAGINATION_PAGE_BY_NUMBER = "//li[@class='qgrd-pagination-page']/a[text()='%s']";

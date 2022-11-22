@@ -1,6 +1,6 @@
 package pageUIs.nopCommerce.user;
 
-public class BasePageUI {
+public class BasePageNopCommerceUI {
 
 	public static final String DYNAMIC_MY_ACCOUNT_PAGE = "//div[@class='side-2']//a[text()= '%s']";
 

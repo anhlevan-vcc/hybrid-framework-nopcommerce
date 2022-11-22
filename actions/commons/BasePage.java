@@ -32,7 +32,8 @@ import pageObject.nopCommerce.user.UserMyProductReviewPageObject;
 import pageObject.nopCommerce.user.UserOrdersPageObject;
 import pageObject.nopCommerce.user.UserRewardPointPageObject;
 import pageObjects.nopCommerce.admin.AdminLoginPageObject;
-import pageUIs.nopCommerce.user.BasePageUI;
+import pageUIs.jQuery.UploadFile.BasePageJQueryUI;
+import pageUIs.nopCommerce.user.BasePageNopCommerceUI;
 
 public class BasePage {
 
@@ -430,6 +431,14 @@ public class BasePage {
 		}
 	}
 
+	protected boolean isImageLoaded(WebDriver driver, String locatorType, String... dynamicValues) {
+		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+		boolean status = (boolean) jsExecutor.executeScript("return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0",
+				getWebElement(driver, getDynamicXpath(locatorType, dynamicValues)));
+		return status;
+
+	}
+
 	protected void waitForElementVisible(WebDriver driver, String locatorType) {
 		WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(getByLocator(locatorType)));
@@ -522,63 +531,79 @@ public class BasePage {
 		return explicitWait.until(jQueryLoad) && explicitWait.until(jsLoad);
 	}
 
+	public void uploadMultipleFiles(WebDriver driver, String... fileNames) {
+		// Đường dẫn thư mục uploadFiles
+		String filePath = GlobalConstants.UPLOAD_FILE;
+
+		// Đường dẫn của tất cả các file
+		// 1 file :hoadao.jpg
+		// Nhiều file thì phai báo thành mảng rồi dùng vòng lặp qua từ giá trị của mảng
+		// String[] fileNames = {"hoadao.jpg","hoahong.jpg","hoamai.jpg","hoasen.jpg",};
+		String fullFileName = "";
+		for (String file : fileNames) {
+			fullFileName = fullFileName + filePath + file + "\n";
+		}
+		fullFileName = fullFileName.trim(); // hàm trim() : dùng cắt bỏ all khoảng trắng ở đầu và cuối của chuỗi
+		getWebElement(driver, BasePageJQueryUI.BUTTON_UPLOAD_FILE).sendKeys(fullFileName);
+	}
+
 	private long allTime;
 	private long pollingTime;
 	private long longTimeout = GlobalConstants.LONG_TIMEOUT;
 
 	// Tối ưu ở bài LV7
 	public UserCustomerInfoPageObject openCustomerInfoPage(WebDriver driver) {
-		waitForElementClickable(driver, BasePageUI.CUSTOMERINFO_LINK);
-		clickToElement(driver, BasePageUI.CUSTOMERINFO_LINK);
+		waitForElementClickable(driver, BasePageNopCommerceUI.CUSTOMERINFO_LINK);
+		clickToElement(driver, BasePageNopCommerceUI.CUSTOMERINFO_LINK);
 		return PageGeneratorManager.getUserCustomerInfoPage(driver);
 	}
 
 	public UserAddressPageObject openAddressPage(WebDriver driver) {
-		waitForElementClickable(driver, BasePageUI.ADDRESS_LINK);
-		clickToElement(driver, BasePageUI.ADDRESS_LINK);
+		waitForElementClickable(driver, BasePageNopCommerceUI.ADDRESS_LINK);
+		clickToElement(driver, BasePageNopCommerceUI.ADDRESS_LINK);
 		return PageGeneratorManager.getUserAddressPage(driver);
 	}
 
 	public UserOrdersPageObject openOrdersPage(WebDriver driver) {
-		waitForElementClickable(driver, BasePageUI.ORDERS_LINK);
-		clickToElement(driver, BasePageUI.ORDERS_LINK);
+		waitForElementClickable(driver, BasePageNopCommerceUI.ORDERS_LINK);
+		clickToElement(driver, BasePageNopCommerceUI.ORDERS_LINK);
 		return PageGeneratorManager.getUserOrdersPage(driver);
 	}
 
 	public UserDownloadableProductsPageObject openDownloadableProductsPage(WebDriver driver) {
-		waitForElementClickable(driver, BasePageUI.DOWNLOADABLE_PRODUCT_LINK);
-		clickToElement(driver, BasePageUI.DOWNLOADABLE_PRODUCT_LINK);
+		waitForElementClickable(driver, BasePageNopCommerceUI.DOWNLOADABLE_PRODUCT_LINK);
+		clickToElement(driver, BasePageNopCommerceUI.DOWNLOADABLE_PRODUCT_LINK);
 		return PageGeneratorManager.getUserDownloadableProductsPage(driver);
 	}
 
 	public UserBackInStockSubscriptionsPageObject openBackInStockSubscriptionsPage(WebDriver driver) {
-		waitForElementClickable(driver, BasePageUI.BACK_IN_STOCK_SUB_LINK);
-		clickToElement(driver, BasePageUI.BACK_IN_STOCK_SUB_LINK);
+		waitForElementClickable(driver, BasePageNopCommerceUI.BACK_IN_STOCK_SUB_LINK);
+		clickToElement(driver, BasePageNopCommerceUI.BACK_IN_STOCK_SUB_LINK);
 		return PageGeneratorManager.getUserBackInStockSubscriptionsPage(driver);
 	}
 
 	public UserRewardPointPageObject openRewardPointPage(WebDriver driver) {
-		waitForElementClickable(driver, BasePageUI.REWARDPOINT_LINK);
-		clickToElement(driver, BasePageUI.REWARDPOINT_LINK);
+		waitForElementClickable(driver, BasePageNopCommerceUI.REWARDPOINT_LINK);
+		clickToElement(driver, BasePageNopCommerceUI.REWARDPOINT_LINK);
 		return PageGeneratorManager.getUserRewardPointPage(driver);
 	}
 
 	public UserChangePasswordPageObject openChangePasswordPage(WebDriver driver) {
-		waitForElementClickable(driver, BasePageUI.CHANGE_PASSWORD_LINK);
-		clickToElement(driver, BasePageUI.CHANGE_PASSWORD_LINK);
+		waitForElementClickable(driver, BasePageNopCommerceUI.CHANGE_PASSWORD_LINK);
+		clickToElement(driver, BasePageNopCommerceUI.CHANGE_PASSWORD_LINK);
 		return PageGeneratorManager.getUserChangePasswordPage(driver);
 	}
 
 	public UserMyProductReviewPageObject openMyProductReviewPage(WebDriver driver) {
-		waitForElementClickable(driver, BasePageUI.MYPRODUCTREVIEW_LINK);
-		clickToElement(driver, BasePageUI.MYPRODUCTREVIEW_LINK);
+		waitForElementClickable(driver, BasePageNopCommerceUI.MYPRODUCTREVIEW_LINK);
+		clickToElement(driver, BasePageNopCommerceUI.MYPRODUCTREVIEW_LINK);
 		return PageGeneratorManager.getUserMyProductReviewPage(driver);
 	}
 
 	// tối ưu ở bài LV9
 	public BasePage openPageAtMyAccountByName(WebDriver driver, String pageName) {
-		waitForElementClickable(driver, BasePageUI.DYNAMIC_MY_ACCOUNT_PAGE, pageName);
-		clickToElement(driver, BasePageUI.DYNAMIC_MY_ACCOUNT_PAGE, pageName);
+		waitForElementClickable(driver, BasePageNopCommerceUI.DYNAMIC_MY_ACCOUNT_PAGE, pageName);
+		clickToElement(driver, BasePageNopCommerceUI.DYNAMIC_MY_ACCOUNT_PAGE, pageName);
 		switch (pageName) {
 		case "Customer info":
 			return PageGeneratorManager.getUserCustomerInfoPage(driver);
@@ -603,16 +628,16 @@ public class BasePage {
 
 	// tối ưu ở bài LV8
 	public UserHomePageObject clickToLogoutLinkAtUserPage(WebDriver driver) {
-		waitForElementClickable(driver, BasePageUI.LOGOUT_LINK_AT_USER);
-		clickToElement(driver, BasePageUI.LOGOUT_LINK_AT_USER);
+		waitForElementClickable(driver, BasePageNopCommerceUI.LOGOUT_LINK_AT_USER);
+		clickToElement(driver, BasePageNopCommerceUI.LOGOUT_LINK_AT_USER);
 		return PageGeneratorManager.getUserHomePage(driver);
 	}
 
 	public AdminLoginPageObject clickToLogoutLinkAtAdminPage(WebDriver driver) {
-		waitForElementInvisible(driver, BasePageUI.LOADING_ICON_AT_ADMIN);
-		waitForElementClickable(driver, BasePageUI.LOGOUT_LINK_AT_ADMIN);
+		waitForElementInvisible(driver, BasePageNopCommerceUI.LOADING_ICON_AT_ADMIN);
+		waitForElementClickable(driver, BasePageNopCommerceUI.LOGOUT_LINK_AT_ADMIN);
 		// clickToElementByJS(driver, BasePageUI.LOGOUT_LINK_AT_ADMIN);
-		clickToElement(driver, BasePageUI.LOGOUT_LINK_AT_ADMIN);
+		clickToElement(driver, BasePageNopCommerceUI.LOGOUT_LINK_AT_ADMIN);
 		return PageGeneratorManager.getAdminLoginPage(driver);
 	}
 }
