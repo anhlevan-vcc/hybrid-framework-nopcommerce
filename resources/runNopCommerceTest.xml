@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="NopCommerce">
 
+	<listeners>
+	<listener class-name="commons.MethodListener"></listener>
+	</listeners>
+	
 	<parameter name="enviroment" value="DEV"></parameter>
 
- 	<test name="Run on Firefox"> 
+ 	<test name="Run on Chrome"> 
 		<parameter name="browser" value="CHROME"></parameter>
  		<classes> 
-    		<class name="com.nopcommerce.user.Level_09_Dynamic_Locator"/> 
+    		<class name="com.nopcommerce.user.Level_12_Assert_Verify"/> 
    		</classes> 
   	</test> 
   	

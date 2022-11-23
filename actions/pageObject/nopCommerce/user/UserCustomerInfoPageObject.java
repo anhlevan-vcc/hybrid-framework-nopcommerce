@@ -17,4 +17,9 @@ public class UserCustomerInfoPageObject extends BasePage {
 		checkToDefaultCheckboxRadio(driver, CustomerInfoPageUI.NEWSLETTER_LINK);
 	}
 
+	public boolean iscustomerinfoPageDisplayed() {
+		waitForElementVisible(driver, CustomerInfoPageUI.CUSTOMERINFO_LINK);
+		return isElementDisplayed(driver, CustomerInfoPageUI.CUSTOMERINFO_LINK);
+	}
+
 }

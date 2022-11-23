@@ -48,5 +48,10 @@
 	<classpathentry kind="lib" path="libraries/lombok-1.18.22.jar"/>
 	<classpathentry kind="lib" path="libraries/client-combined-3.141.59-sources.jar"/>
 	<classpathentry kind="lib" path="libraries/commons-io-2.11.0.jar"/>
+	<classpathentry kind="lib" path="log4J/commons-codec-1.11.jar"/>
+	<classpathentry kind="lib" path="log4J/commons-io-2.6.jar"/>
+	<classpathentry kind="lib" path="log4J/commons-lang3-3.8.1.jar"/>
+	<classpathentry kind="lib" path="log4J/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="log4J/log4j-1.2.16.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
