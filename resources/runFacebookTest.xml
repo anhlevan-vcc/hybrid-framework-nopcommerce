@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Facebook">
+
+	<listeners>
+	<listener class-name="commons.MethodListener"></listener>
+	</listeners>
+	
+	<parameter name="url" value="https://www.facebook.com/"></parameter>
+
+ 	<test name="Run on Chrome"> 
+		<parameter name="browser" value="CHROME"></parameter>
+ 		<classes> 
+    		<class name="com.facebook.register.Level_13_Element_Undisplayed"/> 
+   		</classes> 
+  	</test> 
+  	
+</suite>
