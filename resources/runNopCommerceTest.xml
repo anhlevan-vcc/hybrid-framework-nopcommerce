@@ -3,6 +3,8 @@
 
 	<listeners>
 	<listener class-name="commons.MethodListener"></listener>
+	<listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
+	<listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener>
 	</listeners>
 	
 	<parameter name="enviroment" value="DEV"></parameter>
@@ -10,7 +12,7 @@
  	<test name="Run on Chrome"> 
 		<parameter name="browser" value="CHROME"></parameter>
  		<classes> 
-    		<class name="com.nopcommerce.user.Level_12_Assert_Verify"/> 
+    		<class name="com.nopcommerce.user.Level_14_Log_ReportNG"/> 
    		</classes> 
   	</test> 
   	

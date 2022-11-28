@@ -146,7 +146,7 @@ public class BasePage {
 		} else {
 			throw new RuntimeException("Locator type is not Supported");
 		}
-		System.out.println("locatorType: " + by);
+		// System.out.println("locatorType: " + by);
 		return by;
 	}
 
