@@ -152,6 +152,11 @@ public class BaseTest {
 		return driver;
 	}
 
+	public WebDriver getDriverInstance() {
+		return this.driver;
+
+	}
+
 	protected String getEnvironmentUrl(String severName) {
 		String envUrl = null;
 		EnvironmentList environment = EnvironmentList.valueOf(severName.toUpperCase());
@@ -236,4 +241,5 @@ public class BaseTest {
 	protected boolean verifyEquals(Object actual, Object expected) {
 		return checkEquals(actual, expected);
 	}
+
 }

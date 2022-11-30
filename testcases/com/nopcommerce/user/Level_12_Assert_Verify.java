@@ -8,17 +8,10 @@ import org.testng.annotations.Test;
 
 import commons.BaseTest;
 import commons.PageGeneratorManager;
-import pageObject.nopCommerce.user.UserAddressPageObject;
-import pageObject.nopCommerce.user.UserBackInStockSubscriptionsPageObject;
-import pageObject.nopCommerce.user.UserChangePasswordPageObject;
 import pageObject.nopCommerce.user.UserCustomerInfoPageObject;
-import pageObject.nopCommerce.user.UserDownloadableProductsPageObject;
 import pageObject.nopCommerce.user.UserHomePageObject;
 import pageObject.nopCommerce.user.UserLoginPageObject;
-import pageObject.nopCommerce.user.UserMyProductReviewPageObject;
-import pageObject.nopCommerce.user.UserOrdersPageObject;
 import pageObject.nopCommerce.user.UserRegisterPageObject;
-import pageObject.nopCommerce.user.UserRewardPointPageObject;
 
 public class Level_12_Assert_Verify extends BaseTest {
 	private WebDriver driver;

@@ -1,5 +1,8 @@
 package com.nopcommerce.user;
 
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.assertFalse;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -13,7 +16,7 @@ import pageObject.nopCommerce.user.UserHomePageObject;
 import pageObject.nopCommerce.user.UserLoginPageObject;
 import pageObject.nopCommerce.user.UserRegisterPageObject;
 
-public class Level_14_Log_ReportNG extends BaseTest {
+public class Level_15_Screenshot extends BaseTest {
 	private WebDriver driver;
 	private UserHomePageObject homePage;
 	private UserLoginPageObject loginPage;
@@ -60,7 +63,7 @@ public class Level_14_Log_ReportNG extends BaseTest {
 		registerPage.clickToRegisterButton();
 
 		log.info("Register - Step 08: Verify register success massage is displayed ");
-		verifyEquals(registerPage.getMessageSuccess(), "Your registration completed");
+		assertEquals(registerPage.getMessageSuccess(), "Your registration completed..");
 
 		log.info("Register - Step 09: Click To Logout link ");
 		homePage = registerPage.clickToLogoutLink();
@@ -82,14 +85,14 @@ public class Level_14_Log_ReportNG extends BaseTest {
 		homePage = loginPage.clickToLoginButton();
 
 		log.info("Login - Step 05: Verify 'My Account' link is displayed ");
-		verifyEquals(homePage.getMessageSuccess(), "Welcome to our store");
-		verifyTrue(homePage.isMyAccountLinkDisPlayed());
+		assertEquals(homePage.getMessageSuccess(), "Welcome to our store");
+		assertTrue(homePage.isMyAccountLinkDisPlayed());
 
 		log.info("Login - Step 06:  Navigate to 'My Account' page");
 		customerinfoPage = homePage.openMyAccountCustomerInfoPage();
 
 		log.info("Login - Step 07: Verify 'Customer Infor' page is displayed ");
-		verifyTrue(customerinfoPage.iscustomerinfoPageDisplayed());
+		assertFalse(customerinfoPage.iscustomerinfoPageDisplayed());
 	}
 
 	@AfterClass
