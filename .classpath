@@ -54,5 +54,9 @@
 	<classpathentry kind="lib" path="libReportNG/guice-3.0.jar"/>
 	<classpathentry kind="lib" path="libReportNG/reportng-1.1.4.jar"/>
 	<classpathentry kind="lib" path="libReportNG/velocity-1.4.jar"/>
+	<classpathentry kind="lib" path="libExtentReportV5/extentreports-5.0.8.jar"/>
+	<classpathentry kind="lib" path="libExtentReportV5/freemarker-2.3.30.jar"/>
+	<classpathentry kind="lib" path="libExtentReportV5/reactive-streams-1.0.3.jar"/>
+	<classpathentry kind="lib" path="libExtentReportV5/rxjava-3.0.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

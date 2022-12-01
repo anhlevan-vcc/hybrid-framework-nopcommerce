@@ -3,26 +3,27 @@
 
 	<listeners>
 	<listener class-name="commons.MethodListener"></listener>
-	<listener class-name="reportConfig.ReportNGListener"></listener>
+<!-- 	<listener class-name="reportConfig.ReportNGListener"></listener> -->
+	<listener class-name="reportConfig.ExtentTestListener"></listener>
 	<listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
 	<listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener>
 	</listeners>
 	
 	<parameter name="enviroment" value="DEV"></parameter>
 
- 	<test name="Run on Chrome"> 
-		<parameter name="browser" value="CHROME"></parameter>
+ 	<test name="Run on Firefox"> 
+		<parameter name="browser" value="Firefox"></parameter>
  		<classes> 
-    		<class name="com.nopcommerce.user.Level_15_Screenshot"/> 
+    		<class name="com.nopcommerce.user.Level_16_ExtentV5_Screenshot"/> 
    		</classes> 
   	</test> 
   	
-<!--   	<test name="Run on Chrome">  -->
-<!-- 		<parameter name="browser" value="chrome"></parameter> -->
-<!--  		<classes>  -->
-<!--     		<class name="com.nopcommerce.user.Level_09_Dynamic_Locator"/>  -->
-<!--    		</classes>  -->
-<!--   	</test>  -->
+  	<test name="Run on Chrome"> 
+		<parameter name="browser" value="Chrome"></parameter>
+ 		<classes> 
+    		<class name="com.nopcommerce.user.Level_16_ExtentV5_Screenshot"/> 
+   		</classes> 
+  	</test> 
   	
 <!--   	<test name="Run on Headless Firefox"> -->
 <!-- 		<parameter name="browser" value="h_firefox"></parameter> -->
