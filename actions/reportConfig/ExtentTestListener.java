@@ -42,7 +42,8 @@ public class ExtentTestListener extends BaseTest implements ITestListener {
 		Object testClass = iTestResult.getInstance();
 		WebDriver driver = ((BaseTest) testClass).getDriverInstance();
 		String base64Screenshot = "data:image/png;base64," + ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
-		getTest().log(Status.FAIL, "Test Failed", getTest().addScreenCaptureFromBase64String(base64Screenshot).getModel().getMedia().get(0));
+		getTest().fail(iTestResult.getThrowable());
+		getTest().log(Status.FAIL, "Test Failed \n", getTest().addScreenCaptureFromBase64String(base64Screenshot).getModel().getMedia().get(0));
 	}
 
 	@Override

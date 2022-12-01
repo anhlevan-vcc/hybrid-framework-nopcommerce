@@ -84,8 +84,8 @@ public class Topic_12_String {
 		System.out.println(helloWord2.isEmpty());
 
 		// chuỗi toàn bộ là khoảng trắng thì trả ra true/ có ký tự khác khoảng trắng thì false
-		System.out.println(helloWord1.isBlank());
-		System.out.println(helloWord2.isBlank());
+		// System.out.println(helloWord1.isBlank());
+		// System.out.println(helloWord2.isBlank());
 
 		// Dynamic locator
 		// Đại điện cho 1 chuỗi %s

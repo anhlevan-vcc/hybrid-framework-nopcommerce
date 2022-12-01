@@ -93,8 +93,8 @@ public class Level_16_ExtentV5_Screenshot extends BaseTest {
 		homePage = loginPage.clickToLoginButton();
 
 		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 05: Verify 'My Account' link is displayed ");
-		assertEquals(homePage.getMessageSuccess(), "Welcome to our store..");
-		assertTrue(homePage.isMyAccountLinkDisPlayed());
+		assertEquals(homePage.getMessageSuccess(), "Welcome to our store");
+		assertFalse(homePage.isMyAccountLinkDisPlayed());
 
 		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 06:  Navigate to 'My Account' page");
 		customerinfoPage = homePage.openMyAccountCustomerInfoPage();

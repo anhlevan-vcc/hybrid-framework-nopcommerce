@@ -4,7 +4,8 @@
 	<listeners>
 	<listener class-name="commons.MethodListener"></listener>
 <!-- 	<listener class-name="reportConfig.ReportNGListener"></listener> -->
-	<listener class-name="reportConfig.ExtentTestListener"></listener>
+<!--	<listener class-name="reportConfig.ExtentTestListener"></listener> -->
+	<listener class-name="reportConfig.AllureTestListener"></listener>
 	<listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
 	<listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener>
 	</listeners>
@@ -14,16 +15,10 @@
  	<test name="Run on Firefox"> 
 		<parameter name="browser" value="Firefox"></parameter>
  		<classes> 
-    		<class name="com.nopcommerce.user.Level_16_ExtentV5_Screenshot"/> 
+    		<class name="com.nopcommerce.user.Level_17_AllureReport"/> 
    		</classes> 
   	</test> 
   	
-  	<test name="Run on Chrome"> 
-		<parameter name="browser" value="Chrome"></parameter>
- 		<classes> 
-    		<class name="com.nopcommerce.user.Level_16_ExtentV5_Screenshot"/> 
-   		</classes> 
-  	</test> 
   	
 <!--   	<test name="Run on Headless Firefox"> -->
 <!-- 		<parameter name="browser" value="h_firefox"></parameter> -->
