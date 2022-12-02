@@ -34,9 +34,9 @@ public class UserLoginPageObject extends BasePage {
 	}
 
 	@Step("Enter to Password textbox with value is {0}")
-	public void inputToPasswordTextbox(String passwword) {
+	public void inputToPasswordTextbox(String password) {
 		waitForElementVisible(driver, LoginPageUI.PASSWORD_TEXTBOX);
-		sendkeyToElement(driver, LoginPageUI.PASSWORD_TEXTBOX, passwword);
+		sendkeyToElement(driver, LoginPageUI.PASSWORD_TEXTBOX, password);
 
 	}
 
