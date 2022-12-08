@@ -1,14 +1,4 @@
-[INFO ] [2022-12-07 17:15:14,719] Pre-Condition - Step 01: Navigate to 'Register' page
-[INFO ] [2022-12-07 17:15:15,264] Pre-Condition - Step 02: Enter to Firstname textbox with value is 'Automation'
-[INFO ] [2022-12-07 17:15:15,345] Pre-Condition - Step 03: Enter to Lastname textbox with value is 'FC'
-[INFO ] [2022-12-07 17:15:15,419] Pre-Condition - Step 04: Enter to Email textbox with value is 'Automation4977@gmail.com'
-[INFO ] [2022-12-07 17:15:15,502] Pre-Condition - Step 05: Enter to Password textbox with value is '123456'
-[INFO ] [2022-12-07 17:15:15,591] Pre-Condition - Step 06: Enter to ConfirmPassword textbox with value is '123456'
-[INFO ] [2022-12-07 17:15:15,665] Pre-Condition - Step 07: Click To Register Button 
-[INFO ] [2022-12-07 17:15:16,417] Pre-Condition - Step 08: Verify register success massage is displayed 
-[INFO ] [2022-12-07 17:15:16,463]  -------------------------- PASSED -------------------------- 
-[INFO ] [2022-12-07 17:15:16,463] Pre-Condition - Step 09: Click To Logout link 
-[INFO ] [2022-12-07 17:15:17,078] Pre-Condition - Step 10: Navigate to 'login' page
-[INFO ] [2022-12-07 17:15:17,509] Pre-Condition - Step 11: Enter to Firstname textbox with value is 'Automation4977@gmail.com'
-[INFO ] [2022-12-07 17:15:17,602] Pre-Condition - Step 12: Enter to Firstname textbox with value is '123456'
-[INFO ] [2022-12-07 17:15:17,677] Pre-Condition - Step 13: Click To Login Button 
+[INFO ] [2022-12-08 13:59:01,382] Pre-Condition - Step 01: Navigate to 'login' page
+[INFO ] [2022-12-08 13:59:02,514] Pre-Condition - Step 02: Set cookie and reload page
+[INFO ] [2022-12-08 13:59:07,594] Pre-Condition - Step 03: Verify 'My Account' link is displayed 
+[INFO ] [2022-12-08 13:59:07,954]  -------------------------- PASSED -------------------------- 
