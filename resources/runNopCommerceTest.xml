@@ -12,11 +12,11 @@
 	
 	<parameter name="enviroment" value="DEV"></parameter>
 
- 	<test name="Run on Firefox"> 
-		<parameter name="browser" value="Firefox"></parameter>
+ 	<test name="Run on Chrome"> 
+		<parameter name="browser" value="Chrome"></parameter>
  		<classes> 
-<!--     		<class name="com.nopcommerce.common.Common_01_Register"/>  -->
-    		<class name="com.nopcommerce.user.Level_18_Share_Data_B"/> 
+    		<class name="com.nopcommerce.common.Common_01_Cookie"/> 
+    		<class name="com.nopcommerce.user.Level_18_Share_Data_C"/> 
    		</classes> 
   	</test> 
   	

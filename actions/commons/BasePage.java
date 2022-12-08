@@ -80,6 +80,7 @@ public class BasePage {
 		for (Cookie cookie : cookies) {
 			driver.manage().addCookie(cookie);
 		}
+		sleepInSecond(5);
 	}
 
 	protected Alert waitForAlertPresence(WebDriver driver) {

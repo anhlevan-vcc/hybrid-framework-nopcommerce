@@ -1,5 +1,8 @@
 package com.nopcommerce.common;
 
+import java.util.Set;
+
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -19,6 +22,8 @@ public class Common_01_Cookie extends BaseTest {
 
 	public static String emailAddress, password;
 	private String firstName, lastName;
+
+	public static Set<Cookie> loggedCookie;
 
 	@Parameters("browser")
 	@BeforeTest(description = "Create new Account for all Classes Test")
@@ -69,6 +74,14 @@ public class Common_01_Cookie extends BaseTest {
 
 		log.info("Pre-Condition - Step 13: Click To Login Button ");
 		homePage = loginPage.clickToLoginButton();
+
+		loggedCookie = homePage.getAllCookies(driver);
+		for (Cookie cookie : loggedCookie) {
+			System.out.println("Cookie at Common Class = " + cookie);
+		}
+
+		log.info("Pre-Condition - Step 14: Click To Logout link ");
+		homePage.clickToLogoutLinkAtUserPage(driver);
 
 		driver.quit();
 	}
