@@ -2,7 +2,7 @@
 <suite name="NopCommerce">
 
 	<listeners>
-	<listener class-name="commons.MethodListener"></listener>
+<!--	<listener class-name="commons.MethodListener"></listener> -->
 <!-- 	<listener class-name="reportConfig.ReportNGListener"></listener> -->
 <!-- 	<listener class-name="reportConfig.ExtentTestListener"></listener> -->
 <!-- 	<listener class-name="reportConfig.AllureTestListener"></listener> -->
@@ -15,8 +15,8 @@
  	<test name="Run on Chrome"> 
 		<parameter name="browser" value="Chrome"></parameter>
  		<classes> 
-    		<class name="com.nopcommerce.common.Common_01_Cookie"/> 
-    		<class name="com.nopcommerce.user.Level_18_Share_Data_C"/> 
+ <!--   		<class name="com.nopcommerce.common.Common_01_Cookie"/>  -->
+    		<class name="com.nopcommerce.user.Level_19_Close_BrowserAndDriver"/> 
    		</classes> 
   	</test> 
   	
