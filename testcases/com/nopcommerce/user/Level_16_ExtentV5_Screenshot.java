@@ -100,7 +100,7 @@ public class Level_16_ExtentV5_Screenshot extends BaseTest {
 		customerinfoPage = homePage.openMyAccountCustomerInfoPage();
 
 		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 07: Verify 'Customer Infor' page is displayed ");
-		assertTrue(customerinfoPage.iscustomerinfoPageDisplayed());
+		assertTrue(customerinfoPage.isCustomerinfoPageDisplayed());
 	}
 
 	@AfterClass

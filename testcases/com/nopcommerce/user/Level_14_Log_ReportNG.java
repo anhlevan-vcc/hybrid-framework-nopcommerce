@@ -89,7 +89,7 @@ public class Level_14_Log_ReportNG extends BaseTest {
 		customerinfoPage = homePage.openMyAccountCustomerInfoPage();
 
 		log.info("Login - Step 07: Verify 'Customer Infor' page is displayed ");
-		verifyTrue(customerinfoPage.iscustomerinfoPageDisplayed());
+		verifyTrue(customerinfoPage.isCustomerinfoPageDisplayed());
 	}
 
 	@AfterClass

@@ -58,7 +58,7 @@ public class Level_12_Assert_Verify extends BaseTest {
 		verifyTrue(homePage.isMyAccountLinkDisPlayed());
 
 		customerinfoPage = homePage.openMyAccountCustomerInfoPage();
-		verifyTrue(customerinfoPage.iscustomerinfoPageDisplayed());
+		verifyTrue(customerinfoPage.isCustomerinfoPageDisplayed());
 	}
 
 	@AfterClass

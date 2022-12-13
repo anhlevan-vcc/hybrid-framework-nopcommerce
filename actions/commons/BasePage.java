@@ -104,6 +104,11 @@ public class BasePage {
 		waitForAlertPresence(driver).sendKeys(textValue);
 	}
 
+	protected String pasteUserAndPassToUrlOfAlert(WebDriver driver, String url, String username, String password) {
+		String[] arrayUrl = url.split("//");
+		return arrayUrl[0] + "//" + username + ":" + password + "@" + arrayUrl[1];
+	}
+
 	protected void switchToWindowByID(WebDriver driver, String WindowID) {
 		Set<String> AllWindowID = driver.getWindowHandles();
 		for (String id : AllWindowID) {
@@ -294,7 +299,7 @@ public class BasePage {
 		}
 	}
 
-	protected void checkToDefaultCheckboxRadio(WebDriver driver, String locatorType, String... dynamicValues) {
+	protected void checkToDefaultCheckboxOrRadio(WebDriver driver, String locatorType, String... dynamicValues) {
 		WebElement element = getWebElement(driver, getDynamicXpath(locatorType, dynamicValues));
 		if (!element.isSelected()) {
 			element.click();
@@ -691,8 +696,78 @@ public class BasePage {
 	public AdminLoginPageObject clickToLogoutLinkAtAdminPage(WebDriver driver) {
 		waitForElementInvisible(driver, BasePageNopCommerceUI.LOADING_ICON_AT_ADMIN);
 		waitForElementClickable(driver, BasePageNopCommerceUI.LOGOUT_LINK_AT_ADMIN);
-		// clickToElementByJS(driver, BasePageUI.LOGOUT_LINK_AT_ADMIN);
 		clickToElement(driver, BasePageNopCommerceUI.LOGOUT_LINK_AT_ADMIN);
 		return PageGeneratorManager.getAdminLoginPage(driver);
 	}
+
+	/**
+	 * Enter to dynamic Textbox by ID
+	 * 
+	 * @param driver
+	 * @param textboxID
+	 * @param value
+	 */
+	public void inputToTextboxByID(WebDriver driver, String textboxID, String value) {
+		waitForElementVisible(driver, BasePageNopCommerceUI.DYNAMIC_TEXTBOX_BY_ID, textboxID);
+		sendkeyToElement(driver, BasePageNopCommerceUI.DYNAMIC_TEXTBOX_BY_ID, value, textboxID);
+	}
+
+	/**
+	 * Click to dynamic Button by Text
+	 * 
+	 * @param driver
+	 * @param buttonText
+	 */
+	public void clickToButtonByText(WebDriver driver, String buttonText) {
+		waitForElementClickable(driver, BasePageNopCommerceUI.DYNAMIC_BUTTON_BY_TEXT, buttonText);
+		clickToElement(driver, BasePageNopCommerceUI.DYNAMIC_BUTTON_BY_TEXT, buttonText);
+	}
+
+	/**
+	 * Select item in Dropdown by Name Attribute
+	 * 
+	 * @param driver
+	 * @param dropdownAttributeName
+	 * @param itemValue
+	 */
+	public void selectDropdownByName(WebDriver driver, String dropdownAttributeName, String itemValue) {
+		waitForElementClickable(driver, BasePageNopCommerceUI.DYNAMIC_DROPDOWN_BY_NAME, dropdownAttributeName);
+		selectItemInDefaulfDropdown(driver, BasePageNopCommerceUI.DYNAMIC_DROPDOWN_BY_NAME, itemValue, dropdownAttributeName);
+	}
+
+	/**
+	 * Click to dynamic Radio by Label Name
+	 * 
+	 * @param driver
+	 * @param radioLabelName
+	 */
+	public void clickToRadioButtonByLabel(WebDriver driver, String radioLabelName) {
+		waitForElementClickable(driver, BasePageNopCommerceUI.DYNAMIC_RADIOBUTTON_BY_LABEL, radioLabelName);
+		checkToDefaultCheckboxOrRadio(driver, BasePageNopCommerceUI.DYNAMIC_RADIOBUTTON_BY_LABEL, radioLabelName);
+	}
+
+	/**
+	 * Click to dynamic Checkbox by Label Name
+	 * 
+	 * @param driver
+	 * @param checkboxLabelName
+	 */
+	public void clickToCheckboxByLabel(WebDriver driver, String checkboxLabelName) {
+		waitForElementClickable(driver, BasePageNopCommerceUI.DYNAMIC_CHECKBOX_BY_LABEL, checkboxLabelName);
+		checkToDefaultCheckboxOrRadio(driver, BasePageNopCommerceUI.DYNAMIC_CHECKBOX_BY_LABEL, checkboxLabelName);
+	}
+
+	/**
+	 * Get value in Textbox by textboxID
+	 * 
+	 * @param driver
+	 * @param textboxID
+	 * @param value
+	 * @return
+	 */
+	public String getTextboxValueByID(WebDriver driver, String textboxID, String AttributeValue) {
+		waitForElementVisible(driver, BasePageNopCommerceUI.DYNAMIC_TEXTBOX_BY_ID, textboxID);
+		return getElementAttribute(driver, BasePageNopCommerceUI.DYNAMIC_TEXTBOX_BY_ID, AttributeValue, textboxID);
+	}
+
 }

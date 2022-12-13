@@ -1,22 +1,27 @@
-[INFO ] [2022-12-08 22:18:43,381] Register - Step 01: Navigate to 'Register' page
-[INFO ] [2022-12-08 22:18:43,994] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
-[INFO ] [2022-12-08 22:18:44,176] Register - Step 03: Enter to Lastname textbox with value is 'FC'
-[INFO ] [2022-12-08 22:18:44,322] Register - Step 04: Enter to Email textbox with value is 'Automation2979@gmail.com'
-[INFO ] [2022-12-08 22:18:44,514] Register - Step 05: Enter to Password textbox with value is '123456'
-[INFO ] [2022-12-08 22:18:44,667] Register - Step 06: Enter to ConfirmPassword textbox with value is '123456'
-[INFO ] [2022-12-08 22:18:44,803] Register - Step 07: Click To Register Button 
-[INFO ] [2022-12-08 22:18:45,678] Register - Step 08: Verify register success massage is displayed 
-[INFO ] [2022-12-08 22:18:45,745]  -------------------------- PASSED -------------------------- 
-[INFO ] [2022-12-08 22:18:45,745] Register - Step 09: Click To Logout link 
-[INFO ] [2022-12-08 22:18:46,556] Login - Step 01: Navigate to 'login' page
-[INFO ] [2022-12-08 22:18:47,082] Login - Step 02: Enter to Firstname textbox with value is 'Automation2979@gmail.com'
-[INFO ] [2022-12-08 22:18:47,239] Login - Step 03: Enter to Firstname textbox with value is '123456'
-[INFO ] [2022-12-08 22:18:47,383] Login - Step 04: Click To Login Button 
-[INFO ] [2022-12-08 22:18:48,104] Login - Step 05: Verify 'My Account' link is displayed 
-[INFO ] [2022-12-08 22:18:48,184]  -------------------------- PASSED -------------------------- 
-[INFO ] [2022-12-08 22:18:48,290]  -------------------------- PASSED -------------------------- 
-[INFO ] [2022-12-08 22:18:48,290] Login - Step 06:  Navigate to 'My Account' page
-[INFO ] [2022-12-08 22:18:48,806] Login - Step 07: Verify 'Customer Infor' page is displayed 
-[INFO ] [2022-12-08 22:18:48,868]  -------------------------- PASSED -------------------------- 
-[INFO ] [2022-12-08 22:18:48,881] OS name = windows 10
-[INFO ] [2022-12-08 22:18:48,881] Driver instance name = chromedriver: chrome on windows (8db75b298abb51ecf8637c7841dbbf8c)
+[INFO ] [2022-12-14 00:24:40,850] Register - Step 01: Navigate to 'Register' page
+[INFO ] [2022-12-14 00:24:42,238] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[INFO ] [2022-12-14 00:24:42,392] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[INFO ] [2022-12-14 00:24:42,972] Register - Step 04: Enter to Email textbox with value is 'Automation2273@gmail.com'
+[INFO ] [2022-12-14 00:24:43,199] Register - Step 05: Enter to Password textbox with value is '123456'
+[INFO ] [2022-12-14 00:24:43,345] Register - Step 06: Enter to ConfirmPassword textbox with value is '123456'
+[INFO ] [2022-12-14 00:24:43,493] Register - Step 07: Click To Register Button 
+[INFO ] [2022-12-14 00:24:44,325] Register - Step 08: Verify register success massage is displayed 
+[INFO ] [2022-12-14 00:24:44,408]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-14 00:24:44,408] Register - Step 09: Click To Logout link 
+[INFO ] [2022-12-14 00:24:45,194] Login - Step 01: Navigate to 'login' page
+[INFO ] [2022-12-14 00:24:45,735] Login - Step 02: Enter to Firstname textbox with value is 'Automation2273@gmail.com'
+[INFO ] [2022-12-14 00:24:45,876] Login - Step 03: Enter to Firstname textbox with value is '123456'
+[INFO ] [2022-12-14 00:24:46,025] Login - Step 04: Click To Login Button 
+[INFO ] [2022-12-14 00:24:46,754] Login - Step 05: Verify 'My Account' link is displayed 
+[INFO ] [2022-12-14 00:24:46,830]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-14 00:24:46,898]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-14 00:24:46,898] Login - Step 06:  Navigate to 'My Account' page
+[INFO ] [2022-12-14 00:24:47,392] Login - Step 07: Verify 'Customer Infor' page is displayed 
+[INFO ] [2022-12-14 00:24:47,459]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-14 00:24:47,465] My Account - Step 01: Navigate to 'My Account' page
+[INFO ] [2022-12-14 00:24:47,878] My Account - Step 02: Verify 'Customer Infor' page is displayed 
+[INFO ] [2022-12-14 00:24:47,948] My Account - Step 02: Verify 'First Name' value is corectly 
+[INFO ] [2022-12-14 00:24:48,008] My Account - Step 02: Verify 'Last Name' value is corectly 
+[INFO ] [2022-12-14 00:24:48,069] My Account - Step 02: Verify 'Email Name' value is corectly 
+[INFO ] [2022-12-14 00:24:48,135] OS name = windows 10
+[INFO ] [2022-12-14 00:24:48,135] Driver instance name = chromedriver: chrome on windows (1df7939724c2fba45063b55f0ebe520a)

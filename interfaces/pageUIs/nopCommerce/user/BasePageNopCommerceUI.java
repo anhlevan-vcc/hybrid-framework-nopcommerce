@@ -3,6 +3,11 @@ package pageUIs.nopCommerce.user;
 public class BasePageNopCommerceUI {
 
 	public static final String DYNAMIC_MY_ACCOUNT_PAGE = "//div[@class='side-2']//a[text()= '%s']";
+	public static final String DYNAMIC_TEXTBOX_BY_ID = "//input[@id='%s']";
+	public static final String DYNAMIC_BUTTON_BY_TEXT = "//button[contains(text(),'%s')]";
+	public static final String DYNAMIC_DROPDOWN_BY_NAME = "//select[@name='%s']";
+	public static final String DYNAMIC_RADIOBUTTON_BY_LABEL = "//label[contains(text(),'%s')]/preceding-sibling::input";
+	public static final String DYNAMIC_CHECKBOX_BY_LABEL = "//label[contains(text(),'%s')]/following-sibling::input";
 
 	public static final String CUSTOMERINFO_LINK = "XPATH=//div[@class='side-2']//a[text()= 'Customer info']";
 	public static final String ADDRESS_LINK = "XPATH=//div[@class='side-2']//a[text()= 'Addresses']";

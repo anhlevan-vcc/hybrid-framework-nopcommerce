@@ -16,7 +16,7 @@
 		<parameter name="browser" value="Chrome"></parameter>
  		<classes> 
  <!--   		<class name="com.nopcommerce.common.Common_01_Cookie"/>  -->
-    		<class name="com.nopcommerce.user.Level_19_Close_BrowserAndDriver"/> 
+    		<class name="com.nopcommerce.user.Level_20_Pattern_Object"/> 
    		</classes> 
   	</test> 
   	

@@ -85,7 +85,7 @@ public class Level_17_AllureReport extends BaseTest {
 
 		customerinfoPage = homePage.openMyAccountCustomerInfoPage();
 
-		assertTrue(customerinfoPage.iscustomerinfoPageDisplayed());
+		assertTrue(customerinfoPage.isCustomerinfoPageDisplayed());
 	}
 
 	@AfterClass
