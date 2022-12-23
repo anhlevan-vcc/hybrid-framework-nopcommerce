@@ -25,6 +25,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.google.common.base.Function;
 
+import pageObject.nopCommerce.admin.AdminLoginPageObject;
 import pageObject.nopCommerce.user.UserAddressPageObject;
 import pageObject.nopCommerce.user.UserBackInStockSubscriptionsPageObject;
 import pageObject.nopCommerce.user.UserChangePasswordPageObject;
@@ -34,7 +35,6 @@ import pageObject.nopCommerce.user.UserHomePageObject;
 import pageObject.nopCommerce.user.UserMyProductReviewPageObject;
 import pageObject.nopCommerce.user.UserOrdersPageObject;
 import pageObject.nopCommerce.user.UserRewardPointPageObject;
-import pageObjects.nopCommerce.admin.AdminLoginPageObject;
 import pageUIs.jQuery.UploadFile.BasePageJQueryUI;
 import pageUIs.nopCommerce.user.BasePageNopCommerceUI;
 

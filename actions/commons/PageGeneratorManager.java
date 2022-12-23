@@ -2,6 +2,8 @@ package commons;
 
 import org.openqa.selenium.WebDriver;
 
+import pageObject.nopCommerce.admin.AdminDashboardPageObject;
+import pageObject.nopCommerce.admin.AdminLoginPageObject;
 import pageObject.nopCommerce.user.UserAddressPageObject;
 import pageObject.nopCommerce.user.UserBackInStockSubscriptionsPageObject;
 import pageObject.nopCommerce.user.UserChangePasswordPageObject;
@@ -13,8 +15,6 @@ import pageObject.nopCommerce.user.UserMyProductReviewPageObject;
 import pageObject.nopCommerce.user.UserOrdersPageObject;
 import pageObject.nopCommerce.user.UserRegisterPageObject;
 import pageObject.nopCommerce.user.UserRewardPointPageObject;
-import pageObjects.nopCommerce.admin.AdminDashboardPageObject;
-import pageObjects.nopCommerce.admin.AdminLoginPageObject;
 
 public class PageGeneratorManager {
 

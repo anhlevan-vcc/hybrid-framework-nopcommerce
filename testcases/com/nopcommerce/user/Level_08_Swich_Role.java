@@ -10,12 +10,12 @@ import org.testng.annotations.Test;
 import commons.BaseTest;
 import commons.GlobalConstants;
 import commons.PageGeneratorManager;
+import pageObject.nopCommerce.admin.AdminDashboardPageObject;
+import pageObject.nopCommerce.admin.AdminLoginPageObject;
 import pageObject.nopCommerce.user.UserCustomerInfoPageObject;
 import pageObject.nopCommerce.user.UserHomePageObject;
 import pageObject.nopCommerce.user.UserLoginPageObject;
 import pageObject.nopCommerce.user.UserRegisterPageObject;
-import pageObjects.nopCommerce.admin.AdminDashboardPageObject;
-import pageObjects.nopCommerce.admin.AdminLoginPageObject;
 
 public class Level_08_Swich_Role extends BaseTest {
 	private WebDriver driver;
