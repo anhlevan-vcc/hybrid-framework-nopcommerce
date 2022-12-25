@@ -1,5 +1,11 @@
 package pageObject.wordpress.user;
 
-public class UserHomePO {
+import org.openqa.selenium.WebDriver;
 
+public class UserHomePO {
+	private WebDriver driver;
+
+	public UserHomePO(WebDriver driver) {
+		this.driver = driver;
+	}
 }

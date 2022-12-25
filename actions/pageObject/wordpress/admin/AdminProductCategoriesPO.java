@@ -1,5 +1,11 @@
 package pageObject.wordpress.admin;
 
-public class AdminProductCategoriesPO {
+import org.openqa.selenium.WebDriver;
 
+public class AdminProductCategoriesPO {
+	private WebDriver driver;
+
+	public AdminProductCategoriesPO(WebDriver driver) {
+		this.driver = driver;
+	}
 }

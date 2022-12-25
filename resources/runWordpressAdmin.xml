@@ -2,27 +2,28 @@
 <suite name="WordPress - Admin">
 
 	<listeners>
-<!--	<listener class-name="commons.MethodListener"></listener> -->
-<!-- 	<listener class-name="reportConfig.ReportNGListener"></listener> -->
+		<listener class-name="commons.MethodListener"></listener> 
+ 		<listener class-name="reportConfig.ReportNGListener"></listener> 
 <!-- 	<listener class-name="reportConfig.ExtentTestListener"></listener> -->
 <!-- 	<listener class-name="reportConfig.AllureTestListener"></listener> -->
-<!-- 	<listener class-name="org.uncommons.reportng.HTMLReporter"></listener> -->
-<!-- 	<listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener> -->
+ 		<listener class-name="org.uncommons.reportng.HTMLReporter"></listener> 
+ 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener> 
 	</listeners>
 	
 	<parameter name="urlAdmin" value="https://anhlevan.net/wp-admin/"></parameter>
 	<parameter name="urlUser" value="https://anhlevan.net/"></parameter>
 
- 	<test name="Run on Chrome"> 
-		<parameter name="browser" value="Chrome"></parameter>
-<!--  		<classes>  -->
-<!--     		<class name="com.wordpress.admin.Post_01_Create_Read_Update_Del_Search"/>  -->
-<!--    		</classes>  -->
+ 	<test name="Run on Firefox"> 
+		<parameter name="browser" value="Firefox"></parameter>
+  		<classes>  
+     		<class name="com.wordpress.admin.Post_01_Create_Read_Update_Del_Search"/>  
+    	</classes>  
    		
-   		<packages>
+   		<!--<packages>
 			<package name="com.wordpress.admin" />
-		</packages>
-  	</test> 
+		</packages>-->
+  	</test>
+  	 
   	
   	
 </suite>
