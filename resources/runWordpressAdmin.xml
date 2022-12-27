@@ -23,6 +23,17 @@
 			<package name="com.wordpress.admin" />
 		</packages>-->
   	</test>
+  	
+  	<test name="Run on Chrome"> 
+		<parameter name="browser" value="Chrome"></parameter>
+  		<classes>  
+     		<class name="com.wordpress.admin.Post_01_Create_Read_Update_Del_Search"/>  
+    	</classes>  
+   		
+   		<!--<packages>
+			<package name="com.wordpress.admin" />
+		</packages>-->
+  	</test>
   	 
   	
   	

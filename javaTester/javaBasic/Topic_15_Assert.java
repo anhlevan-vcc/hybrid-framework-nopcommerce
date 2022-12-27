@@ -43,13 +43,13 @@ public class Topic_15_Assert extends BaseTest {
 		verifyEquals(loginPageTitle, "Facebook – log in or sign up....");
 
 		System.out.println("Assert 03 - Pass");
-		verifyTrue(driver.findElement(By.xpath("//form[@data-testid='royal_login_form']")).isDisplayed());
+		assertTrue(driver.findElement(By.xpath("//form[@data-testid='royal_login_form']")).isDisplayed());
 
 		System.out.println("Assert 04 - Failed");
-		verifyTrue(driver.findElement(By.xpath("//input[@name='login_source']")).isDisplayed());
+		assertTrue(driver.findElement(By.xpath("//input[@name='login_source']")).isDisplayed());
 
 		System.out.println("Assert 05 - Pass");
-		verifyTrue(driver.findElement(By.xpath("//div[@id='reg_pages_msg']")).isDisplayed());
+		assertTrue(driver.findElement(By.xpath("//div[@id='reg_pages_msg']")).isDisplayed());
 	}
 
 	@AfterClass

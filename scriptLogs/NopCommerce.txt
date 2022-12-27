@@ -1,15 +1,68 @@
-[INFO ] [2022-12-26 02:06:29,756] Pre-Condition - Step 01: Open browser admin URL
-[INFO ] [2022-12-26 02:06:36,695] Pre-Condition - Step 02: Enter to Username textbox :leanh_192
-[INFO ] [2022-12-26 02:06:36,936] Pre-Condition - Step 03: Enter to Password textbox :Doncoi@16193
-[INFO ] [2022-12-26 02:06:37,030] Pre-Condition - Step 04: Click to login button
-[INFO ] [2022-12-26 02:06:40,141] Create Post - Step 01: Click to 'Posts' menu link
-[INFO ] [2022-12-26 02:06:42,018] Create Post - Step 02: Get 'Search Post' Url
-[INFO ] [2022-12-26 02:06:42,020] Create Post - Step 03: Click to 'Add New' button
-[INFO ] [2022-12-26 02:06:44,884] Create Post - Step 04: Enter to Post title:Title hôm nay học LiveCoding 7679
-[INFO ] [2022-12-26 02:06:45,581] Create Post - Step 05: Enter to Post body :Body hôm nay học LiveCoding 7679
-[INFO ] [2022-12-26 02:06:48,126] Create Post - Step 06: Click to 'Publish' button
-[INFO ] [2022-12-26 02:06:48,711] Create Post - Step 07: Click to 'Pre Publish' button
-[INFO ] [2022-12-26 02:06:49,811] Create Post - Step 08: Verify 'Post published.' message is displayed
-[INFO ] [2022-12-26 02:07:20,022] Search Post - Step 01: Open 'Search post' page
-[INFO ] [2022-12-26 02:07:21,544] OS name = windows 10
-[INFO ] [2022-12-26 02:07:21,544] Driver instance name = firefoxdriver: firefox on windows (5f1a6e84-3ed5-4ce6-9a07-ddf6f5b961d2)
+[INFO ] [2022-12-28 02:35:13,617] Pre-Condition - Step 01: Open browser Admin site
+[INFO ] [2022-12-28 02:35:20,218] Pre-Condition - Step 02: Enter to Username textbox :leanh_192
+[INFO ] [2022-12-28 02:35:20,438] Pre-Condition - Step 03: Enter to Password textbox :Doncoi@16193
+[INFO ] [2022-12-28 02:35:20,524] Pre-Condition - Step 04: Click to login button
+[INFO ] [2022-12-28 02:35:23,760] Create Post - Step 01: Click to 'Posts' menu link
+[INFO ] [2022-12-28 02:35:25,556] Create Post - Step 02: Get 'Search Post' Url
+[INFO ] [2022-12-28 02:35:25,568] Create Post - Step 03: Click to 'Add New' button
+[INFO ] [2022-12-28 02:35:28,415] Create Post - Step 04: Enter to Post title:Title hôm nay học LiveCoding 7370
+[INFO ] [2022-12-28 02:35:29,245] Create Post - Step 05: Enter to Post body :Body hôm nay học LiveCoding 7370
+[INFO ] [2022-12-28 02:35:31,538] Create Post - Step 06: Click to 'Publish' button
+[INFO ] [2022-12-28 02:35:32,231] Create Post - Step 07: Click to 'Pre Publish' button
+[INFO ] [2022-12-28 02:35:33,077] Create Post - Step 08: Verify 'Post published.' message is displayed
+[INFO ] [2022-12-28 02:35:34,882]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-28 02:35:34,974] Search Post - Step 01: Open 'Search post' page
+[INFO ] [2022-12-28 02:35:36,455] Search Post - Step 02: Enter to Search textbox
+[INFO ] [2022-12-28 02:35:36,673] Search Post - Step 03: Click to 'Search Posts' button
+[INFO ] [2022-12-28 02:35:39,417] Search Post - Step 04: Verify Search table contains 'Title hôm nay học LiveCoding 7370'
+[INFO ] [2022-12-28 02:35:39,571]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-28 02:35:39,571] Search Post - Step 05: Verify Search table contains 'Lê Anh'
+[INFO ] [2022-12-28 02:35:39,652]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-28 02:35:39,652] Search Post - Step 06: Open End User site
+[INFO ] [2022-12-28 02:35:41,257] Search Post - Step 07: Verify Post infor displayed at Home page
+[INFO ] [2022-12-28 02:35:41,327]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-28 02:35:41,436]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-28 02:35:41,498]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-28 02:35:41,562]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-28 02:35:41,562] Search Post - Step 08: Click to Post title
+[INFO ] [2022-12-28 02:35:42,833] Search Post - Step 09: Verify Post infor displayed at Post detail page
+[INFO ] [2022-12-28 02:35:42,957]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-28 02:35:43,020]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-28 02:35:43,085]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-28 02:35:43,146]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-28 02:35:43,159] OS name = windows 10
+[INFO ] [2022-12-28 02:35:43,160] Driver instance name = firefoxdriver: firefox on windows (8be39029-29a5-42df-9e35-70632ef0959f)
+[INFO ] [2022-12-28 02:35:44,346] Pre-Condition - Step 01: Open browser Admin site
+[INFO ] [2022-12-28 02:35:47,239] Pre-Condition - Step 02: Enter to Username textbox :leanh_192
+[INFO ] [2022-12-28 02:35:55,482] Pre-Condition - Step 03: Enter to Password textbox :Doncoi@16193
+[INFO ] [2022-12-28 02:35:55,626] Pre-Condition - Step 04: Click to login button
+[INFO ] [2022-12-28 02:35:58,564] Create Post - Step 01: Click to 'Posts' menu link
+[INFO ] [2022-12-28 02:36:00,191] Create Post - Step 02: Get 'Search Post' Url
+[INFO ] [2022-12-28 02:36:00,203] Create Post - Step 03: Click to 'Add New' button
+[INFO ] [2022-12-28 02:36:03,677] Create Post - Step 04: Enter to Post title:Title hôm nay học LiveCoding 9060
+[INFO ] [2022-12-28 02:36:04,391] Create Post - Step 05: Enter to Post body :Body hôm nay học LiveCoding 9060
+[INFO ] [2022-12-28 02:36:06,210] Create Post - Step 06: Click to 'Publish' button
+[INFO ] [2022-12-28 02:36:06,509] Create Post - Step 07: Click to 'Pre Publish' button
+[INFO ] [2022-12-28 02:36:06,985] Create Post - Step 08: Verify 'Post published.' message is displayed
+[INFO ] [2022-12-28 02:36:09,126]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-28 02:36:09,131] Search Post - Step 01: Open 'Search post' page
+[INFO ] [2022-12-28 02:36:10,631] Search Post - Step 02: Enter to Search textbox
+[INFO ] [2022-12-28 02:36:10,858] Search Post - Step 03: Click to 'Search Posts' button
+[INFO ] [2022-12-28 02:36:13,523] Search Post - Step 04: Verify Search table contains 'Title hôm nay học LiveCoding 9060'
+[INFO ] [2022-12-28 02:36:13,605]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-28 02:36:13,605] Search Post - Step 05: Verify Search table contains 'Lê Anh'
+[INFO ] [2022-12-28 02:36:13,685]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-28 02:36:13,685] Search Post - Step 06: Open End User site
+[INFO ] [2022-12-28 02:36:15,072] Search Post - Step 07: Verify Post infor displayed at Home page
+[INFO ] [2022-12-28 02:36:15,143]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-28 02:36:15,251]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-28 02:36:15,312]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-28 02:36:15,373]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-28 02:36:15,374] Search Post - Step 08: Click to Post title
+[INFO ] [2022-12-28 02:36:16,710] Search Post - Step 09: Verify Post infor displayed at Post detail page
+[INFO ] [2022-12-28 02:36:16,777]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-28 02:36:16,873]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-28 02:36:16,935]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-28 02:36:16,994]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-28 02:36:17,038] OS name = windows 10
+[INFO ] [2022-12-28 02:36:17,038] Driver instance name = chromedriver: chrome on windows (a9831a3d895acfe53006f51aa300d510)

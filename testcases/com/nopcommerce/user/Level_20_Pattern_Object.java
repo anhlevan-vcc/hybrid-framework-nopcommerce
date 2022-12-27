@@ -99,13 +99,13 @@ public class Level_20_Pattern_Object extends BaseTest {
 
 		log.info("Login - Step 05: Verify 'My Account' link is displayed ");
 		verifyEquals(homePage.getMessageSuccess(), "Welcome to our store");
-		verifyTrue(homePage.isMyAccountLinkDisPlayed());
+		assertTrue(homePage.isMyAccountLinkDisPlayed());
 
 		log.info("Login - Step 06:  Navigate to 'My Account' page");
 		customerinfoPage = homePage.openMyAccountCustomerInfoPage();
 
 		log.info("Login - Step 07: Verify 'Customer Infor' page is displayed ");
-		verifyTrue(customerinfoPage.isCustomerinfoPageDisplayed());
+		assertTrue(customerinfoPage.isCustomerinfoPageDisplayed());
 	}
 
 	@Test
