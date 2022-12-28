@@ -27,9 +27,9 @@ public class Post_01_Create_Read_Update_Del_Search extends BaseTest {
 	String adminUserName = "leanh_192";
 	String adminPassword = "Doncoi@16193";
 	String searchPostUrl;
-	int generateRandomNumber = generateRandomNumber();
-	String postTitle = "Title hôm nay học LiveCoding " + generateRandomNumber;
-	String postBody = "Body hôm nay học LiveCoding " + generateRandomNumber;
+	String generateRandomNumber = String.valueOf(generateRandomNumber());
+	String postTitle = "Title hôm nay học Live Coding " + generateRandomNumber;
+	String postBody = "Body hôm nay học Live Coding " + generateRandomNumber;
 	String authorName = "Lê Anh";
 	String adminUrl, endUserUrl;
 	String currentDate = getCurentDate();
