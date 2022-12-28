@@ -26,9 +26,18 @@ public class AdminPostAddNewPO extends BasePage {
 
 	}
 
-	public void clickPublishButton() {
-		waitForElementClickable(driver, AdminPostAddNewPageUI.PUBLISH_BUTTON);
-		clickToElement(driver, AdminPostAddNewPageUI.PUBLISH_BUTTON);
+	public void enterToEditPostBody(String valuePostBody) {
+		waitForElementClickable(driver, AdminPostAddNewPageUI.BODY_EDIT_TEXTBOX_BEFORE_CLICK);
+		clickToElement(driver, AdminPostAddNewPageUI.BODY_EDIT_TEXTBOX_BEFORE_CLICK);
+		waitForElementVisible(driver, AdminPostAddNewPageUI.BODY_TEXTBOX_AFTER_CLICK);
+		cleanValueInElementByDeleteKey(driver, AdminPostAddNewPageUI.BODY_TEXTBOX_AFTER_CLICK);
+		sendkeyToElement(driver, AdminPostAddNewPageUI.BODY_TEXTBOX_AFTER_CLICK, valuePostBody);
+
+	}
+
+	public void clickPublishOrUpdateButton() {
+		waitForElementClickable(driver, AdminPostAddNewPageUI.PUBLISH_OR_UPDATE_BUTTON);
+		clickToElement(driver, AdminPostAddNewPageUI.PUBLISH_OR_UPDATE_BUTTON);
 
 	}
 
@@ -39,8 +48,8 @@ public class AdminPostAddNewPO extends BasePage {
 	}
 
 	public boolean isPostPublishMessageDisplayed(String postPublishedMessage) {
-		waitForElementVisible(driver, AdminPostAddNewPageUI.PUBLISHED_MESSAGE, postPublishedMessage);
-		return isElementDisplayed(driver, AdminPostAddNewPageUI.PUBLISHED_MESSAGE, postPublishedMessage);
+		waitForElementVisible(driver, AdminPostAddNewPageUI.PUBLISHED_OR_UPDATE_MESSAGE, postPublishedMessage);
+		return isElementDisplayed(driver, AdminPostAddNewPageUI.PUBLISHED_OR_UPDATE_MESSAGE, postPublishedMessage);
 
 	}
 

@@ -30,6 +30,8 @@ public class Post_01_Create_Read_Update_Del_Search extends BaseTest {
 	String generateRandomNumber = String.valueOf(generateRandomNumber());
 	String postTitle = "Title hôm nay học Live Coding " + generateRandomNumber;
 	String postBody = "Body hôm nay học Live Coding " + generateRandomNumber;
+	String editPostTitle = "Edit title hôm nay học Live Coding " + generateRandomNumber;
+	String editPostBody = "Edit body hôm nay học Live Coding " + generateRandomNumber;
 	String authorName = "Lê Anh";
 	String adminUrl, endUserUrl;
 	String currentDate = getCurentDate();
@@ -73,7 +75,7 @@ public class Post_01_Create_Read_Update_Del_Search extends BaseTest {
 		adminPostAddNewPage.enterToAddNewPostBody(postBody);
 
 		log.info("Create Post - Step 06: Click to 'Publish' button");
-		adminPostAddNewPage.clickPublishButton();
+		adminPostAddNewPage.clickPublishOrUpdateButton();
 
 		log.info("Create Post - Step 07: Click to 'Pre Publish' button");
 		adminPostAddNewPage.clickPrePublishButton();
@@ -122,6 +124,66 @@ public class Post_01_Create_Read_Update_Del_Search extends BaseTest {
 
 	@Test
 	public void Post_03_Edit_Post() {
+		log.info("Edit Post - Step 01: Open Admin site");
+		adminDashboardPage = userPostDetailPage.openAdminSite(driver, this.adminUrl);
+
+		log.info("Edit Post - Step 02: Click to 'Posts' menu link");
+		adminPostSearchPage = adminDashboardPage.clickToPostsMenuLink();
+
+		log.info("Edit Post - Step 03: Enter to Search textbox");
+		adminPostSearchPage.enterToSearchTextbox(postTitle);
+
+		log.info("Edit Post - Step 04: Click to 'Search Posts' button");
+		adminPostSearchPage.clickToSearchPostButton();
+
+		log.info("Edit Post - Step 05: Click to Post title link and navigate to Edit Post page ");
+		adminPostAddNewPage = adminPostSearchPage.clickToPostTitleLink(postTitle);
+
+		log.info("Edit Post - Step 06: Enter to Post title:" + editPostTitle);
+		adminPostAddNewPage.enterToAddNewPostTitle(editPostTitle);
+
+		log.info("Edit Post - Step 07: Enter to Post body :" + editPostBody);
+		adminPostAddNewPage.enterToEditPostBody(editPostBody);
+
+		log.info("Edit Post - Step 08: Click to 'Update' button");
+		adminPostAddNewPage.clickPublishOrUpdateButton();
+
+		log.info("Edit Post - Step 09: Verify 'Post updated.' message is displayed");
+		verifyTrue(adminPostAddNewPage.isPostPublishMessageDisplayed("Post updated."));
+
+		log.info("Edit Post - Step 10: Open 'Search post' page");
+		adminPostSearchPage = adminPostAddNewPage.openSearchPostPageUrl(searchPostUrl);
+
+		log.info("Edit Post - Step 11: Enter to Search textbox");
+		adminPostSearchPage.enterToSearchTextbox(editPostTitle);
+
+		log.info("Edit Post - Step 12: Click to 'Search Posts' button");
+		adminPostSearchPage.clickToSearchPostButton();
+
+		log.info("Edit Post - Step 13: Verify Search table contains '" + editPostTitle + "'");
+		verifyTrue(adminPostSearchPage.isPostSearchTableDisplayed("title", editPostTitle));
+
+		log.info("Edit Post - Step 14: Verify Search table contains '" + authorName + "'");
+		verifyTrue(adminPostSearchPage.isPostSearchTableDisplayed("author", authorName));
+
+		log.info("Edit Post - Step 15: Open End User site");
+		userHomePage = adminPostSearchPage.openEndUserSite(driver, this.endUserUrl);
+
+		log.info("Edit Post - Step 16: Verify Post infor displayed at Home page");
+		verifyTrue(userHomePage.isPostInforDisplayedByTitle(editPostTitle));
+		verifyTrue(userHomePage.isPostInforDisplayedByBody(editPostTitle, editPostBody));
+		verifyTrue(userHomePage.isPostInforDisplayedByAuthor(editPostTitle, authorName));
+		verifyTrue(userHomePage.isPostInforDisplayedByDate(editPostTitle, currentDate));
+
+		log.info("Edit Post - Step 17: Click to Post title");
+		userPostDetailPage = userHomePage.clickPostTitle(editPostTitle);
+
+		log.info("Edit Post - Step 18: Verify Post infor displayed at Post detail page");
+		verifyTrue(userPostDetailPage.isPostInforDisplayedByTitle(editPostTitle));
+		verifyTrue(userPostDetailPage.isPostInforDisplayedByBody(editPostTitle, editPostBody));
+		verifyTrue(userPostDetailPage.isPostInforDisplayedByAuthor(editPostTitle, authorName));
+		verifyTrue(userPostDetailPage.isPostInforDisplayedByDate(editPostTitle, currentDate));
+
 	}
 
 	@Test

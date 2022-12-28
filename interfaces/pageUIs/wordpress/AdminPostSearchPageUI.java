@@ -12,4 +12,5 @@ public class AdminPostSearchPageUI {
 	 * Lấy ra giá trị của hàng trong bảng bằng header index VD:Truyền index =2 vào %s 1 vị trí của cột. %s 2 giá trị tại vị trí cột đó
 	 */
 	public static final String TABLE_ROW_VALUE_BY_HEADER_INDEX = "//table[contains(@class,'table-view-list posts')]/tbody/tr/*[%s]//a[text()='%s']";
+	public static final String ROW_TITLE_DETAIL_BY_TITLE_NAME = "//table[contains(@class,'table-view-list posts')]/tbody/tr//a[text()='%s']";
 }

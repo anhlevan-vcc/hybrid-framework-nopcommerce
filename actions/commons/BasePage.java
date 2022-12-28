@@ -35,6 +35,7 @@ import pageObject.nopCommerce.user.UserHomePageObject;
 import pageObject.nopCommerce.user.UserMyProductReviewPageObject;
 import pageObject.nopCommerce.user.UserOrdersPageObject;
 import pageObject.nopCommerce.user.UserRewardPointPageObject;
+import pageObject.wordpress.AdminDashboardPO;
 import pageObject.wordpress.UserHomePO;
 import pageUIs.jQuery.UploadFile.BasePageJQueryUI;
 import pageUIs.nopCommerce.user.BasePageNopCommerceUI;
@@ -205,6 +206,21 @@ public class BasePage {
 		WebElement element = getWebElement(driver, getDynamicXpath(locatorType, dynamicValues));
 		element.clear();
 		element.sendKeys(textValue);
+	}
+
+	/* Xóa dữ liệu trong textbox khi không dùng đc hàm clean ta dùng Ctrl+a=>Del */
+	protected void cleanValueInElementByDeleteKey(WebDriver driver, String locatorType) {
+		WebElement element = getWebElement(driver, locatorType);
+		element.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+		element.sendKeys(Keys.DELETE);
+
+	}
+
+	/* Xóa dữ liệu trong textbox khi không dùng đc hàm clean ta dùng Ctrl+a=>Del */
+	protected void cleanValueInElementByDeleteKey(WebDriver driver, String locatorType, String... dynamicValues) {
+		WebElement element = getWebElement(driver, getDynamicXpath(locatorType, dynamicValues));
+		element.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+		element.sendKeys(Keys.DELETE);
 	}
 
 	protected void selectItemInDefaulfDropdown(WebDriver driver, String locatorType, String textItem) {
@@ -774,6 +790,11 @@ public class BasePage {
 	public UserHomePO openEndUserSite(WebDriver driver, String endUserUrl) {
 		openPageUrl(driver, endUserUrl);
 		return pageObject.wordpress.PageGeneratorManager.getUserHomePage(driver);
+	}
+
+	public AdminDashboardPO openAdminSite(WebDriver driver, String adminUrl) {
+		openPageUrl(driver, adminUrl);
+		return pageObject.wordpress.PageGeneratorManager.getAdminDashboardPage(driver);
 	}
 
 }
