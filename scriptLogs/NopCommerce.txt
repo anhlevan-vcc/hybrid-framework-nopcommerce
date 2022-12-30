@@ -1,63 +1,83 @@
-[INFO ] [2022-12-28 23:43:36,999] Pre-Condition - Step 01: Open browser Admin site
-[INFO ] [2022-12-28 23:43:44,221] Pre-Condition - Step 02: Enter to Username textbox :leanh_192
-[INFO ] [2022-12-28 23:43:44,440] Pre-Condition - Step 03: Enter to Password textbox :Doncoi@16193
-[INFO ] [2022-12-28 23:43:44,530] Pre-Condition - Step 04: Click to login button
-[INFO ] [2022-12-28 23:43:47,946] Create Post - Step 01: Click to 'Posts' menu link
-[INFO ] [2022-12-28 23:43:50,427] Create Post - Step 02: Get 'Search Post' Url
-[INFO ] [2022-12-28 23:43:50,431] Create Post - Step 03: Click to 'Add New' button
-[INFO ] [2022-12-28 23:43:53,323] Create Post - Step 04: Enter to Post title:Title hôm nay học Live Coding 1114
-[INFO ] [2022-12-28 23:43:54,046] Create Post - Step 05: Enter to Post body :Body hôm nay học Live Coding 1114
-[INFO ] [2022-12-28 23:43:56,505] Create Post - Step 06: Click to 'Publish' button
-[INFO ] [2022-12-28 23:43:57,731] Create Post - Step 07: Click to 'Pre Publish' button
-[INFO ] [2022-12-28 23:43:58,085] Create Post - Step 08: Verify 'Post published.' message is displayed
-[INFO ] [2022-12-28 23:43:59,893]  -------------------------- PASSED -------------------------- 
-[INFO ] [2022-12-28 23:43:59,979] Search Post - Step 01: Open 'Search post' page
-[INFO ] [2022-12-28 23:44:01,519] Search Post - Step 02: Enter to Search textbox
-[INFO ] [2022-12-28 23:44:01,787] Search Post - Step 03: Click to 'Search Posts' button
-[INFO ] [2022-12-28 23:44:04,640] Search Post - Step 04: Verify Search table contains 'Title hôm nay học Live Coding 1114'
-[INFO ] [2022-12-28 23:44:04,893]  -------------------------- PASSED -------------------------- 
-[INFO ] [2022-12-28 23:44:04,893] Search Post - Step 05: Verify Search table contains 'Lê Anh'
-[INFO ] [2022-12-28 23:44:04,981]  -------------------------- PASSED -------------------------- 
-[INFO ] [2022-12-28 23:44:04,981] Search Post - Step 06: Open End User site
-[INFO ] [2022-12-28 23:44:07,337] Search Post - Step 07: Verify Post infor displayed at Home page
-[INFO ] [2022-12-28 23:44:07,457]  -------------------------- PASSED -------------------------- 
-[INFO ] [2022-12-28 23:44:07,564]  -------------------------- PASSED -------------------------- 
-[INFO ] [2022-12-28 23:44:07,656]  -------------------------- PASSED -------------------------- 
-[INFO ] [2022-12-28 23:44:07,719]  -------------------------- PASSED -------------------------- 
-[INFO ] [2022-12-28 23:44:07,719] Search Post - Step 08: Click to Post title
-[INFO ] [2022-12-28 23:44:09,042] Search Post - Step 09: Verify Post infor displayed at Post detail page
-[INFO ] [2022-12-28 23:44:09,162]  -------------------------- PASSED -------------------------- 
-[INFO ] [2022-12-28 23:44:09,228]  -------------------------- PASSED -------------------------- 
-[INFO ] [2022-12-28 23:44:09,291]  -------------------------- PASSED -------------------------- 
-[INFO ] [2022-12-28 23:44:09,350]  -------------------------- PASSED -------------------------- 
-[INFO ] [2022-12-28 23:44:09,356] Edit Post - Step 01: Open Admin site
-[INFO ] [2022-12-28 23:44:10,871] Edit Post - Step 02: Click to 'Posts' menu link
-[INFO ] [2022-12-28 23:44:12,475] Edit Post - Step 03: Enter to Search textbox
-[INFO ] [2022-12-28 23:44:12,657] Edit Post - Step 04: Click to 'Search Posts' button
-[INFO ] [2022-12-28 23:44:15,368] Edit Post - Step 05: Click to Post title link and navigate to Edit Post page 
-[INFO ] [2022-12-28 23:44:17,943] Edit Post - Step 06: Enter to Post title:Edit title hôm nay học Live Coding 1114
-[INFO ] [2022-12-28 23:44:18,891] Edit Post - Step 07: Enter to Post body :Edit body hôm nay học Live Coding 1114
-[INFO ] [2022-12-28 23:44:21,525] Edit Post - Step 08: Click to 'Update' button
-[INFO ] [2022-12-28 23:44:22,288] Edit Post - Step 09: Verify 'Post updated.' message is displayed
-[INFO ] [2022-12-28 23:44:23,495]  -------------------------- PASSED -------------------------- 
-[INFO ] [2022-12-28 23:44:23,495] Edit Post - Step 10: Open 'Search post' page
-[INFO ] [2022-12-28 23:44:25,052] Edit Post - Step 11: Enter to Search textbox
-[INFO ] [2022-12-28 23:44:25,209] Edit Post - Step 12: Click to 'Search Posts' button
-[INFO ] [2022-12-28 23:44:29,090] Edit Post - Step 13: Verify Search table contains 'Edit title hôm nay học Live Coding 1114'
-[INFO ] [2022-12-28 23:44:29,249]  -------------------------- PASSED -------------------------- 
-[INFO ] [2022-12-28 23:44:29,250] Edit Post - Step 14: Verify Search table contains 'Lê Anh'
-[INFO ] [2022-12-28 23:44:29,327]  -------------------------- PASSED -------------------------- 
-[INFO ] [2022-12-28 23:44:29,328] Edit Post - Step 15: Open End User site
-[INFO ] [2022-12-28 23:44:30,630] Edit Post - Step 16: Verify Post infor displayed at Home page
-[INFO ] [2022-12-28 23:44:30,762]  -------------------------- PASSED -------------------------- 
-[INFO ] [2022-12-28 23:44:30,826]  -------------------------- PASSED -------------------------- 
-[INFO ] [2022-12-28 23:44:30,924]  -------------------------- PASSED -------------------------- 
-[INFO ] [2022-12-28 23:44:30,993]  -------------------------- PASSED -------------------------- 
-[INFO ] [2022-12-28 23:44:30,993] Edit Post - Step 17: Click to Post title
-[INFO ] [2022-12-28 23:44:32,297] Edit Post - Step 18: Verify Post infor displayed at Post detail page
-[INFO ] [2022-12-28 23:44:32,429]  -------------------------- PASSED -------------------------- 
-[INFO ] [2022-12-28 23:44:32,491]  -------------------------- PASSED -------------------------- 
-[INFO ] [2022-12-28 23:44:32,572]  -------------------------- PASSED -------------------------- 
-[INFO ] [2022-12-28 23:44:32,644]  -------------------------- PASSED -------------------------- 
-[INFO ] [2022-12-28 23:44:32,652] OS name = windows 10
-[INFO ] [2022-12-28 23:44:32,652] Driver instance name = firefoxdriver: firefox on windows (d487e19c-8e07-472f-bfea-6711172318ce)
+[INFO ] [2022-12-31 00:48:53,484] Pre-Condition - Step 01: Open browser Admin site
+[INFO ] [2022-12-31 00:49:00,309] Pre-Condition - Step 02: Enter to Username textbox :leanh_192
+[INFO ] [2022-12-31 00:49:00,512] Pre-Condition - Step 03: Enter to Password textbox :Doncoi@16193
+[INFO ] [2022-12-31 00:49:00,614] Pre-Condition - Step 04: Click to login button
+[INFO ] [2022-12-31 00:49:03,694] Create Post - Step 01: Click to 'Posts' menu link
+[INFO ] [2022-12-31 00:49:05,451] Create Post - Step 02: Get 'Search Post' Url
+[INFO ] [2022-12-31 00:49:05,454] Create Post - Step 03: Click to 'Add New' button
+[INFO ] [2022-12-31 00:49:08,144] Create Post - Step 04: Enter to Post title:Title hôm nay học Live Coding 7032
+[INFO ] [2022-12-31 00:49:09,051] Create Post - Step 05: Enter to Post body :Body hôm nay học Live Coding 7032
+[INFO ] [2022-12-31 00:49:11,439] Create Post - Step 06: Click to 'Publish' button
+[INFO ] [2022-12-31 00:49:12,411] Create Post - Step 07: Click to 'Pre Publish' button
+[INFO ] [2022-12-31 00:49:12,775] Create Post - Step 08: Verify 'Post published.' message is displayed
+[INFO ] [2022-12-31 00:49:14,401]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-31 00:49:14,506] Search Post - Step 01: Open 'Search post' page
+[INFO ] [2022-12-31 00:49:15,967] Search Post - Step 02: Enter to Search textbox
+[INFO ] [2022-12-31 00:49:16,216] Search Post - Step 03: Click to 'Search Posts' button
+[INFO ] [2022-12-31 00:49:18,876] Search Post - Step 04: Verify Search table contains 'Title hôm nay học Live Coding 7032'
+[INFO ] [2022-12-31 00:49:19,032]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-31 00:49:19,033] Search Post - Step 05: Verify Search table contains 'Lê Anh'
+[INFO ] [2022-12-31 00:49:19,116]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-31 00:49:19,116] Search Post - Step 06: Open End User site
+[INFO ] [2022-12-31 00:49:20,724] Search Post - Step 07: Verify Post infor displayed at Home page
+[INFO ] [2022-12-31 00:49:20,790]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-31 00:49:20,900]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-31 00:49:20,990]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-31 00:49:21,063]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-31 00:49:21,063] Search Post - Step 08: Click to Post title
+[INFO ] [2022-12-31 00:49:22,426] Search Post - Step 09: Verify Post infor displayed at Post detail page
+[INFO ] [2022-12-31 00:49:22,549]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-31 00:49:22,611]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-31 00:49:22,676]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-31 00:49:22,740]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-31 00:49:22,748] Edit Post - Step 01: Open Admin site
+[INFO ] [2022-12-31 00:49:24,222] Edit Post - Step 02: Click to 'Posts' menu link
+[INFO ] [2022-12-31 00:49:25,806] Edit Post - Step 03: Enter to Search textbox
+[INFO ] [2022-12-31 00:49:25,986] Edit Post - Step 04: Click to 'Search Posts' button
+[INFO ] [2022-12-31 00:49:29,580] Edit Post - Step 05: Click to Post title link and navigate to Edit Post page 
+[INFO ] [2022-12-31 00:49:32,138] Edit Post - Step 06: Enter to Post title:Edit title hôm nay học Live Coding 7032
+[INFO ] [2022-12-31 00:49:33,037] Edit Post - Step 07: Enter to Post body :Edit body hôm nay học Live Coding 7032
+[INFO ] [2022-12-31 00:49:35,502] Edit Post - Step 08: Click to 'Update' button
+[INFO ] [2022-12-31 00:49:36,297] Edit Post - Step 09: Verify 'Post updated.' message is displayed
+[INFO ] [2022-12-31 00:49:37,478]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-31 00:49:37,478] Edit Post - Step 10: Open 'Search post' page
+[INFO ] [2022-12-31 00:49:38,923] Edit Post - Step 11: Enter to Search textbox
+[INFO ] [2022-12-31 00:49:39,128] Edit Post - Step 12: Click to 'Search Posts' button
+[INFO ] [2022-12-31 00:49:41,816] Edit Post - Step 13: Verify Search table contains 'Edit title hôm nay học Live Coding 7032'
+[INFO ] [2022-12-31 00:49:41,975]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-31 00:49:41,975] Edit Post - Step 14: Verify Search table contains 'Lê Anh'
+[INFO ] [2022-12-31 00:49:42,053]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-31 00:49:42,053] Edit Post - Step 15: Open End User site
+[INFO ] [2022-12-31 00:49:43,311] Edit Post - Step 16: Verify Post infor displayed at Home page
+[INFO ] [2022-12-31 00:49:43,439]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-31 00:49:43,502]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-31 00:49:43,565]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-31 00:49:43,628]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-31 00:49:43,628] Edit Post - Step 17: Click to Post title
+[INFO ] [2022-12-31 00:49:44,971] Edit Post - Step 18: Verify Post infor displayed at Post detail page
+[INFO ] [2022-12-31 00:49:45,093]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-31 00:49:45,157]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-31 00:49:45,220]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-31 00:49:45,283]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-31 00:49:45,289] Delete Post - Step 01: Open Admin site
+[INFO ] [2022-12-31 00:49:46,769] Delete Post - Step 02: Click to 'Posts' menu link
+[INFO ] [2022-12-31 00:49:48,324] Delete Post - Step 03: Enter to Search textbox
+[INFO ] [2022-12-31 00:49:48,508] Delete Post - Step 04: Click to 'Search Posts' button
+[INFO ] [2022-12-31 00:49:51,101] Delete Post - Step 05: Select Post detail checkbox
+[INFO ] [2022-12-31 00:49:51,457] Delete Post - Step 05: Select 'Move to Trash' item in dropdown
+[INFO ] [2022-12-31 00:49:51,789] Delete Post - Step 05: Click to 'Apply' button
+[INFO ] [2022-12-31 00:49:54,378] Delete Post - Step 05: Verify '1 post moved to the Trash' message is displayed
+[INFO ] [2022-12-31 00:49:54,513]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-31 00:49:54,513] Delete Post - Step 03: Enter to Search textbox
+[INFO ] [2022-12-31 00:49:54,617] Delete Post - Step 04: Click to 'Search Posts' button
+[INFO ] [2022-12-31 00:49:57,194] Delete Post - Step 05: Verify 'No posts found' message is displayed
+[INFO ] [2022-12-31 00:49:57,346]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-31 00:49:57,346] Delete Post - Step 15: Open End User site
+[INFO ] [2022-12-31 00:49:58,626] Delete Post - Step 05: Verify Post title undisplayed at Home page
+[INFO ] [2022-12-31 00:50:03,697]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-31 00:50:03,697] Delete Post - Step 03: Enter to Search textbox
+[INFO ] [2022-12-31 00:50:03,807] Delete Post - Step 04: Click to 'Search Posts' button
+[INFO ] [2022-12-31 00:50:05,065] Delete Post - Step 05: Verify 'Nothing Found' message is displayed
+[INFO ] [2022-12-31 00:50:05,184]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-31 00:50:05,188] OS name = windows 10
+[INFO ] [2022-12-31 00:50:05,188] Driver instance name = firefoxdriver: firefox on windows (98d9934e-236c-4812-bf4e-ce647784b574)
