@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Saucelab-Sort">
+
+	<listeners>
+		<listener class-name="commons.MethodListener"></listener> 
+ 		<listener class-name="reportConfig.ReportNGListener"></listener> 
+<!-- 	<listener class-name="reportConfig.ExtentTestListener"></listener> -->
+<!-- 	<listener class-name="reportConfig.AllureTestListener"></listener> -->
+ 		<listener class-name="org.uncommons.reportng.HTMLReporter"></listener> 
+ 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener> 
+	</listeners>
+	
+	<parameter name="appUrl" value="https://www.saucedemo.com"></parameter>
+
+ 	<test name="Run on Firefox"> 
+		<parameter name="browser" value="Firefox"></parameter>
+  		<classes>  
+     		<class name="com.saurcelab.sort.Level_21_Sort_Asc_Desc"/>  
+    	</classes>  
+   		
+   		<!--<packages>
+			<package name="com.wordpress.admin" />
+		</packages>-->
+  	</test>
+  	
+<!--  	<test name="Run on Chrome"> -->
+<!--		<parameter name="browser" value="Chrome"></parameter>-->
+<!--  		<classes>  -->
+<!--     		<class name="com.wordpress.admin.Post_01_Create_Read_Update_Del_Search"/>  -->
+<!--    	</classes>  -->
+   		
+   		<!--<packages>
+			<package name="com.wordpress.admin" />
+		</packages>-->
+<!--  	</test>-->
+  	 
+  	
+  	
+</suite>
