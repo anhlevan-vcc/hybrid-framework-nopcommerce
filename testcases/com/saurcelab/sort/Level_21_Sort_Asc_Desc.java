@@ -35,18 +35,22 @@ public class Level_21_Sort_Asc_Desc extends BaseTest {
 	public void Sort_01_Name() {
 		// Ascending
 		productPage.selectItemInProductSortDropdown("Name (A to Z)");
+		assertTrue(productPage.isProductNameSortByAscending());
 
 		// Descending
 		productPage.selectItemInProductSortDropdown("Name (Z to A)");
+		assertTrue(productPage.isProductNameSortByDescending());
 	}
 
 	@Test
 	public void Sort_01_Price() {
 		// Ascending
 		productPage.selectItemInProductSortDropdown("Price (low to high)");
+		assertTrue(productPage.isProductPriceSortByAscending());
 
 		// Descending
 		productPage.selectItemInProductSortDropdown("Price (high to low)");
+		assertTrue(productPage.isProductPriceSortByDescending());
 	}
 
 	@AfterClass(alwaysRun = true)
