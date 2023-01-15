@@ -69,5 +69,8 @@
 	<classpathentry kind="lib" path="libAllureReport2.13.5/joor-java-8-0.9.10.jar"/>
 	<classpathentry kind="lib" path="libAllureReport2.13.5/tika-core-1.20.jar"/>
 	<classpathentry kind="lib" path="libraries/joda-time-2.0.jar"/>
+	<classpathentry kind="lib" path="libJavaFaker/javafaker-1.0.1.jar" sourcepath="libJavaFaker/javafaker-1.0.1-sources.jar"/>
+	<classpathentry kind="lib" path="libJavaFaker/generex-1.0.2.jar"/>
+	<classpathentry kind="lib" path="libJavaFaker/snakeyaml-1.23.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
