@@ -16,7 +16,7 @@ import pageObject.nopCommerce.user.UserHomePageObject;
 import pageObject.nopCommerce.user.UserLoginPageObject;
 import pageObject.nopCommerce.user.UserRegisterPageObject;
 
-public class Level_20_Pattern_Object extends BaseTest {
+public class Level_21_Xml_Data extends BaseTest {
 	private WebDriver driver;
 	private UserHomePageObject homePage;
 	private UserLoginPageObject loginPage;
@@ -26,20 +26,19 @@ public class Level_20_Pattern_Object extends BaseTest {
 	private String validEmail, firstName, lastName, password;
 	private String day, month, year;
 
-	@Parameters("browser")
+	@Parameters({ "browser", "firstname", "lastname", "email", "password", "date", "month", "year" })
 	@BeforeClass
-	public void beforeClass(String browserName) {
+	public void beforeClass(String browserName, String firstname, String lastname, String email, String password, String date, String month, String year) {
 		driver = getBrowserDriver(browserName);
-
 		homePage = PageGeneratorManager.getUserHomePage(driver);
 
-		firstName = "Automation";
-		lastName = "FC";
-		validEmail = "Automation" + generateRandomNumber() + "@gmail.com";
-		password = "123456";
-		day = "16";
-		month = "January";
-		year = "1993";
+		this.firstName = firstname;
+		this.lastName = lastname;
+		this.validEmail = email + generateRandomNumber() + "@gmail.com";
+		this.password = password;
+		this.day = date;
+		this.month = month;
+		this.year = year;
 
 	}
 

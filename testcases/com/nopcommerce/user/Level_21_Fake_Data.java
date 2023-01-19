@@ -80,8 +80,6 @@ public class Level_21_Fake_Data extends BaseTest {
 		log.info("Register - Step 08: Verify register success massage is displayed ");
 		verifyEquals(registerPage.getMessageSuccess(), "Your registration completed");
 
-		log.info("Register - Step 09: Click To Logout link ");
-		homePage = registerPage.clickToLogoutLink();
 	}
 
 	@Test

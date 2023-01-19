@@ -9,6 +9,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.nopcommerce.data.UserData;
+
 import commons.BaseTest;
 import commons.PageGeneratorManager;
 import pageObject.nopCommerce.user.UserCustomerInfoPageObject;
@@ -16,7 +18,7 @@ import pageObject.nopCommerce.user.UserHomePageObject;
 import pageObject.nopCommerce.user.UserLoginPageObject;
 import pageObject.nopCommerce.user.UserRegisterPageObject;
 
-public class Level_20_Pattern_Object extends BaseTest {
+public class Level_21_ClassDataTest extends BaseTest {
 	private WebDriver driver;
 	private UserHomePageObject homePage;
 	private UserLoginPageObject loginPage;
@@ -30,16 +32,15 @@ public class Level_20_Pattern_Object extends BaseTest {
 	@BeforeClass
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName);
-
 		homePage = PageGeneratorManager.getUserHomePage(driver);
 
-		firstName = "Automation";
-		lastName = "FC";
-		validEmail = "Automation" + generateRandomNumber() + "@gmail.com";
-		password = "123456";
-		day = "16";
-		month = "January";
-		year = "1993";
+		firstName = UserData.FIRST_NAME;
+		lastName = UserData.LAST_NAME;
+		validEmail = UserData.EMAIL + generateRandomNumber() + "@gmail.com";
+		password = UserData.PASSWORD;
+		day = UserData.DAY;
+		month = UserData.MONTH;
+		year = UserData.YEAR;
 
 	}
 
