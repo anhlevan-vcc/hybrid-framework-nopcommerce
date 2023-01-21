@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.nopcommerce.data.UserData;
+import com.nopcommerce.data.UserDataMapper;
 
 import commons.BaseTest;
 import commons.PageGeneratorManager;
@@ -18,12 +18,13 @@ import pageObject.nopCommerce.user.UserHomePageObject;
 import pageObject.nopCommerce.user.UserLoginPageObject;
 import pageObject.nopCommerce.user.UserRegisterPageObject;
 
-public class Level_21_ClassDataTest extends BaseTest {
+public class Level_21_Data_Driven_Test extends BaseTest {
 	private WebDriver driver;
 	private UserHomePageObject homePage;
 	private UserLoginPageObject loginPage;
 	private UserRegisterPageObject registerPage;
 	private UserCustomerInfoPageObject customerinfoPage;
+	UserDataMapper userData;
 
 	private String validEmail, firstName, lastName, password;
 	private String day, month, year;
@@ -33,14 +34,15 @@ public class Level_21_ClassDataTest extends BaseTest {
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName);
 		homePage = PageGeneratorManager.getUserHomePage(driver);
+		userData = UserDataMapper.getUserData();
 
-		firstName = UserData.Rigester.FIRST_NAME;
-		lastName = UserData.Rigester.LAST_NAME;
-		validEmail = UserData.Rigester.EMAIL + generateRandomNumber() + "@gmail.com";
-		password = UserData.Rigester.PASSWORD;
-		day = UserData.Rigester.DAY;
-		month = UserData.Rigester.MONTH;
-		year = UserData.Rigester.YEAR;
+		firstName = userData.getFirstName();
+		lastName = userData.getLastName();
+		validEmail = userData.getEmailAddress() + generateRandomNumber() + "@gmail.com";
+		password = userData.getPassword();
+		day = userData.getDay();
+		month = userData.getMonth();
+		year = userData.getYear();
 
 	}
 

@@ -1,0 +1,14 @@
+{
+"firstName": "Lê Anh",
+"lastName": "Văn",
+"emailAddress": "anh",
+"password": "123456",
+"day": "16",
+"month": "March",
+"year": "1991",
+
+"Login":{
+	"username":"leanh_192",
+	"password":"123456"
+	}
+}
