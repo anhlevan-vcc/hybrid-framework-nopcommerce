@@ -1,24 +1,11 @@
-[INFO ] [2023-01-24 16:18:55,997] Register - Step 01: Navigate to 'Register' page
-[INFO ] [2023-01-24 16:18:57,428] Register - Step 02: Enter to Firstname textbox with value is 'Lê Anh'
-[INFO ] [2023-01-24 16:18:57,596] Register - Step 03: Enter to Lastname textbox with value is 'Văn'
-[INFO ] [2023-01-24 16:18:58,285] Register - Step 04: Enter to Email textbox with value is 'anh6529@gmail.com'
-[INFO ] [2023-01-24 16:18:58,540] Register - Step 05: Enter to Password textbox with value is '123456'
-[INFO ] [2023-01-24 16:18:58,718] Register - Step 06: Enter to ConfirmPassword textbox with value is '123456'
-[INFO ] [2023-01-24 16:18:58,888] Register - Step 07: Click To Register Button 
-[INFO ] [2023-01-24 16:18:59,744] Register - Step 08: Verify register success massage is displayed 
-[INFO ] [2023-01-24 16:18:59,819]  -------------------------- PASSED -------------------------- 
-[INFO ] [2023-01-24 16:18:59,859] Login - Step 01: Navigate to 'login' page
-[INFO ] [2023-01-24 16:19:00,417] Login - Step 02: Enter to Firstname textbox with value is 'anh6529@gmail.com'
-[INFO ] [2023-01-24 16:19:00,584] Login - Step 03: Enter to Firstname textbox with value is '123456'
-[INFO ] [2023-01-24 16:19:00,758] Login - Step 04: Click To Login Button 
-[INFO ] [2023-01-24 16:19:01,579] Login - Step 05: Verify 'My Account' link is displayed 
-[INFO ] [2023-01-24 16:19:01,659]  -------------------------- PASSED -------------------------- 
-[INFO ] [2023-01-24 16:19:01,741] Login - Step 06:  Navigate to 'My Account' page
-[INFO ] [2023-01-24 16:19:02,225] Login - Step 07: Verify 'Customer Infor' page is displayed 
-[INFO ] [2023-01-24 16:19:02,310] My Account - Step 01: Navigate to 'My Account' page
-[INFO ] [2023-01-24 16:19:02,790] My Account - Step 02: Verify 'Customer Infor' page is displayed 
-[INFO ] [2023-01-24 16:19:02,875] My Account - Step 02: Verify 'First Name' value is corectly 
-[INFO ] [2023-01-24 16:19:02,934] My Account - Step 02: Verify 'Last Name' value is corectly 
-[INFO ] [2023-01-24 16:19:02,998] My Account - Step 02: Verify 'Email Name' value is corectly 
-[INFO ] [2023-01-24 16:19:03,062] OS name = windows 10
-[INFO ] [2023-01-24 16:19:03,062] Driver instance name = chromedriver: chrome on windows (22023786e60989f97acf8d9e035d1adf)
+[INFO ] [2023-01-26 16:49:09,219] Pre-Condition - Step 01: Open browser Admin site
+[INFO ] [2023-01-26 16:49:13,820] Pre-Condition - Step 02: Enter to Username textbox :leanh_192
+[INFO ] [2023-01-26 16:49:14,111] Pre-Condition - Step 03: Enter to Password textbox :Doncoi@16193
+[INFO ] [2023-01-26 16:49:14,273] Pre-Condition - Step 04: Click to login button
+[INFO ] [2023-01-26 16:49:17,789] View - users - Step 01: Click to 'Users' menu link
+[INFO ] [2023-01-26 16:49:19,730] View - users - Step 02: Get all User from UI
+[INFO ] [2023-01-26 16:49:19,836] View - users - Step 03: Get all User from DB
+[INFO ] [2023-01-26 16:49:20,149] View - users - Step 04: Verify user UI and DB
+[INFO ] [2023-01-26 16:49:20,153]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-01-26 16:49:20,264] OS name = windows 10
+[INFO ] [2023-01-26 16:49:20,265] Driver instance name = chromedriver: chrome on windows (e9d9d431b636dfa4d9b1bcdb29ae7ce6)

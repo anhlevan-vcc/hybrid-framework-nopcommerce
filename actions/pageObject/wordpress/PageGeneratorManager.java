@@ -28,6 +28,10 @@ public class PageGeneratorManager {
 		return new AdminPostTagPO(driver);
 	}
 
+	public static AdminUsersPO getAdminUsersPage(WebDriver driver) {
+		return new AdminUsersPO(driver);
+	}
+
 	public static UserHomePO getUserHomePage(WebDriver driver) {
 		return new UserHomePO(driver);
 	}

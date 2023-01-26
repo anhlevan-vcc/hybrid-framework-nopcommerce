@@ -177,7 +177,7 @@ public class BaseTest {
 		EnvironmentList environment = EnvironmentList.valueOf(environmentName.toUpperCase());
 		switch (environment) {
 		case DEV:
-			envUrl = "https://demo.nopcommerce.com/";
+			envUrl = "https://anhlevan.net/wp-login.php";
 			break;
 		case TESTING:
 			envUrl = "https://test.demo.nopcommerce.com/";

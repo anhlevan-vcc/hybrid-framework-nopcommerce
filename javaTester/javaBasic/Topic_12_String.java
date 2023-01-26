@@ -69,7 +69,7 @@ public class Topic_12_String {
 		float giaTienF = Float.parseFloat(giaTien);
 		System.out.println(giaTienF);
 
-		// convert ngược lại số qua chuỗi
+		// convert ngược lại số qua String
 		String.valueOf(giaTienF);
 
 		// Cắt hết khoảng trắng /xuống dòng /tab trung trim()

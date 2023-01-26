@@ -1690,3 +1690,80 @@ Session ID: 7e6c54d269cca9b4eac9d64a0a08c202
 [INFO ] [2023-01-24 16:19:02,998] My Account - Step 02: Verify 'Email Name' value is corectly 
 [INFO ] [2023-01-24 16:19:03,062] OS name = windows 10
 [INFO ] [2023-01-24 16:19:03,062] Driver instance name = chromedriver: chrome on windows (22023786e60989f97acf8d9e035d1adf)
+[INFO ] [2023-01-26 16:23:59,225] OS name = windows 10
+[INFO ] [2023-01-26 16:23:59,235] 
+[INFO ] [2023-01-26 16:26:08,356] Pre-Condition - Step 01: Open browser Admin site
+[INFO ] [2023-01-26 16:26:16,940] OS name = windows 10
+[INFO ] [2023-01-26 16:26:16,941] Driver instance name = firefoxdriver: firefox on windows (de0f3012-f090-400c-98c5-962fa8013706)
+[INFO ] [2023-01-26 16:30:32,352] OS name = windows 10
+[INFO ] [2023-01-26 16:30:32,352] 
+[INFO ] [2023-01-26 16:31:53,012] OS name = windows 10
+[INFO ] [2023-01-26 16:31:53,013] 
+[INFO ] [2023-01-26 16:32:20,056] OS name = windows 10
+[INFO ] [2023-01-26 16:32:20,057] 
+[INFO ] [2023-01-26 16:32:43,936] Pre-Condition - Step 01: Open browser Admin site
+[INFO ] [2023-01-26 16:32:49,742] Pre-Condition - Step 02: Enter to Username textbox :leanh_192
+[INFO ] [2023-01-26 16:32:49,998] Pre-Condition - Step 03: Enter to Password textbox :Doncoi@16193
+[INFO ] [2023-01-26 16:32:50,156] Pre-Condition - Step 04: Click to login button
+[INFO ] [2023-01-26 16:32:53,327] View - users - Step 01: Click to 'Users' menu link
+[INFO ] [2023-01-26 16:32:54,908] View - users - Step 02: Get all User from UI
+[INFO ] [2023-01-26 16:32:54,980] View - users - Step 03: Get all User from DB
+[INFO ] [2023-01-26 16:32:55,383] View - users - Step 04: Verify user UI and DB
+[INFO ] [2023-01-26 16:32:55,384]  -------------------------- FAILED -------------------------- 
+[INFO ] [2023-01-26 16:32:55,458] OS name = windows 10
+[INFO ] [2023-01-26 16:32:55,458] Driver instance name = chromedriver: chrome on windows (1de00c3c4a5f6936d1ff8e0a63353320)
+[INFO ] [2023-01-26 16:39:02,694] Pre-Condition - Step 01: Open browser Admin site
+[INFO ] [2023-01-26 16:39:06,823] Pre-Condition - Step 02: Enter to Username textbox :leanh_192
+[INFO ] [2023-01-26 16:39:07,049] Pre-Condition - Step 03: Enter to Password textbox :Doncoi@16193
+[INFO ] [2023-01-26 16:39:07,212] Pre-Condition - Step 04: Click to login button
+[INFO ] [2023-01-26 16:39:10,416] View - users - Step 01: Click to 'Users' menu link
+[INFO ] [2023-01-26 16:39:11,985] View - users - Step 02: Get all User from UI
+[INFO ] [2023-01-26 16:39:12,047] View - users - Step 03: Get all User from DB
+[INFO ] [2023-01-26 16:39:12,296] View - users - Step 04: Verify user UI and DB
+[INFO ] [2023-01-26 16:39:12,299]  -------------------------- FAILED -------------------------- 
+[INFO ] [2023-01-26 16:39:12,515] OS name = windows 10
+[INFO ] [2023-01-26 16:39:12,516] Driver instance name = chromedriver: chrome on windows (e3a55cccbbe3d0e43ffd5132ecf4ff6d)
+[INFO ] [2023-01-26 16:40:29,332] Pre-Condition - Step 01: Open browser Admin site
+[INFO ] [2023-01-26 16:40:33,479] Pre-Condition - Step 02: Enter to Username textbox :leanh_192
+[INFO ] [2023-01-26 16:40:33,719] Pre-Condition - Step 03: Enter to Password textbox :Doncoi@16193
+[INFO ] [2023-01-26 16:40:33,861] Pre-Condition - Step 04: Click to login button
+[INFO ] [2023-01-26 16:40:36,983] View - users - Step 01: Click to 'Users' menu link
+[INFO ] [2023-01-26 16:40:38,626] View - users - Step 02: Get all User from UI
+[INFO ] [2023-01-26 16:40:38,701] View - users - Step 03: Get all User from DB
+[INFO ] [2023-01-26 16:40:38,956] View - users - Step 04: Verify user UI and DB
+[INFO ] [2023-01-26 16:40:38,958]  -------------------------- FAILED -------------------------- 
+[INFO ] [2023-01-26 16:40:39,053] OS name = windows 10
+[INFO ] [2023-01-26 16:40:39,053] Driver instance name = chromedriver: chrome on windows (505687c7ea964943ac13cd6b42d9808b)
+[INFO ] [2023-01-26 16:44:08,325] Pre-Condition - Step 01: Open browser Admin site
+[INFO ] [2023-01-26 16:44:12,562] Pre-Condition - Step 02: Enter to Username textbox :leanh_192
+[INFO ] [2023-01-26 16:44:12,788] Pre-Condition - Step 03: Enter to Password textbox :Doncoi@16193
+[INFO ] [2023-01-26 16:44:12,935] Pre-Condition - Step 04: Click to login button
+[INFO ] [2023-01-26 16:44:16,131] View - users - Step 01: Click to 'Users' menu link
+[INFO ] [2023-01-26 16:44:17,773] View - users - Step 02: Get all User from UI
+[INFO ] [2023-01-26 16:44:17,833] View - users - Step 03: Get all User from DB
+[INFO ] [2023-01-26 16:44:18,092] View - users - Step 04: Verify user UI and DB
+[INFO ] [2023-01-26 16:44:18,093]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-01-26 16:44:18,183] OS name = windows 10
+[INFO ] [2023-01-26 16:44:18,184] Driver instance name = chromedriver: chrome on windows (aed9d314966e825b524fecc119e9f850)
+[INFO ] [2023-01-26 16:46:43,438] Pre-Condition - Step 01: Open browser Admin site
+[INFO ] [2023-01-26 16:46:48,017] Pre-Condition - Step 02: Enter to Username textbox :leanh_192
+[INFO ] [2023-01-26 16:46:48,185] Pre-Condition - Step 03: Enter to Password textbox :Doncoi@16193
+[INFO ] [2023-01-26 16:46:48,367] Pre-Condition - Step 04: Click to login button
+[INFO ] [2023-01-26 16:46:52,231] View - users - Step 01: Click to 'Users' menu link
+[INFO ] [2023-01-26 16:46:53,992] View - users - Step 02: Get all User from UI
+[INFO ] [2023-01-26 16:46:54,069] View - users - Step 03: Get all User from DB
+[INFO ] [2023-01-26 16:46:54,386] View - users - Step 04: Verify user UI and DB
+[INFO ] [2023-01-26 16:46:54,388]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-01-26 16:46:54,482] OS name = windows 10
+[INFO ] [2023-01-26 16:46:54,483] Driver instance name = chromedriver: chrome on windows (0243e78c81a4a0091eba7821fdfbf1f5)
+[INFO ] [2023-01-26 16:49:09,219] Pre-Condition - Step 01: Open browser Admin site
+[INFO ] [2023-01-26 16:49:13,820] Pre-Condition - Step 02: Enter to Username textbox :leanh_192
+[INFO ] [2023-01-26 16:49:14,111] Pre-Condition - Step 03: Enter to Password textbox :Doncoi@16193
+[INFO ] [2023-01-26 16:49:14,273] Pre-Condition - Step 04: Click to login button
+[INFO ] [2023-01-26 16:49:17,789] View - users - Step 01: Click to 'Users' menu link
+[INFO ] [2023-01-26 16:49:19,730] View - users - Step 02: Get all User from UI
+[INFO ] [2023-01-26 16:49:19,836] View - users - Step 03: Get all User from DB
+[INFO ] [2023-01-26 16:49:20,149] View - users - Step 04: Verify user UI and DB
+[INFO ] [2023-01-26 16:49:20,153]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-01-26 16:49:20,264] OS name = windows 10
+[INFO ] [2023-01-26 16:49:20,265] Driver instance name = chromedriver: chrome on windows (e9d9d431b636dfa4d9b1bcdb29ae7ce6)

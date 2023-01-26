@@ -16,6 +16,12 @@ public class AdminDashboardPO extends BasePage {
 		waitForElementClickable(driver, AdminDashboardPageUI.POST_MENU_LINK);
 		clickToElement(driver, AdminDashboardPageUI.POST_MENU_LINK);
 		return PageGeneratorManager.getAdminPostSearchPage(driver);
-
 	}
+
+	public AdminUsersPO clickToUsersMenuLink() {
+		waitForElementClickable(driver, AdminDashboardPageUI.USERS_MENU_LINK);
+		clickToElement(driver, AdminDashboardPageUI.USERS_MENU_LINK);
+		return PageGeneratorManager.getAdminUsersPage(driver);
+	}
+
 }
