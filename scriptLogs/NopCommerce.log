@@ -1976,3 +1976,29 @@ Session ID: 7e6c54d269cca9b4eac9d64a0a08c202
 [INFO ] [2023-01-29 22:56:42,947] Pre-Condition - Step 01: Open browser Admin site
 [INFO ] [2023-01-29 22:56:56,239] OS name = windows 10
 [INFO ] [2023-01-29 22:56:56,239] Driver instance name = remotewebdriver: chrome on windows (81f53b49a7c92c12a6778adb1f850329ec07fb46)
+[INFO ] [2023-01-29 23:33:00,621] OS name = windows 10
+[INFO ] [2023-01-29 23:33:00,622] 
+[INFO ] [2023-01-29 23:33:50,598] Register - Step 01: Navigate to 'Register' page
+[INFO ] [2023-01-29 23:33:53,814] Register - Step 02: Enter to Firstname textbox with value is 'Lê Anh'
+[INFO ] [2023-01-29 23:33:55,332] Register - Step 03: Enter to Lastname textbox with value is 'Văn'
+[INFO ] [2023-01-29 23:34:01,922] Register - Step 04: Enter to Email textbox with value is 'anh7131@gmail.com'
+[INFO ] [2023-01-29 23:34:04,042] Register - Step 05: Enter to Password textbox with value is '123456'
+[INFO ] [2023-01-29 23:34:05,124] Register - Step 06: Enter to ConfirmPassword textbox with value is '123456'
+[INFO ] [2023-01-29 23:34:06,205] Register - Step 07: Click To Register Button 
+[INFO ] [2023-01-29 23:34:07,741] Register - Step 08: Verify register success massage is displayed 
+[INFO ] [2023-01-29 23:34:08,544]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-01-29 23:34:08,589] Login - Step 01: Navigate to 'login' page
+[INFO ] [2023-01-29 23:34:09,697] Login - Step 02: Enter to Firstname textbox with value is 'anh7131@gmail.com'
+[INFO ] [2023-01-29 23:34:10,736] Login - Step 03: Enter to Firstname textbox with value is '123456'
+[INFO ] [2023-01-29 23:34:11,757] Login - Step 04: Click To Login Button 
+[INFO ] [2023-01-29 23:34:13,342] Login - Step 05: Verify 'My Account' link is displayed 
+[INFO ] [2023-01-29 23:34:15,046]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-01-29 23:34:15,835] Login - Step 06:  Navigate to 'My Account' page
+[INFO ] [2023-01-29 23:34:17,204] Login - Step 07: Verify 'Customer Infor' page is displayed 
+[INFO ] [2023-01-29 23:34:18,017] My Account - Step 01: Navigate to 'My Account' page
+[INFO ] [2023-01-29 23:34:19,188] My Account - Step 02: Verify 'Customer Infor' page is displayed 
+[INFO ] [2023-01-29 23:34:19,986] My Account - Step 02: Verify 'First Name' value is corectly 
+[INFO ] [2023-01-29 23:34:20,731] My Account - Step 02: Verify 'Last Name' value is corectly 
+[INFO ] [2023-01-29 23:34:21,491] My Account - Step 02: Verify 'Email Name' value is corectly 
+[INFO ] [2023-01-29 23:34:22,242] OS name = windows 10
+[INFO ] [2023-01-29 23:34:22,242] Driver instance name = remotewebdriver: chrome on windows (b6b93b7069811979e13de9794de4deb78686290a)
