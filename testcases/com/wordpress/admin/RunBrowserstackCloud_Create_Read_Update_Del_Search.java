@@ -16,7 +16,7 @@ import pageObject.wordpress.UserHomePO;
 import pageObject.wordpress.UserPostDetailPO;
 import pageObject.wordpress.UserSearchPostPO;
 
-public class Post_01_Create_Read_Update_Del_Search extends BaseTest {
+public class RunBrowserstackCloud_Create_Read_Update_Del_Search extends BaseTest {
 	private WebDriver driver;
 	AdminLoginPO adminLoginpage;
 	AdminDashboardPO adminDashboardPage;
@@ -38,13 +38,13 @@ public class Post_01_Create_Read_Update_Del_Search extends BaseTest {
 	String adminUrl, endUserUrl;
 	String currentDate = getCurentDate();
 
-	@Parameters({ "browser", "urlAdmin", "urlUser" })
+	@Parameters({ "browser", "urlAdmin", "urlUser", "osName", "osVersion", "browserVersion" })
 	@BeforeClass
-	public void beforeClass(String browserName, String adminUrl, String endUserUrl) {
+	public void beforeClass(String browserName, String adminUrl, String endUserUrl, String osName, String osVersion, String browserVersion) {
 		this.adminUrl = adminUrl;
 		this.endUserUrl = endUserUrl;
 		log.info("Pre-Condition - Step 01: Open browser Admin site");
-		driver = getBrowserDriverAppUrl(browserName, this.adminUrl);
+		driver = getBrowserDriverBrowserstack(browserName, this.adminUrl, osName, osVersion, browserVersion);
 
 		adminLoginpage = PageGeneratorManager.getAdminLoginPage(driver);
 

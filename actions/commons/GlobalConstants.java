@@ -22,9 +22,9 @@ public class GlobalConstants {
 	public static final String DB_DEV_USER = "leanh";
 	public static final String DB_DEV_PASS = "Vcc@1234";
 
-	public static final String DB_TEST_URL = "31.18.195.22:9860";
-	public static final String DB_TEST_USER = "leanh";
-	public static final String DB_TEST_PASS = "Vcc@1234";
+	public static final String BROWSER_USERNAME = "lvnanh_VxkBQ6";
+	public static final String BROWSER_AUTOMATE_KEY = "zpJqBHy9JmFQ7GATTgUm";
+	public static final String BROWSER_STACK_URL = "https://" + BROWSER_USERNAME + ":" + BROWSER_AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";;
 
 	public static final long LONG_TIMEOUT = 30;
 	public static final long SHORT_TIMEOUT = 5;

@@ -1,11 +1,3 @@
-[INFO ] [2023-01-26 16:49:09,219] Pre-Condition - Step 01: Open browser Admin site
-[INFO ] [2023-01-26 16:49:13,820] Pre-Condition - Step 02: Enter to Username textbox :leanh_192
-[INFO ] [2023-01-26 16:49:14,111] Pre-Condition - Step 03: Enter to Password textbox :Doncoi@16193
-[INFO ] [2023-01-26 16:49:14,273] Pre-Condition - Step 04: Click to login button
-[INFO ] [2023-01-26 16:49:17,789] View - users - Step 01: Click to 'Users' menu link
-[INFO ] [2023-01-26 16:49:19,730] View - users - Step 02: Get all User from UI
-[INFO ] [2023-01-26 16:49:19,836] View - users - Step 03: Get all User from DB
-[INFO ] [2023-01-26 16:49:20,149] View - users - Step 04: Verify user UI and DB
-[INFO ] [2023-01-26 16:49:20,153]  -------------------------- PASSED -------------------------- 
-[INFO ] [2023-01-26 16:49:20,264] OS name = windows 10
-[INFO ] [2023-01-26 16:49:20,265] Driver instance name = chromedriver: chrome on windows (e9d9d431b636dfa4d9b1bcdb29ae7ce6)
+[INFO ] [2023-01-29 22:56:42,947] Pre-Condition - Step 01: Open browser Admin site
+[INFO ] [2023-01-29 22:56:56,239] OS name = windows 10
+[INFO ] [2023-01-29 22:56:56,239] Driver instance name = remotewebdriver: chrome on windows (81f53b49a7c92c12a6778adb1f850329ec07fb46)

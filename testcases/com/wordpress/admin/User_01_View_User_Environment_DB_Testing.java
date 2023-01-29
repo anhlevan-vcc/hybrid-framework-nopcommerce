@@ -17,7 +17,7 @@ import pageObject.wordpress.UserHomePO;
 import pageObject.wordpress.UserPostDetailPO;
 import pageObject.wordpress.UserSearchPostPO;
 
-public class User_01_View_User extends BaseTest {
+public class User_01_View_User_Environment_DB_Testing extends BaseTest {
 	private WebDriver driver;
 	AdminLoginPO adminLoginpage;
 	AdminDashboardPO adminDashboardPage;

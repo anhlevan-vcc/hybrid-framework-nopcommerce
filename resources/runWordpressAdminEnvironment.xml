@@ -10,14 +10,13 @@
  	<listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener> 
 	</listeners>
 	
-	<parameter name="urlUser" value="https://anhlevan.net/"></parameter>
-	<parameter name="urlAdmin" value="https://localhost/wp-admin/"></parameter>
+	<parameter name="environment" value="DEV"></parameter>
 
  	<test name="Run on Chrome"> 
 		<parameter name="browser" value="Chrome"></parameter>
  		<classes> 
  <!--   		<class name="com.nopcommerce.common.Common_01_Cookie"/>  -->
-    		<class name="com.wordpress.admin.Post_01_Create_Read_Update_Del_Search"/> 
+    		<class name="com.wordpress.admin.User_01_View_User_Environment_DB_Testing"/> 
    		</classes> 
   	</test> 
   	

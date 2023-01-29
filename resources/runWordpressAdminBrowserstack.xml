@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="NopCommerce">
+<suite name="Wordpress">
 
 	<listeners>
 	<listener class-name="commons.MethodListener"></listener> 
@@ -15,9 +15,12 @@
 
  	<test name="Run on Chrome"> 
 		<parameter name="browser" value="Chrome"></parameter>
+		<parameter name="osName" value="Windows"></parameter>
+		<parameter name="osVersion" value="10"></parameter>
+		<parameter name="browserVersion" value="latest"></parameter>
  		<classes> 
  <!--   		<class name="com.nopcommerce.common.Common_01_Cookie"/>  -->
-    		<class name="com.wordpress.admin.Post_01_Create_Read_Update_Del_Search"/> 
+    		<class name="com.wordpress.admin.RunBrowserstackCloud_Create_Read_Update_Del_Search"/> 
    		</classes> 
   	</test> 
   	
