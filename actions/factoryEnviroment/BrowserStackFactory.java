@@ -31,9 +31,9 @@ public class BrowserStackFactory {
 		caps.setCapability("browser", browserName);
 		caps.setCapability("browser_version", browserVersion);
 		caps.setCapability("browserstack.debug", "true");
-		caps.setCapability("project", "Wordpress");
+		caps.setCapability("project", "NopCommerce");
 		caps.setCapability("resolution", "1920x1080");
-		caps.setCapability("name", "Run on" + osName + " | " + osVersion + " | " + browserName);
+		caps.setCapability("name", "Run on : " + osName + " | " + osVersion + " | " + browserName);
 
 		try {
 			driver = new RemoteWebDriver(new URL(GlobalConstants.BROWSER_STACK_URL), caps);

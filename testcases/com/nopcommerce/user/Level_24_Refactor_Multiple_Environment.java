@@ -6,6 +6,7 @@ import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -29,10 +30,11 @@ public class Level_24_Refactor_Multiple_Environment extends BaseTest {
 	private String validEmail, firstName, lastName, password;
 	private String day, month, year;
 
-	@Parameters({ "browser", "appUrl", "osName", "osVersion", "browserVersion" })
+	@Parameters({ "envName", "serverName", "browser", "osName", "osVersion", "browserVersion" })
 	@BeforeClass
-	public void beforeClass(String browserName, String appUrl, String osName, String osVersion, String browserVersion) {
-		driver = getBrowserDriverChung(browserName, appUrl, osName, osName, osVersion, browserVersion);
+	public void beforeClass(@Optional("local") String envName, @Optional("DEV") String serverName, @Optional("Chrome") String browser, @Optional("Windows") String osName,
+			@Optional("10") String osVersion, @Optional("latest") String browserVersion) {
+		driver = getBrowserDriverAll(envName, serverName, browser, osName, osVersion, browserVersion);
 		homePage = PageGeneratorManager.getUserHomePage(driver);
 		userData = UserDataMapper.getUserData();
 

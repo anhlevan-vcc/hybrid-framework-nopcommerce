@@ -10,7 +10,8 @@
  	<listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener> 
 	</listeners>
 	
-	<parameter name="appUrl" value="https://demo.nopcommerce.com/"></parameter>
+	<parameter name="severName" value="DEV"></parameter>
+	<parameter name="envName" value="browserStack"></parameter>
 
  	<test name="Run on Chrome"> 
 		<parameter name="browser" value="Chrome"></parameter>
@@ -19,7 +20,7 @@
 		<parameter name="browserVersion" value="latest"></parameter>
  		<classes> 
  <!--   		<class name="com.nopcommerce.common.Common_01_Cookie"/>  -->
-    		<class name="com.nopcommerce.user.Level_23_Cloud_Testing"/> 
+    		<class name="com.nopcommerce.user.Level_24_Refactor_Multiple_Environment"/> 
    		</classes> 
   	</test> 
   	

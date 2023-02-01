@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Wordpress">
+<suite name="NopCommerce">
 
 	<listeners>
 	<listener class-name="commons.MethodListener"></listener> 
-<!-- 	<listener class-name="reportConfig.ReportNGListener"></listener> -->
+ 	<listener class-name="reportConfig.ReportNGListener"></listener> 
 <!-- 	<listener class-name="reportConfig.ExtentTestListener"></listener> -->
 <!-- 	<listener class-name="reportConfig.AllureTestListener"></listener> -->
  	<listener class-name="org.uncommons.reportng.HTMLReporter"></listener> 
  	<listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener> 
 	</listeners>
 	
-	<parameter name="urlUser" value="https://anhlevan.net/"></parameter>
-	<parameter name="urlAdmin" value="https://localhost/wp-admin/"></parameter>
+	<parameter name="serverName" value="DEV"></parameter>
+	<parameter name="envName" value="local"></parameter>
 
  	<test name="Run on Chrome"> 
 		<parameter name="browser" value="Chrome"></parameter>
-		<parameter name="osName" value="Windows"></parameter>
-		<parameter name="osVersion" value="10"></parameter>
-		<parameter name="browserVersion" value="latest"></parameter>
+		<parameter name="osName" value=""></parameter>
+		<parameter name="osVersion" value=""></parameter>
+		<parameter name="browserVersion" value=""></parameter>
  		<classes> 
  <!--   		<class name="com.nopcommerce.common.Common_01_Cookie"/>  -->
-    		<class name="com.wordpress.admin.RunBrowserstackCloud_Create_Read_Update_Del_Search"/> 
+    		<class name="com.nopcommerce.user.Level_24_Refactor_Multiple_Environment"/> 
    		</classes> 
   	</test> 
   	

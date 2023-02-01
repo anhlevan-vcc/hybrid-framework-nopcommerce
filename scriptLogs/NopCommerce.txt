@@ -1,24 +1,24 @@
-[INFO ] [2023-01-29 23:33:50,598] Register - Step 01: Navigate to 'Register' page
-[INFO ] [2023-01-29 23:33:53,814] Register - Step 02: Enter to Firstname textbox with value is 'Lê Anh'
-[INFO ] [2023-01-29 23:33:55,332] Register - Step 03: Enter to Lastname textbox with value is 'Văn'
-[INFO ] [2023-01-29 23:34:01,922] Register - Step 04: Enter to Email textbox with value is 'anh7131@gmail.com'
-[INFO ] [2023-01-29 23:34:04,042] Register - Step 05: Enter to Password textbox with value is '123456'
-[INFO ] [2023-01-29 23:34:05,124] Register - Step 06: Enter to ConfirmPassword textbox with value is '123456'
-[INFO ] [2023-01-29 23:34:06,205] Register - Step 07: Click To Register Button 
-[INFO ] [2023-01-29 23:34:07,741] Register - Step 08: Verify register success massage is displayed 
-[INFO ] [2023-01-29 23:34:08,544]  -------------------------- PASSED -------------------------- 
-[INFO ] [2023-01-29 23:34:08,589] Login - Step 01: Navigate to 'login' page
-[INFO ] [2023-01-29 23:34:09,697] Login - Step 02: Enter to Firstname textbox with value is 'anh7131@gmail.com'
-[INFO ] [2023-01-29 23:34:10,736] Login - Step 03: Enter to Firstname textbox with value is '123456'
-[INFO ] [2023-01-29 23:34:11,757] Login - Step 04: Click To Login Button 
-[INFO ] [2023-01-29 23:34:13,342] Login - Step 05: Verify 'My Account' link is displayed 
-[INFO ] [2023-01-29 23:34:15,046]  -------------------------- PASSED -------------------------- 
-[INFO ] [2023-01-29 23:34:15,835] Login - Step 06:  Navigate to 'My Account' page
-[INFO ] [2023-01-29 23:34:17,204] Login - Step 07: Verify 'Customer Infor' page is displayed 
-[INFO ] [2023-01-29 23:34:18,017] My Account - Step 01: Navigate to 'My Account' page
-[INFO ] [2023-01-29 23:34:19,188] My Account - Step 02: Verify 'Customer Infor' page is displayed 
-[INFO ] [2023-01-29 23:34:19,986] My Account - Step 02: Verify 'First Name' value is corectly 
-[INFO ] [2023-01-29 23:34:20,731] My Account - Step 02: Verify 'Last Name' value is corectly 
-[INFO ] [2023-01-29 23:34:21,491] My Account - Step 02: Verify 'Email Name' value is corectly 
-[INFO ] [2023-01-29 23:34:22,242] OS name = windows 10
-[INFO ] [2023-01-29 23:34:22,242] Driver instance name = remotewebdriver: chrome on windows (b6b93b7069811979e13de9794de4deb78686290a)
+[INFO ] [2023-02-01 22:03:21,745] Register - Step 01: Navigate to 'Register' page
+[INFO ] [2023-02-01 22:03:25,275] Register - Step 02: Enter to Firstname textbox with value is 'Lê Anh'
+[INFO ] [2023-02-01 22:03:26,415] Register - Step 03: Enter to Lastname textbox with value is 'Văn'
+[INFO ] [2023-02-01 22:03:35,640] Register - Step 04: Enter to Email textbox with value is 'anh1631@gmail.com'
+[INFO ] [2023-02-01 22:03:37,683] Register - Step 05: Enter to Password textbox with value is '123456'
+[INFO ] [2023-02-01 22:03:38,787] Register - Step 06: Enter to ConfirmPassword textbox with value is '123456'
+[INFO ] [2023-02-01 22:03:39,923] Register - Step 07: Click To Register Button 
+[INFO ] [2023-02-01 22:03:44,052] Register - Step 08: Verify register success massage is displayed 
+[INFO ] [2023-02-01 22:03:44,847]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-02-01 22:03:44,893] Login - Step 01: Navigate to 'login' page
+[INFO ] [2023-02-01 22:03:46,108] Login - Step 02: Enter to Firstname textbox with value is 'anh1631@gmail.com'
+[INFO ] [2023-02-01 22:03:47,203] Login - Step 03: Enter to Firstname textbox with value is '123456'
+[INFO ] [2023-02-01 22:03:48,335] Login - Step 04: Click To Login Button 
+[INFO ] [2023-02-01 22:03:50,215] Login - Step 05: Verify 'My Account' link is displayed 
+[INFO ] [2023-02-01 22:03:53,160]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-02-01 22:03:54,127] Login - Step 06:  Navigate to 'My Account' page
+[INFO ] [2023-02-01 22:03:55,383] Login - Step 07: Verify 'Customer Infor' page is displayed 
+[INFO ] [2023-02-01 22:03:56,254] My Account - Step 01: Navigate to 'My Account' page
+[INFO ] [2023-02-01 22:03:57,432] My Account - Step 02: Verify 'Customer Infor' page is displayed 
+[INFO ] [2023-02-01 22:03:58,273] My Account - Step 02: Verify 'First Name' value is corectly 
+[INFO ] [2023-02-01 22:03:59,178] My Account - Step 02: Verify 'Last Name' value is corectly 
+[INFO ] [2023-02-01 22:04:00,068] My Account - Step 02: Verify 'Email Name' value is corectly 
+[INFO ] [2023-02-01 22:04:00,954] OS name = windows 10
+[INFO ] [2023-02-01 22:04:00,954] Driver instance name = remotewebdriver: chrome on windows (c7b80f64767840254576c20b11f4cb02fc426f04)

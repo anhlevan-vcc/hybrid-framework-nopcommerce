@@ -44,8 +44,8 @@ public class BaseTest {
 		log = LogFactory.getLog(getClass());
 	}
 
-	protected WebDriver getBrowserDriverChung(String browserName, String appUrl, String environmentName, String osName, String osVersion, String browserVersion) {
-		switch (environmentName) {
+	protected WebDriver getBrowserDriverAll(String envName, String serverName, String browserName, String osName, String osVersion, String browserVersion) {
+		switch (envName) {
 		case "local":
 			driver = new LocalFactory(browserName).createDriver();
 			break;
@@ -58,7 +58,7 @@ public class BaseTest {
 		}
 		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-		driver.get(appUrl);
+		driver.get(getEnvironmentUrl(serverName));
 		return driver;
 
 	}
@@ -134,29 +134,6 @@ public class BaseTest {
 		return driver;
 	}
 
-	protected WebDriver getBrowserDriverBrowserstack(String browserName, String appUrl, String osName, String osVersion, String browserVersion) {
-
-		DesiredCapabilities caps = new DesiredCapabilities();
-		caps.setCapability("os", osName);
-		caps.setCapability("os_version", osVersion);
-		caps.setCapability("browser", browserName);
-		caps.setCapability("browser_version", browserVersion);
-		caps.setCapability("project", "Wordpress");
-		caps.setCapability("name", "Run on" + osName + " | " + osVersion + " | " + browserName);
-		caps.setCapability("browserstack.debug", "true");
-
-		try {
-			driver = new RemoteWebDriver(new URL(GlobalConstants.BROWSER_STACK_URL), caps);
-		} catch (MalformedURLException e) {
-			e.printStackTrace();
-		}
-
-		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
-		driver.get(appUrl);
-		return driver;
-	}
-
 	protected WebDriver getBrowserDriverLocalAdminAndUser(String browserName, String appUrl) {
 
 		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
@@ -218,7 +195,30 @@ public class BaseTest {
 		return driver;
 	}
 
-	protected WebDriver getBrowserDriverLocal(String browserName, String environmentName) {
+	protected WebDriver getBrowserDriverBrowserstack(String browserName, String appUrl, String osName, String osVersion, String browserVersion) {
+
+		DesiredCapabilities caps = new DesiredCapabilities();
+		caps.setCapability("os", osName);
+		caps.setCapability("os_version", osVersion);
+		caps.setCapability("browser", browserName);
+		caps.setCapability("browser_version", browserVersion);
+		caps.setCapability("project", "Wordpress");
+		caps.setCapability("name", "Run on" + osName + " | " + osVersion + " | " + browserName);
+		caps.setCapability("browserstack.debug", "true");
+
+		try {
+			driver = new RemoteWebDriver(new URL(GlobalConstants.BROWSER_STACK_URL), caps);
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
+
+		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+		driver.get(appUrl);
+		return driver;
+	}
+
+	protected WebDriver getBrowserDriverLocal(String browserName, String severName) {
 
 		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
 
@@ -275,7 +275,7 @@ public class BaseTest {
 		}
 		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-		driver.get(getEnvironmentUrl(environmentName));
+		driver.get(getEnvironmentUrl(severName));
 		return driver;
 	}
 
@@ -284,12 +284,12 @@ public class BaseTest {
 
 	}
 
-	protected String getEnvironmentUrl(String environmentName) {
+	protected String getEnvironmentUrl(String serverName) {
 		String envUrl = null;
-		EnvironmentList environment = EnvironmentList.valueOf(environmentName.toUpperCase());
+		EnvironmentList environment = EnvironmentList.valueOf(serverName.toUpperCase());
 		switch (environment) {
 		case DEV:
-			envUrl = "https://anhlevan.net/wp-login.php";
+			envUrl = "https://demo.nopcommerce.com/";
 			break;
 		case TESTING:
 			envUrl = "https://test.demo.nopcommerce.com/";
