@@ -18,7 +18,7 @@ import pageObject.nopCommerce.user.UserHomePageObject;
 import pageObject.nopCommerce.user.UserLoginPageObject;
 import pageObject.nopCommerce.user.UserRegisterPageObject;
 
-public class Level_22_Multiple_Environment extends BaseTest {
+public class Level_24_Refactor_Multiple_Environment extends BaseTest {
 	private WebDriver driver;
 	private UserHomePageObject homePage;
 	private UserLoginPageObject loginPage;
@@ -29,10 +29,10 @@ public class Level_22_Multiple_Environment extends BaseTest {
 	private String validEmail, firstName, lastName, password;
 	private String day, month, year;
 
-	@Parameters({ "browser", "environment" })
+	@Parameters({ "browser", "appUrl", "osName", "osVersion", "browserVersion" })
 	@BeforeClass
-	public void beforeClass(String browserName, String environmentName) {
-		driver = getBrowserDriverLocal(browserName, environmentName);
+	public void beforeClass(String browserName, String appUrl, String osName, String osVersion, String browserVersion) {
+		driver = getBrowserDriverBrowserstack(browserName, appUrl, osName, osVersion, browserVersion);
 		homePage = PageGeneratorManager.getUserHomePage(driver);
 		userData = UserDataMapper.getUserData();
 

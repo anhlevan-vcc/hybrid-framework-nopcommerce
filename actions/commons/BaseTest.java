@@ -25,6 +25,10 @@ import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeSuite;
 
+import factoryEnviroment.BrowserList;
+import factoryEnviroment.BrowserStackFactory;
+import factoryEnviroment.EnvironmentList;
+import factoryEnviroment.LocalFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
@@ -38,6 +42,25 @@ public class BaseTest {
 
 	protected BaseTest() {
 		log = LogFactory.getLog(getClass());
+	}
+
+	protected WebDriver getBrowserDriverChung(String browserName, String appUrl, String environmentName, String osName, String osVersion, String browserVersion) {
+		switch (environmentName) {
+		case "local":
+			driver = new LocalFactory(browserName).createDriver();
+			break;
+		case "browserStack":
+			driver = new BrowserStackFactory(browserName, osName, osVersion, browserVersion).createDriver();
+			break;
+		default:
+			driver = new LocalFactory(browserName).createDriver();
+			break;
+		}
+		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+		driver.get(appUrl);
+		return driver;
+
 	}
 
 	protected WebDriver getBrowserDriver(String browserName) {
@@ -134,7 +157,7 @@ public class BaseTest {
 		return driver;
 	}
 
-	protected WebDriver getBrowserDriverAppUrl(String browserName, String appUrl) {
+	protected WebDriver getBrowserDriverLocalAdminAndUser(String browserName, String appUrl) {
 
 		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
 
@@ -195,7 +218,7 @@ public class BaseTest {
 		return driver;
 	}
 
-	protected WebDriver getBrowserDriver(String browserName, String environmentName) {
+	protected WebDriver getBrowserDriverLocal(String browserName, String environmentName) {
 
 		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
 

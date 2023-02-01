@@ -45,7 +45,7 @@ public class User_01_View_User_Environment_DB_Testing extends BaseTest {
 	public void beforeClass(String browserName, String environmentName) {
 		this.environmentName = environmentName;
 		log.info("Pre-Condition - Step 01: Open browser Admin site");
-		driver = getBrowserDriver(browserName, this.environmentName);
+		driver = getBrowserDriverLocal(browserName, this.environmentName);
 
 		adminLoginpage = PageGeneratorManager.getAdminLoginPage(driver);
 
