@@ -32,7 +32,7 @@ public class Level_24_Refactor_Multiple_Environment extends BaseTest {
 	@Parameters({ "browser", "appUrl", "osName", "osVersion", "browserVersion" })
 	@BeforeClass
 	public void beforeClass(String browserName, String appUrl, String osName, String osVersion, String browserVersion) {
-		driver = getBrowserDriverBrowserstack(browserName, appUrl, osName, osVersion, browserVersion);
+		driver = getBrowserDriverChung(browserName, appUrl, osName, osName, osVersion, browserVersion);
 		homePage = PageGeneratorManager.getUserHomePage(driver);
 		userData = UserDataMapper.getUserData();
 
