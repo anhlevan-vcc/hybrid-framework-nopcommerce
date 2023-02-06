@@ -1,0 +1,9 @@
+1675680819427	geckodriver	INFO	Listening on 127.0.0.1:13056
+1675680819561	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Admin\\AppData\\Local\\Temp\\rust_mozprofileQSt5cQ"
+1675680819862	Marionette	INFO	Marionette enabled
+1675680819867	Marionette	INFO	Listening on port 56082
+Read port: 56082
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Admin\\AppData\\Local\\Temp\\rust_mozprofileQSt5cQ\\search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://demo.nopcommerce.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://demo.nopcommerce.com."
+1675680828968	Marionette	INFO	Stopped listening on port 56082
