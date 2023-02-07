@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="NopCommerce-GRID" parallel="tests" thread-count="2">
+
+	<listeners>
+	<listener class-name="commons.MethodListener"></listener> 
+ 	<listener class-name="reportConfig.ReportNGListener"></listener> 
+<!-- 	<listener class-name="reportConfig.ExtentTestListener"></listener> -->
+<!-- 	<listener class-name="reportConfig.AllureTestListener"></listener> -->
+ 	<listener class-name="org.uncommons.reportng.HTMLReporter"></listener> 
+ 	<listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener> 
+	</listeners>
+	
+	<parameter name="serverName" value="DEV"></parameter>
+	<parameter name="envName" value="grid"></parameter>
+	
+<!--Chạy máy nào thì trỏ vào IP và port đã setting của máy đó-->
+<!-- 	<test name="Run on Firefox"> -->
+<!--		<parameter name="browser" value="Firefox"></parameter>-->
+<!--		<parameter name="ipAddress" value="192.168.1.2" />-->
+<!--    	<parameter name="portNumber" value="5555" />-->
+<!-- 		<classes> -->
+<!--    		<class name="com.nopcommerce.user.Level_23_SeleniumGrid"/> -->
+<!--   		</classes> -->
+<!--  	</test> -->
+  	
+  	<test name="Run on Chrome"> 
+		<parameter name="browser" value="Chrome"></parameter>
+		<parameter name="ipAddress" value="192.168.1.2" />
+    	<parameter name="portNumber" value="5555" />
+ 		<classes> 
+    		<class name="com.nopcommerce.user.Level_24_Refactor_Multiple_Environment"/> 
+   		</classes> 
+  	</test> 
+  	
+</suite>

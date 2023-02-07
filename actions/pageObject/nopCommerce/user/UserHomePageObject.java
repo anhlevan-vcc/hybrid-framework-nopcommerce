@@ -23,7 +23,7 @@ public class UserHomePageObject extends BasePage {
 
 	@Step("Navigate to 'login' page")
 	public UserLoginPageObject openLoginPage() {
-		waitForElementVisible(driver, HomePageUI.LOGIN_LINK);
+		waitForElementClickable(driver, HomePageUI.LOGIN_LINK);
 		clickToElement(driver, HomePageUI.LOGIN_LINK);
 		return PageGeneratorManager.getUserLoginPage(driver);
 	}

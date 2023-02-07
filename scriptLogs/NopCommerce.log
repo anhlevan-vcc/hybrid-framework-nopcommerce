@@ -2212,3 +2212,182 @@ Session ID: 7e6c54d269cca9b4eac9d64a0a08c202
 [INFO ] [2023-02-06 17:53:55,314] My Account - Step 02: Verify 'Email Name' value is corectly 
 [INFO ] [2023-02-06 17:53:55,354] OS name = windows 10
 [INFO ] [2023-02-06 17:53:55,354] Driver instance name = chromedriver: chrome on windows (8f775aa1fa0d6c99af4fb0fd503887db)
+[INFO ] [2023-02-07 23:30:58,613] OS name = windows 10
+[INFO ] [2023-02-07 23:30:58,619] OS name = windows 10
+[INFO ] [2023-02-07 23:30:58,634] 
+[INFO ] [2023-02-07 23:30:58,634] 
+[INFO ] [2023-02-07 23:36:10,039] OS name = windows 10
+[INFO ] [2023-02-07 23:36:10,040] 
+[INFO ] [2023-02-07 23:36:10,054] OS name = windows 10
+[INFO ] [2023-02-07 23:36:10,055] 
+[INFO ] [2023-02-07 23:37:45,805] OS name = windows 10
+[INFO ] [2023-02-07 23:37:45,807] 
+[INFO ] [2023-02-07 23:37:45,818] OS name = windows 10
+[INFO ] [2023-02-07 23:37:45,824] 
+[INFO ] [2023-02-07 23:40:27,620] OS name = windows 10
+[INFO ] [2023-02-07 23:40:27,620] 
+[INFO ] [2023-02-07 23:40:32,395] Register - Step 01: Navigate to 'Register' page
+[INFO ] [2023-02-07 23:40:33,792] Register - Step 02: Enter to Firstname textbox with value is 'Lê Anh'
+[INFO ] [2023-02-07 23:40:33,905] Register - Step 03: Enter to Lastname textbox with value is 'Văn'
+[INFO ] [2023-02-07 23:40:35,037] Register - Step 04: Enter to Email textbox with value is 'anh2693@gmail.com'
+[INFO ] [2023-02-07 23:40:35,229] Register - Step 05: Enter to Password textbox with value is '123456'
+[INFO ] [2023-02-07 23:40:35,313] Register - Step 06: Enter to ConfirmPassword textbox with value is '123456'
+[INFO ] [2023-02-07 23:40:35,392] Register - Step 07: Click To Register Button 
+[INFO ] [2023-02-07 23:40:36,226] Register - Step 08: Verify register success massage is displayed 
+[INFO ] [2023-02-07 23:40:36,297]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-02-07 23:40:36,302] Login - Step 01: Navigate to 'login' page
+[INFO ] [2023-02-07 23:40:36,752] Login - Step 02: Enter to Firstname textbox with value is 'anh2693@gmail.com'
+[INFO ] [2023-02-07 23:40:36,874] Login - Step 03: Enter to Firstname textbox with value is '123456'
+[INFO ] [2023-02-07 23:40:36,963] Login - Step 04: Click To Login Button 
+[INFO ] [2023-02-07 23:40:37,643] Login - Step 05: Verify 'My Account' link is displayed 
+[INFO ] [2023-02-07 23:40:37,701]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-02-07 23:40:37,765] Login - Step 06:  Navigate to 'My Account' page
+[INFO ] [2023-02-07 23:40:38,120] Login - Step 07: Verify 'Customer Infor' page is displayed 
+[INFO ] [2023-02-07 23:40:38,216] My Account - Step 01: Navigate to 'My Account' page
+[INFO ] [2023-02-07 23:40:38,568] My Account - Step 02: Verify 'Customer Infor' page is displayed 
+[INFO ] [2023-02-07 23:40:38,653] My Account - Step 02: Verify 'First Name' value is corectly 
+[INFO ] [2023-02-07 23:40:38,708] My Account - Step 02: Verify 'Last Name' value is corectly 
+[INFO ] [2023-02-07 23:40:38,770] My Account - Step 02: Verify 'Email Name' value is corectly 
+[INFO ] [2023-02-07 23:40:38,833] OS name = windows 10
+[INFO ] [2023-02-07 23:40:38,833] Driver instance name = remotewebdriver: firefox on windows (ff006418-6388-4845-b8a2-aab2652e9b9f)
+[INFO ] [2023-02-07 23:43:37,134] Register - Step 01: Navigate to 'Register' page
+[INFO ] [2023-02-07 23:43:38,400] Register - Step 02: Enter to Firstname textbox with value is 'Lê Anh'
+[INFO ] [2023-02-07 23:43:38,482] Register - Step 03: Enter to Lastname textbox with value is 'Văn'
+[INFO ] [2023-02-07 23:43:39,524] Register - Step 04: Enter to Email textbox with value is 'anh5396@gmail.com'
+[INFO ] [2023-02-07 23:43:39,679] Register - Step 05: Enter to Password textbox with value is '123456'
+[INFO ] [2023-02-07 23:43:39,762] Register - Step 06: Enter to ConfirmPassword textbox with value is '123456'
+[INFO ] [2023-02-07 23:43:39,868] Register - Step 07: Click To Register Button 
+[INFO ] [2023-02-07 23:43:40,534] Register - Step 08: Verify register success massage is displayed 
+[INFO ] [2023-02-07 23:43:40,602]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-02-07 23:43:40,648] Login - Step 01: Navigate to 'login' page
+[INFO ] [2023-02-07 23:44:10,818] My Account - Step 01: Navigate to 'My Account' page
+[INFO ] [2023-02-07 23:44:12,020] My Account - Step 02: Verify 'Customer Infor' page is displayed 
+[INFO ] [2023-02-07 23:44:12,099] My Account - Step 02: Verify 'First Name' value is corectly 
+[INFO ] [2023-02-07 23:44:12,169] My Account - Step 02: Verify 'Last Name' value is corectly 
+[INFO ] [2023-02-07 23:44:12,233] My Account - Step 02: Verify 'Email Name' value is corectly 
+[INFO ] [2023-02-07 23:44:12,310] OS name = windows 10
+[INFO ] [2023-02-07 23:44:12,310] Driver instance name = remotewebdriver: firefox on windows (2ba9d2d2-2978-4132-95ae-8b5e32711169)
+[INFO ] [2023-02-07 23:44:21,977] Register - Step 01: Navigate to 'Register' page
+[INFO ] [2023-02-07 23:44:22,720] Register - Step 02: Enter to Firstname textbox with value is 'Lê Anh'
+[INFO ] [2023-02-07 23:44:22,825] Register - Step 03: Enter to Lastname textbox with value is 'Văn'
+[INFO ] [2023-02-07 23:44:23,836] Register - Step 04: Enter to Email textbox with value is 'anh5539@gmail.com'
+[INFO ] [2023-02-07 23:44:23,992] Register - Step 05: Enter to Password textbox with value is '123456'
+[INFO ] [2023-02-07 23:44:24,075] Register - Step 06: Enter to ConfirmPassword textbox with value is '123456'
+[INFO ] [2023-02-07 23:44:24,155] Register - Step 07: Click To Register Button 
+[INFO ] [2023-02-07 23:44:24,848] Register - Step 08: Verify register success massage is displayed 
+[INFO ] [2023-02-07 23:44:24,894]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-02-07 23:44:24,941] Login - Step 01: Navigate to 'login' page
+[INFO ] [2023-02-07 23:44:25,325] Login - Step 02: Enter to Firstname textbox with value is 'anh5539@gmail.com'
+[INFO ] [2023-02-07 23:44:25,420] Login - Step 03: Enter to Firstname textbox with value is '123456'
+[INFO ] [2023-02-07 23:44:25,516] Login - Step 04: Click To Login Button 
+[INFO ] [2023-02-07 23:44:26,141] Login - Step 05: Verify 'My Account' link is displayed 
+[INFO ] [2023-02-07 23:44:26,207]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-02-07 23:44:26,271] Login - Step 06:  Navigate to 'My Account' page
+[INFO ] [2023-02-07 23:44:26,622] Login - Step 07: Verify 'Customer Infor' page is displayed 
+[INFO ] [2023-02-07 23:44:26,716] My Account - Step 01: Navigate to 'My Account' page
+[INFO ] [2023-02-07 23:44:27,063] My Account - Step 02: Verify 'Customer Infor' page is displayed 
+[INFO ] [2023-02-07 23:44:27,137] My Account - Step 02: Verify 'First Name' value is corectly 
+[INFO ] [2023-02-07 23:44:27,194] My Account - Step 02: Verify 'Last Name' value is corectly 
+[INFO ] [2023-02-07 23:44:27,257] My Account - Step 02: Verify 'Email Name' value is corectly 
+[INFO ] [2023-02-07 23:44:27,326] OS name = windows 10
+[INFO ] [2023-02-07 23:44:27,326] Driver instance name = remotewebdriver: firefox on windows (cfabda94-ce08-442c-a5c4-68301c4e95fc)
+[INFO ] [2023-02-07 23:44:50,438] OS name = windows 10
+[INFO ] [2023-02-07 23:44:50,439] 
+[INFO ] [2023-02-07 23:46:50,474] OS name = windows 10
+[INFO ] [2023-02-07 23:46:50,475] 
+[INFO ] [2023-02-07 23:55:27,911] Register - Step 01: Navigate to 'Register' page
+[INFO ] [2023-02-07 23:55:29,115] Register - Step 02: Enter to Firstname textbox with value is 'Lê Anh'
+[INFO ] [2023-02-07 23:55:29,290] Register - Step 03: Enter to Lastname textbox with value is 'Văn'
+[INFO ] [2023-02-07 23:55:29,971] Register - Step 04: Enter to Email textbox with value is 'anh1117@gmail.com'
+[INFO ] [2023-02-07 23:55:30,214] Register - Step 05: Enter to Password textbox with value is '123456'
+[INFO ] [2023-02-07 23:55:30,377] Register - Step 06: Enter to ConfirmPassword textbox with value is '123456'
+[INFO ] [2023-02-07 23:55:30,530] Register - Step 07: Click To Register Button 
+[INFO ] [2023-02-07 23:55:31,292] Register - Step 08: Verify register success massage is displayed 
+[INFO ] [2023-02-07 23:55:31,369]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-02-07 23:55:31,416] Login - Step 01: Navigate to 'login' page
+[INFO ] [2023-02-07 23:55:50,218] Login - Step 02: Enter to Firstname textbox with value is 'anh1117@gmail.com'
+[INFO ] [2023-02-07 23:55:50,360] Login - Step 03: Enter to Firstname textbox with value is '123456'
+[INFO ] [2023-02-07 23:55:50,501] Login - Step 04: Click To Login Button 
+[INFO ] [2023-02-07 23:55:51,226] Login - Step 05: Verify 'My Account' link is displayed 
+[INFO ] [2023-02-07 23:55:51,311]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-02-07 23:55:51,393] Login - Step 06:  Navigate to 'My Account' page
+[INFO ] [2023-02-07 23:55:51,846] Login - Step 07: Verify 'Customer Infor' page is displayed 
+[INFO ] [2023-02-07 23:55:51,931] My Account - Step 01: Navigate to 'My Account' page
+[INFO ] [2023-02-07 23:55:52,359] My Account - Step 02: Verify 'Customer Infor' page is displayed 
+[INFO ] [2023-02-07 23:55:52,445] My Account - Step 02: Verify 'First Name' value is corectly 
+[INFO ] [2023-02-07 23:55:52,510] My Account - Step 02: Verify 'Last Name' value is corectly 
+[INFO ] [2023-02-07 23:55:52,586] My Account - Step 02: Verify 'Email Name' value is corectly 
+[INFO ] [2023-02-07 23:55:52,650] OS name = windows 10
+[INFO ] [2023-02-07 23:55:52,650] Driver instance name = remotewebdriver: chrome on windows (c51b496f15e3727971481172a4badb99)
+[INFO ] [2023-02-08 00:27:51,560] Register - Step 01: Navigate to 'Register' page
+[INFO ] [2023-02-08 00:27:52,217] Register - Step 02: Enter to Firstname textbox with value is 'Lê Anh'
+[INFO ] [2023-02-08 00:27:52,368] Register - Step 03: Enter to Lastname textbox with value is 'Văn'
+[INFO ] [2023-02-08 00:27:53,091] Register - Step 04: Enter to Email textbox with value is 'anh9188@gmail.com'
+[INFO ] [2023-02-08 00:27:53,352] Register - Step 05: Enter to Password textbox with value is '123456'
+[INFO ] [2023-02-08 00:27:53,514] Register - Step 06: Enter to ConfirmPassword textbox with value is '123456'
+[INFO ] [2023-02-08 00:27:53,668] Register - Step 07: Click To Register Button 
+[INFO ] [2023-02-08 00:27:54,357] Register - Step 08: Verify register success massage is displayed 
+[INFO ] [2023-02-08 00:27:54,443]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-02-08 00:27:54,490] Login - Step 01: Navigate to 'login' page
+[INFO ] [2023-02-08 00:27:54,903] Login - Step 02: Enter to Firstname textbox with value is 'anh9188@gmail.com'
+[INFO ] [2023-02-08 00:27:55,037] Login - Step 03: Enter to Firstname textbox with value is '123456'
+[INFO ] [2023-02-08 00:27:55,164] Login - Step 04: Click To Login Button 
+[INFO ] [2023-02-08 00:27:55,843] Login - Step 05: Verify 'My Account' link is displayed 
+[INFO ] [2023-02-08 00:27:55,928]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-02-08 00:27:56,011] Login - Step 06:  Navigate to 'My Account' page
+[INFO ] [2023-02-08 00:27:56,410] Login - Step 07: Verify 'Customer Infor' page is displayed 
+[INFO ] [2023-02-08 00:27:56,490] My Account - Step 01: Navigate to 'My Account' page
+[INFO ] [2023-02-08 00:27:56,840] My Account - Step 02: Verify 'Customer Infor' page is displayed 
+[INFO ] [2023-02-08 00:27:56,900] My Account - Step 02: Verify 'First Name' value is corectly 
+[INFO ] [2023-02-08 00:27:56,960] My Account - Step 02: Verify 'Last Name' value is corectly 
+[INFO ] [2023-02-08 00:27:57,025] My Account - Step 02: Verify 'Email Name' value is corectly 
+[INFO ] [2023-02-08 00:27:57,092] OS name = windows 10
+[INFO ] [2023-02-08 00:27:57,092] Driver instance name = remotewebdriver: chrome on windows (f3dc3e51ae2a6df8edcde62b19bce37f)
+[INFO ] [2023-02-08 00:28:14,313] Register - Step 01: Navigate to 'Register' page
+[INFO ] [2023-02-08 00:28:15,160] Register - Step 02: Enter to Firstname textbox with value is 'Lê Anh'
+[INFO ] [2023-02-08 00:28:15,256] Register - Step 03: Enter to Lastname textbox with value is 'Văn'
+[INFO ] [2023-02-08 00:28:16,305] Register - Step 04: Enter to Email textbox with value is 'anh2510@gmail.com'
+[INFO ] [2023-02-08 00:28:16,463] Register - Step 05: Enter to Password textbox with value is '123456'
+[INFO ] [2023-02-08 00:28:16,549] Register - Step 06: Enter to ConfirmPassword textbox with value is '123456'
+[INFO ] [2023-02-08 00:28:16,627] Register - Step 07: Click To Register Button 
+[INFO ] [2023-02-08 00:28:17,528] Register - Step 08: Verify register success massage is displayed 
+[INFO ] [2023-02-08 00:28:17,586]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-02-08 00:28:17,631] Login - Step 01: Navigate to 'login' page
+[INFO ] [2023-02-08 00:28:21,413] Login - Step 02: Enter to Firstname textbox with value is 'anh2510@gmail.com'
+[INFO ] [2023-02-08 00:28:21,510] Login - Step 03: Enter to Firstname textbox with value is '123456'
+[INFO ] [2023-02-08 00:28:21,605] Login - Step 04: Click To Login Button 
+[INFO ] [2023-02-08 00:28:22,420] Login - Step 05: Verify 'My Account' link is displayed 
+[INFO ] [2023-02-08 00:28:22,462]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-02-08 00:28:22,526] Login - Step 06:  Navigate to 'My Account' page
+[INFO ] [2023-02-08 00:28:22,883] Login - Step 07: Verify 'Customer Infor' page is displayed 
+[INFO ] [2023-02-08 00:28:22,958] My Account - Step 01: Navigate to 'My Account' page
+[INFO ] [2023-02-08 00:28:23,371] My Account - Step 02: Verify 'Customer Infor' page is displayed 
+[INFO ] [2023-02-08 00:28:23,444] My Account - Step 02: Verify 'First Name' value is corectly 
+[INFO ] [2023-02-08 00:28:23,502] My Account - Step 02: Verify 'Last Name' value is corectly 
+[INFO ] [2023-02-08 00:28:23,565] My Account - Step 02: Verify 'Email Name' value is corectly 
+[INFO ] [2023-02-08 00:28:23,632] OS name = windows 10
+[INFO ] [2023-02-08 00:28:23,632] Driver instance name = firefoxdriver: firefox on windows (7f20eda2-ca0c-4da0-8b2d-02d4215c31c9)
+[INFO ] [2023-02-08 00:28:26,984] Register - Step 01: Navigate to 'Register' page
+[INFO ] [2023-02-08 00:28:27,635] Register - Step 02: Enter to Firstname textbox with value is 'Lê Anh'
+[INFO ] [2023-02-08 00:28:27,792] Register - Step 03: Enter to Lastname textbox with value is 'Văn'
+[INFO ] [2023-02-08 00:28:28,361] Register - Step 04: Enter to Email textbox with value is 'anh4276@gmail.com'
+[INFO ] [2023-02-08 00:28:28,589] Register - Step 05: Enter to Password textbox with value is '123456'
+[INFO ] [2023-02-08 00:28:28,720] Register - Step 06: Enter to ConfirmPassword textbox with value is '123456'
+[INFO ] [2023-02-08 00:28:28,875] Register - Step 07: Click To Register Button 
+[INFO ] [2023-02-08 00:28:29,843] Register - Step 08: Verify register success massage is displayed 
+[INFO ] [2023-02-08 00:28:29,918]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-02-08 00:28:29,924] Login - Step 01: Navigate to 'login' page
+[INFO ] [2023-02-08 00:28:30,355] Login - Step 02: Enter to Firstname textbox with value is 'anh4276@gmail.com'
+[INFO ] [2023-02-08 00:28:30,496] Login - Step 03: Enter to Firstname textbox with value is '123456'
+[INFO ] [2023-02-08 00:28:30,638] Login - Step 04: Click To Login Button 
+[INFO ] [2023-02-08 00:28:31,378] Login - Step 05: Verify 'My Account' link is displayed 
+[INFO ] [2023-02-08 00:28:31,444]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-02-08 00:28:31,514] Login - Step 06:  Navigate to 'My Account' page
+[INFO ] [2023-02-08 00:28:31,924] Login - Step 07: Verify 'Customer Infor' page is displayed 
+[INFO ] [2023-02-08 00:28:32,032] My Account - Step 01: Navigate to 'My Account' page
+[INFO ] [2023-02-08 00:28:32,445] My Account - Step 02: Verify 'Customer Infor' page is displayed 
+[INFO ] [2023-02-08 00:28:32,513] My Account - Step 02: Verify 'First Name' value is corectly 
+[INFO ] [2023-02-08 00:28:32,573] My Account - Step 02: Verify 'Last Name' value is corectly 
+[INFO ] [2023-02-08 00:28:32,635] My Account - Step 02: Verify 'Email Name' value is corectly 
+[INFO ] [2023-02-08 00:28:32,702] OS name = windows 10
+[INFO ] [2023-02-08 00:28:32,702] Driver instance name = chromedriver: chrome on windows (f351260eccdcb00607fb1495647a4dd9)

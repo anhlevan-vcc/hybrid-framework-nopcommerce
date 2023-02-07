@@ -11,6 +11,7 @@ import org.openqa.selenium.opera.OperaDriver;
 
 import commons.GlobalConstants;
 import factoryBrowser.BraveDriverManager;
+import factoryBrowser.BrowserList;
 import factoryBrowser.BrowserNotSupportedException;
 import factoryBrowser.ChromeDriverManager;
 import factoryBrowser.CocCocDriverManager;

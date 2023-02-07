@@ -30,11 +30,11 @@ public class Level_24_Refactor_Multiple_Environment extends BaseTest {
 	private String validEmail, firstName, lastName, password;
 	private String day, month, year;
 
-	@Parameters({ "envName", "serverName", "browser", "osName", "osVersion", "browserVersion" })
+	@Parameters({ "envName", "serverName", "browser", "ipAddress", "portNumber", "osName", "osVersion", "browserVersion" })
 	@BeforeClass
-	public void beforeClass(@Optional("local") String envName, @Optional("DEV") String serverName, @Optional("Chrome") String browser, @Optional("Windows") String osName,
-			@Optional("10") String osVersion, @Optional("latest") String browserVersion) {
-		driver = getBrowserDriverAll(envName, serverName, browser, osName, osVersion, browserVersion);
+	public void beforeClass(@Optional("local") String envName, @Optional("DEV") String serverName, @Optional("Chrome") String browser, @Optional("localhost") String ipAddress,
+			@Optional("4444") String portNumber, @Optional("Windows") String osName, @Optional("10") String osVersion, @Optional("latest") String browserVersion) {
+		driver = getBrowserDriverAll(envName, serverName, browser, ipAddress, portNumber, osName, osVersion, browserVersion);
 		homePage = PageGeneratorManager.getUserHomePage(driver);
 		userData = UserDataMapper.getUserData();
 

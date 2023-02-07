@@ -11,6 +11,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.joda.time.DateTime;
 import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -25,9 +26,10 @@ import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeSuite;
 
-import factoryEnviroment.BrowserList;
+import factoryBrowser.BrowserList;
+import factoryBrowser.EnvironmentList;
 import factoryEnviroment.BrowserStackFactory;
-import factoryEnviroment.EnvironmentList;
+import factoryEnviroment.GridFactory;
 import factoryEnviroment.LocalFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -44,10 +46,14 @@ public class BaseTest {
 		log = LogFactory.getLog(getClass());
 	}
 
-	protected WebDriver getBrowserDriverAll(String envName, String serverName, String browserName, String osName, String osVersion, String browserVersion) {
+	protected WebDriver getBrowserDriverAll(String envName, String serverName, String browserName, String ipAddress, String portNumber, String osName, String osVersion,
+			String browserVersion) {
 		switch (envName) {
 		case "local":
 			driver = new LocalFactory(browserName).createDriver();
+			break;
+		case "grid":
+			driver = new GridFactory(browserName, ipAddress, portNumber).createDriver();
 			break;
 		case "browserStack":
 			driver = new BrowserStackFactory(browserName, osName, osVersion, browserVersion).createDriver();
@@ -218,7 +224,86 @@ public class BaseTest {
 		return driver;
 	}
 
-	protected WebDriver getBrowserDriverLocal(String browserName, String severName) {
+	protected WebDriver getBrowserDriverGrid(String browserName, String serverName, String ipAddress, String portNumber) {
+
+		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
+		DesiredCapabilities capability = null;
+
+		if (browserList == BrowserList.FIREFOX) {
+			WebDriverManager.firefoxdriver().setup();
+			capability = DesiredCapabilities.firefox();
+			capability.setBrowserName("firefox");
+			capability.setPlatform(Platform.WINDOWS);
+			FirefoxOptions options = new FirefoxOptions();
+			options.merge(capability);
+
+		} else if (browserList == BrowserList.H_FIREFOX) {
+			WebDriverManager.firefoxdriver().setup();
+			FirefoxOptions options = new FirefoxOptions();
+			options.addArguments("--headless");
+			options.addArguments("window-size=1920x1080");
+			driver = new FirefoxDriver(options);
+
+		} else if (browserList == BrowserList.CHROME) {
+			WebDriverManager.chromedriver().setup();
+			ChromeOptions options = new ChromeOptions();
+			capability = DesiredCapabilities.chrome();
+			capability.setBrowserName("chrome");
+			capability.setPlatform(Platform.WINDOWS);
+			options.merge(capability);
+
+		} else if (browserList == BrowserList.H_CHROME) {
+			WebDriverManager.chromedriver().setup();
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--headless");
+			options.addArguments("window-size=1920x1080");
+			driver = new ChromeDriver(options);
+
+		} else if (browserList == BrowserList.EDGE) {
+			WebDriverManager.edgedriver().setup();
+			capability = DesiredCapabilities.edge();
+			capability.setBrowserName("edge");
+			capability.setPlatform(Platform.ANY);
+			capability.setJavascriptEnabled(true);
+
+		} else if (browserList == BrowserList.OPERA) {
+			WebDriverManager.operadriver().setup();
+			driver = new OperaDriver();
+
+		} else if (browserList == BrowserList.IE) {
+			WebDriverManager.iedriver().arch32().setup();
+			capability = DesiredCapabilities.internetExplorer();
+			capability.setBrowserName("internetexplorer");
+			capability.setPlatform(Platform.WINDOWS);
+			capability.setJavascriptEnabled(true);
+
+		} else if (browserList == BrowserList.COCCOC) {
+			WebDriverManager.chromedriver().driverVersion("105.0.5195.52").setup();
+			ChromeOptions options = new ChromeOptions();
+			options.setBinary("C:\\Program Files (x86)\\CocCoc\\Browser\\Application\\browser.exe");
+			driver = new ChromeDriver(options);
+
+		} else if (browserList == BrowserList.BRAVE) {
+			WebDriverManager.chromedriver().driverVersion("105.0.5195.52").setup();
+			ChromeOptions options = new ChromeOptions();
+			options.setBinary("C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe");
+			driver = new ChromeDriver(options);
+
+		} else {
+			throw new RuntimeException("Browser name invalid");
+		}
+		try {
+			driver = new RemoteWebDriver(new URL(String.format("http://%s:%s/wd/hub", ipAddress, portNumber)), capability);
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
+		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+		driver.get(getEnvironmentUrl(serverName));
+		return driver;
+	}
+
+	protected WebDriver getBrowserDriverLocal(String browserName, String serverName) {
 
 		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
 
@@ -275,7 +360,7 @@ public class BaseTest {
 		}
 		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-		driver.get(getEnvironmentUrl(severName));
+		driver.get(getEnvironmentUrl(serverName));
 		return driver;
 	}
 
