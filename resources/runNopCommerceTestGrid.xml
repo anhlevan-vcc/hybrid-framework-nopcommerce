@@ -14,19 +14,19 @@
 	<parameter name="envName" value="grid"></parameter>
 	
 <!--Chạy máy nào thì trỏ vào IP và port đã setting của máy đó-->
-<!-- 	<test name="Run on Firefox"> -->
-<!--		<parameter name="browser" value="Firefox"></parameter>-->
-<!--		<parameter name="ipAddress" value="192.168.1.2" />-->
-<!--    	<parameter name="portNumber" value="5555" />-->
-<!-- 		<classes> -->
-<!--    		<class name="com.nopcommerce.user.Level_23_SeleniumGrid"/> -->
-<!--   		</classes> -->
-<!--  	</test> -->
+	<test name="Run on Firefox">
+		<parameter name="browser" value="Firefox"></parameter>
+		<parameter name="ipAddress" value="localhost" />
+   	<parameter name="portNumber" value="4446" />
+		<classes>
+   		<class name="com.nopcommerce.user.Level_24_Refactor_Multiple_Environment"/>
+  		</classes>
+ 	</test>
   	
   	<test name="Run on Chrome"> 
 		<parameter name="browser" value="Chrome"></parameter>
-		<parameter name="ipAddress" value="192.168.1.2" />
-    	<parameter name="portNumber" value="5555" />
+		<parameter name="ipAddress" value="localhost" />
+    	<parameter name="portNumber" value="4445" />
  		<classes> 
     		<class name="com.nopcommerce.user.Level_24_Refactor_Multiple_Environment"/> 
    		</classes> 

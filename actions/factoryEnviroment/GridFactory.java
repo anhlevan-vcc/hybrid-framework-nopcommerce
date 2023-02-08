@@ -36,7 +36,7 @@ public class GridFactory {
 			WebDriverManager.firefoxdriver().setup();
 			capability = DesiredCapabilities.firefox();
 			capability.setBrowserName("firefox");
-			capability.setPlatform(Platform.WINDOWS);
+			capability.setPlatform(Platform.ANY);
 			FirefoxOptions options = new FirefoxOptions();
 			options.merge(capability);
 
@@ -52,7 +52,7 @@ public class GridFactory {
 			ChromeOptions options = new ChromeOptions();
 			capability = DesiredCapabilities.chrome();
 			capability.setBrowserName("chrome");
-			capability.setPlatform(Platform.WINDOWS);
+			capability.setPlatform(Platform.ANY);
 			options.merge(capability);
 
 		} else if (browserList == BrowserList.H_CHROME) {
@@ -77,7 +77,7 @@ public class GridFactory {
 			WebDriverManager.iedriver().arch32().setup();
 			capability = DesiredCapabilities.internetExplorer();
 			capability.setBrowserName("internetexplorer");
-			capability.setPlatform(Platform.WINDOWS);
+			capability.setPlatform(Platform.ANY);
 			capability.setJavascriptEnabled(true);
 
 		} else if (browserList == BrowserList.COCCOC) {
