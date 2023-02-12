@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -28,10 +29,11 @@ public class Level_08_Swich_Role extends BaseTest {
 
 	private String userEmailAddress, firstName, lastName, userPassword, adminEmailAddress, adminPassword;
 
-	@Parameters("browser")
+	@Parameters({ "envName", "serverName", "browser", "ipAddress", "portNumber", "osName", "osVersion", "browserVersion" })
 	@BeforeClass
-	public void beforeClass(String browserName) {
-		driver = getBrowserDriver(browserName);
+	public void beforeClass(@Optional("local") String envName, @Optional("DEV") String serverName, @Optional("Chrome") String browser, @Optional("localhost") String ipAddress,
+			@Optional("4444") String portNumber, @Optional("Windows") String osName, @Optional("10") String osVersion, @Optional("latest") String browserVersion) {
+		driver = getBrowserDriverAll(envName, serverName, browser, ipAddress, portNumber, osName, osVersion, browserVersion);
 
 		userHomePage = PageGeneratorManager.getUserHomePage(driver);
 
@@ -54,7 +56,7 @@ public class Level_08_Swich_Role extends BaseTest {
 		userRegisterPage.clickToRegisterButton();
 
 		Assert.assertEquals(userRegisterPage.getMessageSuccess(), "Your registration completed");
-		userHomePage = userRegisterPage.clickToLogoutLink();
+		// userHomePage = userRegisterPage.clickToLogoutLink();
 
 		userLoginPage = userHomePage.openLoginPage();
 
@@ -64,7 +66,7 @@ public class Level_08_Swich_Role extends BaseTest {
 		userCustomerInfoPage = userHomePage.openMyAccountCustomerInfoPage();
 		userHomePage = userCustomerInfoPage.clickToLogoutLinkAtUserPage(driver);
 
-		userHomePage.openPageUrl(driver, GlobalConstants.ADMIN_PAGE_URL);
+		userHomePage.openPageUrl(driver, GlobalConstants.getGlobalConstants().getAdminPageUrl());
 		adminLoginPage = PageGeneratorManager.getAdminLoginPage(driver);
 		adminDashboardPage = adminLoginPage.loginAsAdmin(adminEmailAddress, adminPassword);
 
@@ -75,7 +77,7 @@ public class Level_08_Swich_Role extends BaseTest {
 
 	@Test
 	public void Role_02_Admin_To_User() {
-		adminLoginPage.openPageUrl(driver, GlobalConstants.PORTAL_PAGE_URL);
+		adminLoginPage.openPageUrl(driver, GlobalConstants.getGlobalConstants().getUserPageUrl());
 		userHomePage = PageGeneratorManager.getUserHomePage(driver);
 
 		userLoginPage = userHomePage.openLoginPage();

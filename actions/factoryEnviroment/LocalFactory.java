@@ -115,7 +115,7 @@ public class LocalFactory {
 		} else if (browserList == BrowserList.COCCOC) {
 			WebDriverManager.chromedriver().driverVersion("105.0.5195.52").setup();
 			ChromeOptions options = new ChromeOptions();
-			if (GlobalConstants.OS_NAME.startsWith("Windows")) {
+			if (GlobalConstants.getGlobalConstants().getOsName().startsWith("Windows")) {
 				options.setBinary("C:\\Program Files (x86)\\CocCoc\\Browser\\Application\\browser.exe");
 			} else {
 				options.setBinary("....");
@@ -125,7 +125,7 @@ public class LocalFactory {
 		} else if (browserList == BrowserList.BRAVE) {
 			WebDriverManager.chromedriver().driverVersion("105.0.5195.52").setup();
 			ChromeOptions options = new ChromeOptions();
-			if (GlobalConstants.OS_NAME.startsWith("Windows")) {
+			if (GlobalConstants.getGlobalConstants().getOsName().startsWith("Windows")) {
 				options.setBinary("C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe");
 			} else {
 				options.setBinary("...");

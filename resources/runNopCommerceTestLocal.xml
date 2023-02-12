@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="NopCommerce">
+<suite name="NopCommerce" parallel="tests" thread-count="2">
 
 	<listeners>
 	<listener class-name="commons.MethodListener"></listener> 
@@ -20,7 +20,7 @@
 		<parameter name="browserVersion" value=""></parameter>
  		<classes> 
  <!--  <class name="com.nopcommerce.common.Common_01_Cookie"/>  -->
-    		<class name="com.nopcommerce.user.Level_24_Refactor_Multiple_Environment"/> 
+    		<class name="com.nopcommerce.user.Level_08_Swich_Role"/> 
    		</classes> 
   	</test> 
   	
@@ -31,7 +31,7 @@
 		<parameter name="browserVersion" value=""></parameter>
  		<classes> 
  <!--  <class name="com.nopcommerce.common.Common_01_Cookie"/>  -->
-    		<class name="com.nopcommerce.user.Level_24_Refactor_Multiple_Environment"/> 
+    		<class name="com.nopcommerce.user.Level_08_Swich_Role"/> 
    		</classes> 
   	</test> 
   	

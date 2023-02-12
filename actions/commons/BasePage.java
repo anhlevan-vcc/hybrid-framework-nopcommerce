@@ -508,7 +508,8 @@ public class BasePage {
 
 	protected boolean isImageLoaded(WebDriver driver, String locatorType) {
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-		boolean status = (boolean) jsExecutor.executeScript("return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", getWebElement(driver, locatorType));
+		boolean status = (boolean) jsExecutor.executeScript("return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0",
+				getWebElement(driver, locatorType));
 		if (status) {
 			return true;
 		} else {
@@ -628,7 +629,7 @@ public class BasePage {
 
 	public void uploadMultipleFiles(WebDriver driver, String... fileNames) {
 		// Đường dẫn thư mục uploadFiles
-		String filePath = GlobalConstants.UPLOAD_FILE;
+		String filePath = GlobalConstants.getGlobalConstants().getUploadFile();
 
 		// Đường dẫn của tất cả các file
 		// 1 file :hoadao.jpg
@@ -644,8 +645,8 @@ public class BasePage {
 
 	private long allTime;
 	private long pollingTime;
-	private long longTimeout = GlobalConstants.LONG_TIMEOUT;
-	private long shortTimeout = GlobalConstants.SHORT_TIMEOUT;
+	private long longTimeout = GlobalConstants.getGlobalConstants().getLongTimeout();
+	private long shortTimeout = GlobalConstants.getGlobalConstants().getShortTimeout();
 
 	// Tối ưu ở bài LV7
 	public UserCustomerInfoPageObject openCustomerInfoPage(WebDriver driver) {

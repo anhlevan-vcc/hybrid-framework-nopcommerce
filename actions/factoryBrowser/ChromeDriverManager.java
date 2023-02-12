@@ -44,7 +44,7 @@ public class ChromeDriverManager implements BrowserFactory {
 		// Sét auto lưu file download vào thư mục
 		HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
 		chromePrefs.put("profile.default_content_settings.popups", 0);
-		chromePrefs.put("download.default_directory", GlobalConstants.DOWNLOAD_FILE);
+		chromePrefs.put("download.default_directory", GlobalConstants.getGlobalConstants().getDownloadFile());
 		options.setExperimentalOption("prefs", chromePrefs);
 
 		// Chạy ở trình duyệt ẩn danh

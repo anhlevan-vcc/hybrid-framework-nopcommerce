@@ -36,7 +36,7 @@ public class BrowserStackFactory {
 		caps.setCapability("name", "Run on : " + osName + " | " + osVersion + " | " + browserName);
 
 		try {
-			driver = new RemoteWebDriver(new URL(GlobalConstants.BROWSER_STACK_URL), caps);
+			driver = new RemoteWebDriver(new URL(GlobalConstants.getGlobalConstants().getBrowserStackUrl()), caps);
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}

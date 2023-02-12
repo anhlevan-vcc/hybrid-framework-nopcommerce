@@ -10,10 +10,8 @@ import com.nopcommerce.common.Common_01_Register;
 
 import commons.BaseTest;
 import commons.PageGeneratorManager;
-import pageObject.nopCommerce.user.UserCustomerInfoPageObject;
 import pageObject.nopCommerce.user.UserHomePageObject;
 import pageObject.nopCommerce.user.UserLoginPageObject;
-import pageObject.nopCommerce.user.UserRegisterPageObject;
 
 public class Level_18_Share_Data_A extends BaseTest {
 	private WebDriver driver;
