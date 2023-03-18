@@ -9,6 +9,7 @@ import static org.testng.Assert.assertFalse;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -30,13 +31,14 @@ public class Level_16_ExtentV5_Screenshot extends BaseTest {
 	private UserCustomerInfoPageObject customerinfoPage;
 
 	private String validEmail, firstName, lastName, password;
-	String browserName;
+	String browser;
 
-	@Parameters("browser")
+	@Parameters({ "envName", "serverName", "browser", "ipAddress", "portNumber", "osName", "osVersion", "browserVersion" })
 	@BeforeClass
-	public void beforeClass(String browserName) {
-		driver = getBrowserDriver(browserName);
-		this.browserName = browserName;
+	public void beforeClass(@Optional("local") String envName, @Optional("DEV") String serverName, @Optional("Chrome") String browser, @Optional("localhost") String ipAddress,
+			@Optional("4444") String portNumber, @Optional("Windows") String osName, @Optional("10") String osVersion, @Optional("latest") String browserVersion) {
+		driver = getBrowserDriverAll(envName, serverName, browser, ipAddress, portNumber, osName, osVersion, browserVersion);
+		this.browser = browser;
 
 		homePage = PageGeneratorManager.getUserHomePage(driver);
 
@@ -49,7 +51,7 @@ public class Level_16_ExtentV5_Screenshot extends BaseTest {
 
 	@Test
 	public void User_01_Register(Method method) {
-		ExtentTestManager.startTest(method.getName() + " - " + this.browserName, "Register to system with valid Email and Password");
+		ExtentTestManager.startTest(method.getName() + " - " + this.browser, "Register to system with valid Email and Password");
 		ExtentTestManager.getTest().log(Status.INFO, "Register - Step 01: Navigate to 'Register' page");
 		registerPage = homePage.openRegisterPage();
 
@@ -78,7 +80,7 @@ public class Level_16_ExtentV5_Screenshot extends BaseTest {
 
 	@Test
 	public void User_02_Login(Method method) {
-		ExtentTestManager.startTest(method.getName() + " - " + this.browserName, "Login to system sucessfully");
+		ExtentTestManager.startTest(method.getName() + " - " + this.browser, "Login to system sucessfully");
 		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 01: Navigate to 'login' page");
 		homePage = registerPage.clickToLogoutLink();
 		loginPage = homePage.openLoginPage();

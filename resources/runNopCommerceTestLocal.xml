@@ -4,7 +4,7 @@
 	<listeners>
 	<listener class-name="commons.MethodListener"></listener> 
  	<listener class-name="reportConfig.ReportNGListener"></listener> 
-<!-- 	<listener class-name="reportConfig.ExtentTestListener"></listener> -->
+ 	<listener class-name="reportConfig.ExtentTestListener"></listener> 
 <!-- 	<listener class-name="reportConfig.AllureTestListener"></listener> -->
  	<listener class-name="org.uncommons.reportng.HTMLReporter"></listener> 
  	<listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener> 
@@ -20,19 +20,19 @@
 		<parameter name="browserVersion" value=""></parameter>
  		<classes> 
  <!--  <class name="com.nopcommerce.common.Common_01_Cookie"/>  -->
-    		<class name="com.nopcommerce.user.Level_08_Swich_Role"/> 
+    		<class name="com.nopcommerce.user.Level_16_ExtentV5_Screenshot"/> 
    		</classes> 
   	</test> 
   	
-  	<test name="Run on Chrome"> 
-		<parameter name="browser" value="Chrome"></parameter>
-		<parameter name="osName" value=""></parameter>
-		<parameter name="osVersion" value=""></parameter>
-		<parameter name="browserVersion" value=""></parameter>
- 		<classes> 
+<!--  	<test name="Run on Chrome"> -->
+<!--		<parameter name="browser" value="Chrome"></parameter>-->
+<!--		<parameter name="osName" value=""></parameter>-->
+<!--		<parameter name="osVersion" value=""></parameter>-->
+<!--		<parameter name="browserVersion" value=""></parameter>-->
+<!-- 		<classes> -->
  <!--  <class name="com.nopcommerce.common.Common_01_Cookie"/>  -->
-    		<class name="com.nopcommerce.user.Level_08_Swich_Role"/> 
-   		</classes> 
-  	</test> 
+<!--    		<class name="com.nopcommerce.user.Level_08_Swich_Role"/> -->
+<!--   		</classes> -->
+<!--  	</test> -->
   	
 </suite>
