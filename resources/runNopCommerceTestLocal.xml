@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="NopCommerce" parallel="tests" thread-count="2">
+<suite name="NopCommerce">
 
 	<listeners>
 	<listener class-name="commons.MethodListener"></listener> 
  	<listener class-name="reportConfig.ReportNGListener"></listener> 
- 	<listener class-name="reportConfig.ExtentTestListener"></listener> 
+<!-- 	<listener class-name="reportConfig.ExtentTestListener"></listener> -->
 <!-- 	<listener class-name="reportConfig.AllureTestListener"></listener> -->
  	<listener class-name="org.uncommons.reportng.HTMLReporter"></listener> 
  	<listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener> 
@@ -20,7 +20,7 @@
 		<parameter name="browserVersion" value=""></parameter>
  		<classes> 
  <!--  <class name="com.nopcommerce.common.Common_01_Cookie"/>  -->
-    		<class name="com.nopcommerce.user.Level_16_ExtentV5_Screenshot"/> 
+    		<class name="com.nopcommerce.user.Level_24_Refactor_Multiple_Environment"/> 
    		</classes> 
   	</test> 
   	

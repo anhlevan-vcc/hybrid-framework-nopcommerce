@@ -1,15 +1,15 @@
-1678982386420	geckodriver	INFO	Listening on 127.0.0.1:7699
-1678982387072	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\ANHMAI\\AppData\\Local\\Temp\\rust_mozprofileYa2yVo"
+1679211417712	geckodriver	INFO	Listening on 127.0.0.1:16086
+1679211418391	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\ANHMAI\\AppData\\Local\\Temp\\rust_mozprofilea0Jz8Z"
 console.warn: services.settings: Ignoring preference override of remote settings server
 console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
-1678982387471	Marionette	INFO	Marionette enabled
+1679211418870	Marionette	INFO	Marionette enabled
 Dynamically enable window occlusion 0
-1678982387476	Marionette	INFO	Listening on port 59602
-Read port: 59602
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\ANHMAI\\AppData\\Local\\Temp\\rust_mozprofileYa2yVo\\search.json.mozlz4", (void 0)))
+1679211418877	Marionette	INFO	Listening on port 57936
+Read port: 57936
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\ANHMAI\\AppData\\Local\\Temp\\rust_mozprofilea0Jz8Z\\search.json.mozlz4", (void 0)))
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://demo.nopcommerce.com."
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://demo.nopcommerce.com."
-1678982427402	Marionette	INFO	Stopped listening on port 59602
+1679211428688	Marionette	INFO	Stopped listening on port 57936
 Dynamically enable window occlusion 1
 WARNING: A blocker encountered an error while we were waiting.
           Blocker:  Waiting for ping task
@@ -53,17 +53,15 @@ WARNING: A blocker encountered an error while we were waiting.
           State: (none)
 WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
 WARNING: addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:727:15
-addBlocker@resource://gJavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too latre to register completei/omodulens /AsyconnditcShutdoion "OS.File: flush I/O queuwn.ed sys.before profilmejBs:5e2f3oreChange"
-:26
-addBlockJearv@arSecsroiuprtc ee:r/r/ogrr:e /modules/AsyncSrhesoutdown.sys.mujs:458rce://gre/modules:/1A5sy
-nsceSthuutdownpShutdown@re.ssoyusr.cmej:s/,/ glrie/modules/osfile/osfile_async_front.jsm:1548:28
-@resource://gre/modules/osfile/noes f727: Error: Phase "profile-before-chaniglee"_ aissy nfci_nfirsohnetd.,j simt: 1i5s6 too8 :16
+addBlocker@resource://gre/modules/AsyncShutdowJavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too latne. styos .rmejgsi:s5t2e3r: 2c6om
+paldedtBiloonc kceorn@driesourtcieo:n/ /"gOrSe./Fmioldeu: fllush eI/O quesued b/eforeAsyncShutdown.sys.mjs:458:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
 @resource://gre/modules/osfile.jsm:12:30
-@relates otuor cree:g/i/sgre/modules/TelemetryStorage.sys.mjs:10:28
+@resource://gre/modules/TelemetryStorage.sys.mjs:10:28
 _checkPendingPings@resource://gre/modules/TelemetrySend.sys.mjs:863:17
-setup@retseoru rccoem:p/l/egtrieo/nm ocdounldeist/iToenl e"mOeSt.rFyiSleen:d .fslyuss.hm I/O queued before profileBeforeChange"
-JavaScript error: resource://gre/modules/Asynjcs:803:18
-setuShutdown.sys.mjs, line 727: Error: Phasp@resource://gre/modules/TelemetrySend.sys.mjs:241:30
+setup@resource://gre/modules/TelemetrySend.sys.mjs:803:18
+setup@resource://gre/modules/TelemetrySend.sys.mjs:241:30
 setupTelemetry/this._delayedInitTask<@resource://gre/modules/TelemetryControllerParent.sys.mjs:829:36
 observe@resource://gre/modules/AsyncShutdown.sys.mjs:576:16
 
@@ -90,14 +88,16 @@ addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:458:15
 setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
 @resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
 @resource://gre/modules/osfile.jsm:12:30
-@resource://gre/modules/TelemetryStorage.sys.mjs:10:28
-_checkPendingPings@resource://gre/modules/TelemetrySend.sys.mjs:863:17
+@resource://gre/modules/TelemetryStorage.sys.mj profileBeforeChange"s:10:28
+_checkPendingPings@resource://gre/modules/TelemetrySend.sys.mjs:863:17
 setup@resource://gre/modules/TelemetrySend.sys.mjs:803:18
 setup@resource://gre/modules/TelemetrySend.sys.mjs:241:30
 setupTelemetry/this._delayedInitTask<@resource://gre/modules/TelemetryControllerParent.sys.mjs:829:36
 observe@resource://gre/modules/AsyncShutdown.sys.mjs:576:16
 
-e "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
 JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
 JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
 JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"

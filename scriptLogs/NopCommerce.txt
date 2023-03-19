@@ -1,0 +1,20 @@
+[INFO ] [2023-03-19 14:38:51,121] OS name = windows 10
+[INFO ] [2023-03-19 14:38:51,124] Driver instance name = firefoxdriver: firefox on windows (879345fe-e2af-4fb5-91b7-c87acea63335)
+[INFO ] [2023-03-19 14:38:52,059] OS name = windows 10
+[INFO ] [2023-03-19 14:38:52,059] 
+[INFO ] [2023-03-19 14:38:52,076] OS name = windows 10
+[INFO ] [2023-03-19 14:38:52,076] 
+[INFO ] [2023-03-19 14:38:52,105] OS name = windows 10
+[INFO ] [2023-03-19 14:38:52,105] 
+[INFO ] [2023-03-19 14:38:52,132] OS name = windows 10
+[INFO ] [2023-03-19 14:38:52,133] 
+[INFO ] [2023-03-19 14:38:52,158] OS name = windows 10
+[INFO ] [2023-03-19 14:38:52,158] 
+[INFO ] [2023-03-19 14:38:52,189] OS name = windows 10
+[INFO ] [2023-03-19 14:38:52,189] 
+[INFO ] [2023-03-19 14:38:52,227] OS name = windows 10
+[INFO ] [2023-03-19 14:38:52,227] 
+[INFO ] [2023-03-19 14:38:52,255] OS name = windows 10
+[INFO ] [2023-03-19 14:38:52,255] 
+[INFO ] [2023-03-19 14:38:52,281] OS name = windows 10
+[INFO ] [2023-03-19 14:38:52,282] 
