@@ -171,6 +171,7 @@ public class BasePage {
 
 	private String getDynamicXpath(String locatorType, String... dynamicValues) {
 		if (locatorType.startsWith("xpath=") || locatorType.startsWith("Xpath=") || locatorType.startsWith("XPATH=") || locatorType.startsWith("")) {
+			// ép kiểu từ Object qua String dùng (Object[]) đăt trước giá trị string
 			locatorType = String.format(locatorType, (Object[]) dynamicValues);
 		}
 		return locatorType;
