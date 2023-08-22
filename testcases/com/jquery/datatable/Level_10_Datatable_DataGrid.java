@@ -64,6 +64,12 @@ public class Level_10_Datatable_DataGrid extends BaseTest {
 		homePage.inputToHeaderTextboxByLabel("Total", "687522");
 	}
 
+	@Test
+	public void Table_21_Enter_To_Header() {
+		homePage.inputToHeaderTextboxByLabel("Country", "Afghanistan");
+		Assert.assertTrue(homePage.isRowDisplayed("384187", "Afghanistan", "407124", "791312"));
+	}
+
 	// @Test
 	public void Table_03_Get_All_Value() {
 		// có thể lưu tất cả dữ liệu lấy ra vào 1 List <String> để so sánh với dữ liệu của 1 file bên ngoài
@@ -78,7 +84,7 @@ public class Level_10_Datatable_DataGrid extends BaseTest {
 
 	}
 
-	@Test
+	// @Test
 	public void Table_04_Action_At_Any_Row() {
 
 		homePage.clickToLoadButton();

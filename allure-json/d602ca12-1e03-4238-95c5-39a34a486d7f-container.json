@@ -1,0 +1,1 @@
+{"uuid":"d602ca12-1e03-4238-95c5-39a34a486d7f","name":"JQuery","children":["fd113f85-114d-4ac6-a3a7-b11e823f45c8"],"befores":[{"name":"deleteAllFilesInReportNGScreenshot","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1690988444477,"stop":1690988444482}],"afters":[],"links":[],"start":1690988444460,"stop":1690988450979}

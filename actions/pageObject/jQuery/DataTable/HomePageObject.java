@@ -30,6 +30,11 @@ public class HomePageObject extends BasePage {
 		pressKeyToElement(driver, HomePageUI.HEADER_TEXTBOX_BY_LABEL_NAME, Keys.ENTER, headerLabel);
 	}
 
+	public boolean isRowDisplayed(String females, String country, String males, String total) {
+		waitForElementVisible(driver, HomePageUI.DYNAMIC_ROW_LOCATOR, females, country, males, total);
+		return isElementDisplayed(driver, HomePageUI.DYNAMIC_ROW_LOCATOR, females, country, males, total);
+	}
+
 	public boolean isPageNumberActived(String pageNumber) {
 		waitForElementVisible(driver, HomePageUI.PAGINATION_PAGE_ACTIVED_BY_NUMBER, pageNumber);
 		return isElementDisplayed(driver, HomePageUI.PAGINATION_PAGE_ACTIVED_BY_NUMBER, pageNumber);

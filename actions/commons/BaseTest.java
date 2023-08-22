@@ -360,7 +360,7 @@ public class BaseTest {
 		}
 		driver.get().manage().timeouts().implicitlyWait(GlobalConstants.getGlobalConstants().getLongTimeout(), TimeUnit.SECONDS);
 		driver.get().manage().window().maximize();
-		driver.get().get(getEnvironmentUrl(serverName));
+		driver.get().get(serverName);
 		return driver.get();
 	}
 

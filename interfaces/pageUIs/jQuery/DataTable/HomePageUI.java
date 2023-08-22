@@ -8,6 +8,7 @@ public class HomePageUI {
 	public static final String PAGINATION_PAGE_ALL_INDEX = "//ul[@class='qgrd-pagination-ul']//li[@class='qgrd-pagination-page'][%s]/a";
 	public static final String ALL_ROW_EACH_PAGE = "//tbody//tr";
 	public static final String CUSTOM_ROW_ALL_PAGE = "//tbody//tr//td[@data-key='%s']";
+	public static final String DYNAMIC_ROW_LOCATOR = "//td[@data-key='females' and text()='%s']/following-sibling::td[@data-key='country' and text()='%s']/following-sibling::td[@data-key='males' and text()='%s']/following-sibling::td[@data-key='total' and text()='%s']";
 
 	// index của cột mà mình cần hành động vào
 	public static final String COLUMN_INDEX_BY_NAME = "xpath=//tr//td[text()='%s']//preceding-sibling::td";
